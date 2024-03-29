@@ -1,0 +1,28 @@
+material draft
+{
+	technique
+	{
+		pass
+		{
+			lighting on
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+			scene_blend add
+			depth_write off
+			cull_hardware none
+			cull_software none 
+
+			texture_unit
+			{
+				texture draft.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				rotate 0
+			}
+		}
+	}
+}

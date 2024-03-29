@@ -1,0 +1,687 @@
+<?xml version="1.0" ?>
+<Map name="ChuteShoot" onload="ChuteShootLoad" onunload="ChuteShootUnload">
+    <Settings>
+        <Parameter name="SkyBox" type="STRING" data="" />
+        <Parameter name="ObserveCamPosX" type="FLOAT" data="0" />
+        <Parameter name="ObserveCamPosY" type="FLOAT" data="54.101" />
+        <Parameter name="ObserveCamPosZ" type="FLOAT" data="-153.805" />
+        <Parameter name="ObserveCamLookAtX" type="FLOAT" data="0" />
+        <Parameter name="ObserveCamLookAtY" type="FLOAT" data="25.834" />
+        <Parameter name="ObserveCamLookAtZ" type="FLOAT" data="-193.877" />
+        <Parameter name="CameraResetY" type="FLOAT" data="0" />
+    </Settings>
+    <Scripts>
+        <Script profile="Client" name="Maps/ChuteShoot/Scripts/ChuteShootClient.lua" />
+        <Script profile="Server" name="Maps/ChuteShoot/Scripts/ChuteShootServer.lua" />
+    </Scripts>
+    <MapObjects>
+	  <MapObject type="WorldMesh" name="SingleWorldMesh" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="Static" type="BOOL" data="true" />
+                <Parameter name="CollisionMeshName" type="STRING" data="#ASSET_DIR/Maps/ChuteShoot/Physics/jumptarget_c.obj.murphyrocks" />
+                <Parameter name="CastShadows" type="BOOL" data="false" />
+                <Parameter name="ReceiveShadows" type="BOOL" data="true" />
+                <Parameter name="RenderMeshName" type="STRING" data="JumpTarget_r.mesh" />
+            </Parameters>
+        </MapObject>
+
+        <MapObject type="SoundSource" name="MapAmb" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="SpatialMode" type="STRING" data="LOCAL" />
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="Maps\ChuteShoot\Sound\Skeet_AMB.wav" />
+                <Parameter name="Looping" type="BOOL" data="true" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data=".9" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="true" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="false" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="5" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="15" />
+                <Parameter name="Priority" type="STRING" data="MEDIUM" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="MapAmb2" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="SpatialMode" type="STRING" data="LOCAL" />
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="Maps\ChuteShoot\Sound\Skeet_COIN_AMB.wav" />
+                <Parameter name="Looping" type="BOOL" data="true" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data=".25" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="true" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="false" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="5" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="15" />
+                <Parameter name="Priority" type="STRING" data="LOW" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="MapRand1" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="SpatialMode" type="STRING" data="LOCAL" />
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="Maps\ChuteShoot\Sound\Skeet_AMB_1.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data=".85" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="15" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="60" />
+                <Parameter name="Priority" type="STRING" data="LOW" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="MapRand2" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="SpatialMode" type="STRING" data="LOCAL" />
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="Maps\ChuteShoot\Sound\Skeet_AMB_2.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data=".85" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="15" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="60" />
+                <Parameter name="Priority" type="STRING" data="LOW" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="MapRand3" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="SpatialMode" type="STRING" data="LOCAL" />
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="Maps\ChuteShoot\Sound\Skeet_AMB_3.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data=".85" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="15" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="60" />
+                <Parameter name="Priority" type="STRING" data="LOW" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint1" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="-25.693" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="-2.427" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="-187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint2" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="-22.735" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="-2.063" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="-187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint3" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="-19.958" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="-1.722" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="-187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint4" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="-17.174" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="-1.381" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="-187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint5" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="-14.435" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="-1.044" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="-187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint6" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="-11.69" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="-0.707" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="-187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint7" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="-8.799" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="-0.352" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="-187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint8" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="-5.93" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="-187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint9" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="5.864" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint10" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="8.916" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="-0.375" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint11" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="11.964" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="-0.749" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint12" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="14.596" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="-1.072" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint13" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="17.503" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="-1.429" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint14" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="20.275" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="-1.769" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint15" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="23.155" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="-2.123" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="SpawnPoint16" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="PlayerSpawnPoint" />
+                <Parameter name="PositionX" type="FLOAT" data="26.01" />
+                <Parameter name="PositionY" type="FLOAT" data="5.805" />
+                <Parameter name="PositionZ" type="FLOAT" data="-2.474" />
+                <Parameter name="EulerX" type="FLOAT" data="0" />
+                <Parameter name="EulerY" type="FLOAT" data="187" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="JumpCameraSensor" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/Sensors/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="AAPlanePlayerSensor" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="AAPlanePlayerSensor" />
+                <Parameter name="Axis" type="STRING" data="z" />
+                <Parameter name="Sign" type="STRING" data="-" />
+                <Parameter name="Value" type="FLOAT" data="-180" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="FalloutSensor" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/Sensors/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="AAPlanePlayerSensor" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="AAPlanePlayerSensor" />
+                <Parameter name="Axis" type="STRING" data="y" />
+                <Parameter name="Sign" type="STRING" data="-" />
+                <Parameter name="Value" type="FLOAT" data="-16" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="TopLeftGreen" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/GameModes/ChuteShoot/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="JumpTarget" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="JumpTarget" />
+                <Parameter name="Points" type="INT" data="40" />
+                <Parameter name="CubeWidth" type="FLOAT" data="10" />
+                <Parameter name="CubeHeight" type="FLOAT" data="6" />
+                <Parameter name="CubeDepth" type="FLOAT" data="10" />
+                <Parameter name="PositionX" type="FLOAT" data="-30.131" />
+                <Parameter name="PositionY" type="FLOAT" data="32.791" />
+                <Parameter name="PositionZ" type="FLOAT" data="-214.726" />
+                <Parameter name="EulerX" type="FLOAT" data="42" />
+                <Parameter name="EulerY" type="FLOAT" data="0" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="TopRightGreen" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/GameModes/ChuteShoot/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="JumpTarget" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="JumpTarget" />
+                <Parameter name="Points" type="INT" data="40" />
+                <Parameter name="CubeWidth" type="FLOAT" data="10" />
+                <Parameter name="CubeHeight" type="FLOAT" data="6" />
+                <Parameter name="CubeDepth" type="FLOAT" data="10" />
+                <Parameter name="PositionX" type="FLOAT" data="30.131" />
+                <Parameter name="PositionY" type="FLOAT" data="32.791" />
+                <Parameter name="PositionZ" type="FLOAT" data="-214.726" />
+                <Parameter name="EulerX" type="FLOAT" data="42" />
+                <Parameter name="EulerY" type="FLOAT" data="0" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="TopRed" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/GameModes/ChuteShoot/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="JumpTarget" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="JumpTarget" />
+                <Parameter name="Points" type="INT" data="40" />
+                <Parameter name="CubeWidth" type="FLOAT" data="10" />
+                <Parameter name="CubeHeight" type="FLOAT" data="6" />
+                <Parameter name="CubeDepth" type="FLOAT" data="10" />
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="36.658" />
+                <Parameter name="PositionZ" type="FLOAT" data="-219.322" />
+                <Parameter name="EulerX" type="FLOAT" data="42" />
+                <Parameter name="EulerY" type="FLOAT" data="0" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="LeftPurple" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/GameModes/ChuteShoot/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="JumpTarget" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="JumpTarget" />
+                <Parameter name="Points" type="INT" data="10" />
+                <Parameter name="CubeWidth" type="FLOAT" data="12" />
+                <Parameter name="CubeHeight" type="FLOAT" data="8" />
+                <Parameter name="CubeDepth" type="FLOAT" data="12" />
+                <Parameter name="PositionX" type="FLOAT" data="-27.555" />
+                <Parameter name="PositionY" type="FLOAT" data="15.19" />
+                <Parameter name="PositionZ" type="FLOAT" data="-196.986" />
+                <Parameter name="EulerX" type="FLOAT" data="42" />
+                <Parameter name="EulerY" type="FLOAT" data="0" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="RightPurple" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/GameModes/ChuteShoot/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="JumpTarget" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="JumpTarget" />
+                <Parameter name="Points" type="INT" data="10" />
+                <Parameter name="CubeWidth" type="FLOAT" data="12" />
+                <Parameter name="CubeHeight" type="FLOAT" data="8" />
+                <Parameter name="CubeDepth" type="FLOAT" data="12" />
+                <Parameter name="PositionX" type="FLOAT" data="27.555" />
+                <Parameter name="PositionY" type="FLOAT" data="15.19" />
+                <Parameter name="PositionZ" type="FLOAT" data="-196.986" />
+                <Parameter name="EulerX" type="FLOAT" data="42" />
+                <Parameter name="EulerY" type="FLOAT" data="0" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="CenterOrange" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/GameModes/ChuteShoot/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="JumpTarget" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="JumpTarget" />
+                <Parameter name="Points" type="INT" data="30" />
+                <Parameter name="CubeWidth" type="FLOAT" data="10" />
+                <Parameter name="CubeHeight" type="FLOAT" data="6" />
+                <Parameter name="CubeDepth" type="FLOAT" data="10" />
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="20" />
+                <Parameter name="PositionZ" type="FLOAT" data="-201" />
+                <Parameter name="EulerX" type="FLOAT" data="42" />
+                <Parameter name="EulerY" type="FLOAT" data="0" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="InnerBlueRing" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/GameModes/ChuteShoot/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="JumpTarget" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="JumpTarget" />
+                <Parameter name="Points" type="INT" data="20" />
+                <Parameter name="CubeWidth" type="FLOAT" data="6" />
+                <Parameter name="CubeHeight" type="FLOAT" data="6" />
+                <Parameter name="CubeDepth" type="FLOAT" data="6" />
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="13.672" />
+                <Parameter name="PositionZ" type="FLOAT" data="-193.766" />
+                <Parameter name="EulerX" type="FLOAT" data="42" />
+                <Parameter name="EulerY" type="FLOAT" data="0" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="ScriptObject" name="OuterBlueRing" sync="false">
+            <Profiles>
+                <Profile name="Server" />
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ScriptObjectPath" type="STRING" data="Scripts/GameModes/ChuteShoot/" />
+                <Parameter name="ScriptObjectFileName" type="STRING" data="JumpTarget" />
+                <Parameter name="ScriptObjectTypeName" type="STRING" data="JumpTarget" />
+                <Parameter name="Points" type="INT" data="10" />
+                <Parameter name="CubeWidth" type="FLOAT" data="6" />
+                <Parameter name="CubeHeight" type="FLOAT" data="6" />
+                <Parameter name="CubeDepth" type="FLOAT" data="6" />
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="9.374" />
+                <Parameter name="PositionZ" type="FLOAT" data="-188.993" />
+                <Parameter name="EulerX" type="FLOAT" data="42" />
+                <Parameter name="EulerY" type="FLOAT" data="0" />
+                <Parameter name="EulerZ" type="FLOAT" data="0" />
+            </Parameters>
+        </MapObject>
+
+        <MapObject type="SoundSource" name="Soundtrack" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="0" />
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Level - Rock Blip.wav" />
+                <Parameter name="Looping" type="BOOL" data="true" />
+                <Parameter name="Volume" type="FLOAT" data=".2" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="true" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="false" />
+                <Parameter name="Priority" type="STRING" data="HIGH" />
+                <Parameter name="SoundType" type="STRING" data="MUSIC" />
+            </Parameters>
+        </MapObject>
+
+    </MapObjects>
+</Map>

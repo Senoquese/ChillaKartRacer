@@ -1,0 +1,9 @@
+<Item type="Accessories" name="Spectacles">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="+1 to vision" />
+		<Colors amount="1" Color1="0.5 0.5 0.5" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

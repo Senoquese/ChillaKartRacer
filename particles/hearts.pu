@@ -1,0 +1,80 @@
+system hearts
+{
+//lod_distances	500
+//smooth_lod	true
+scale	0.02 0.02 0.02
+scale_velocity   0.02
+	technique
+	{
+//		lod_index 0
+		use_alias						$defaultBillboardRenderer
+		material						heart
+		default_particle_width			10
+		default_particle_height			10
+		visual_particle_quota			2000
+		emitter							Circle
+		{
+			position				0 1 0
+			emission_rate				25
+			direction					0 1 0
+			time_to_live				4
+			circle_em_radius			50
+			velocity					20
+		}
+		affector						Colour
+		{
+			colour_aff_time_colour		0 0 0 0
+			colour_aff_time_colour		0.1 1 1 1
+			colour_aff_time_colour		1 0 0 0
+		}
+		affector						Jet
+		{
+			jet_aff_accel				dyn_random
+			{
+				min						0.1
+				max						1
+			}
+		}
+		affector               Scale
+		{
+		   xyz_scale           10
+		}
+	}
+
+//	technique
+//	{
+//		lod_index 1
+//		use_alias						$defaultBillboardRenderer
+//		material						heart
+//		default_particle_width			10
+//		default_particle_height			10
+//		visual_particle_quota			2000
+//		emitter							Circle
+//		{
+//			enabled					false
+//			emission_rate				0
+//			direction					0 1 0
+//			time_to_live				4
+//			circle_em_radius			50
+//			velocity					20
+//		}
+//		affector						Colour
+//		{
+//			colour_aff_time_colour		0 0 0 0
+//			colour_aff_time_colour		0.1 1 1 1
+//			colour_aff_time_colour		1 0 0 0
+//		}
+//		affector						Jet
+//		{
+//			jet_aff_accel				dyn_random
+//			{
+//				min						0.1
+//				max						1
+//			}
+//		}
+//		affector               Scale
+//		{
+//		   xyz_scale           10
+//		}
+//	}
+}

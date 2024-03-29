@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="Panel" position="392 5 496 107" align="HCenter Top" layer="Back" name="cont">
+        <Property key="Widget_Alpha" value="0"/>
+        <Widget type="StaticImage" skin="StaticImage" position="16 11 105 73" layer="Back" name="scorebg_red">
+            <Property key="Image_Texture" value="core_zg.png"/>
+            <Property key="Image_Coord" value="693 2 105 73"/>
+            <Property key="Image_Tile" value="105 73"/>
+            <Property key="Widget_Enabled" value="false"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+        <Widget type="StaticImage" skin="StaticImage" position="376 11 105 73" layer="Back" name="scorebg_blue">
+            <Property key="Image_Texture" value="core_zg.png"/>
+            <Property key="Image_Coord" value="693 2 105 73"/>
+            <Property key="Image_Tile" value="105 73"/>
+            <Property key="Widget_Enabled" value="false"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="16 22 104 64" layer="Main" name="redscore">
+            <Property key="Text_TextColour" value="1 0 0"/>
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Text_TextAlign" value="HCenter VCenter"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="376 22 104 64" layer="Back" name="bluescore">
+            <Property key="Text_TextAlign" value="HCenter VCenter"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_TextColour" value="#4196ff"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+        <Widget type="StaticImage" skin="StaticImage" position="375 10 107 74" layer="Back" name="blueteam">
+            <Property key="Image_Texture" value="core_zg.png"/>
+            <Property key="Image_Coord" value="910 109 107 74"/>
+            <Property key="Image_Tile" value="107 74"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+        </Widget>
+        <Widget type="StaticImage" skin="StaticImage" position="15 10 107 74" layer="Back" name="redteam">
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Image_Texture" value="core_zg.png"/>
+            <Property key="Image_Coord" value="910 186 107 74"/>
+            <Property key="Image_Tile" value="107 74"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="128 91 240 21" layer="Back" name="bluetext">
+            <Property key="Text_FontName" value="ManualFont"/>
+            <Property key="Text_FontHeight" value="17"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_Caption" value="hit it into the #ff0000RED GOAL!"/>
+            <Property key="Text_TextAlign" value="Center"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="128 91 240 21" layer="Back" name="redtext">
+            <Property key="Text_FontName" value="ManualFont"/>
+            <Property key="Text_FontHeight" value="17"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_Caption" value="hit it into the #0084ffBLUE GOAL!"/>
+            <Property key="Text_TextAlign" value="Center"/>
+        </Widget>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="512 112 256 128" align="HCenter Top" layer="Back" name="scoredred">
+        <Property key="Image_Texture" value="score_red.png"/>
+        <Property key="Visible" value="false"/>
+        <Property key="Image_Coord" value="0 0 256 128"/>
+        <Property key="Image_Tile" value="256 128"/>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="512 112 256 128" align="HCenter Top" layer="Back" name="scoredblue">
+        <Property key="Image_Texture" value="score_blue.png"/>
+        <Property key="Visible" value="false"/>
+        <Property key="Image_Coord" value="0 0 256 128"/>
+        <Property key="Image_Tile" value="256 128"/>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="384 104 512 512" align="Center" layer="Main" name="redwin">
+        <Property key="Image_Texture" value="redwin.png"/>
+        <Property key="Image_Coord" value="0 0 512 512"/>
+        <Property key="Image_Tile" value="512 512"/>
+        <Property key="Widget_Enabled" value="false"/>
+        <Property key="Widget_Visible" value="false"/>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="384 104 512 512" align="Center" layer="Main" name="bluewin">
+        <Property key="Image_Texture" value="bluewin.png"/>
+        <Property key="Widget_Enabled" value="false"/>
+        <Property key="Widget_Visible" value="false"/>
+    </Widget>
+</MyGUI>

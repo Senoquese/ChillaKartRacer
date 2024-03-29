@@ -1,0 +1,9 @@
+<Item type="Hats" name="Pot">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Keeps the voices out of your head." />
+		<Colors amount="1" Color1="0.5 0.5 0.5" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

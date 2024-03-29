@@ -1,0 +1,9 @@
+<Item type="Characters" name="Robot">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="This little guy has only one desire: TOTAL WORLD DOMINATION" />
+		<Colors amount="4" Color1=".75 .75 .75" Color2=".75 .75 .75" Color3=".75 .75 .75" Color4="1 0 0" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

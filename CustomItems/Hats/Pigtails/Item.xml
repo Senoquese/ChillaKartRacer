@@ -1,0 +1,9 @@
+<Item type="Hats" name="Pigtails">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Be careful not to get hair caught in moving parts." />
+		<Colors amount="2" Color1=".97 .76 .34" Color2="1 0 0" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

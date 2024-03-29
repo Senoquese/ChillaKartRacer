@@ -1,0 +1,9 @@
+<Item type="Wheels" name="Max Trax">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Spiked for increase traction. Not street legal!" />
+		<Colors amount="3" Color1="1 1 1" Color2=".9 .9 .9" Color3=".15 .15 .15" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

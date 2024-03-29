@@ -1,0 +1,52 @@
+//CG Vertex shader definition
+vertex_program NimbleItem_VS cg
+{
+      //Look in this source file for shader code
+	source NimbleShaders.cg
+      //Use this function for the vertex shader
+	entry_point nimble_item_vs
+      //Compile the shader to vs_1_1 format
+	profiles vs_1_1
+
+	//This block saves us from manually setting parameters in code
+      default_params
+	{
+            //Ogre will put the worldviewproj into our 'worldViewProj' parameter for us.
+		param_named_auto worldViewProj worldviewproj_matrix
+		param_named_auto eyePositionW camera_position
+		param_named_auto worldMat world_matrix
+		param_named_auto worldViewMat worldview_matrix
+	}
+}
+
+
+vertex_program NimbleInstancedItem_VS cg
+{
+      //Look in this source file for shader code
+	source NimbleShaders.cg
+      //Use this function for the vertex shader
+	entry_point nimble_instanced_item_vs
+      //Compile the shader to vs_2_0 format
+	profiles vs_2_0
+
+	//This block saves us from manually setting parameters in code
+      default_params
+	{
+            //Ogre will put the worldviewproj into our 'worldViewProj' parameter for us.
+		param_named_auto eyePositionW camera_position
+		param_named_auto viewMat view_matrix
+		param_named_auto viewProjMat viewproj_matrix
+		param_named_auto worldMatrix3x4Array world_matrix_array_3x4
+	}
+}
+
+//CG Pixel shader definition
+fragment_program NimbleItem_PS cg
+{
+	source NimbleShaders.cg
+
+	//Different entry point for pixel shader
+	entry_point nimble_item_ps
+
+	profiles ps_2_0 arbfp1
+}

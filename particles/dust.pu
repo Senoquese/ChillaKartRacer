@@ -1,0 +1,130 @@
+system dust
+{
+//lod_distances	50
+//smooth_lod	true
+	// --------------- Clouds ---------------
+	technique
+	{
+//		lod_index 0
+		renderer						Billboard
+		{
+			billboard_type					point
+			billboard_rotation_type				vertex
+		}
+		material						dust_particle
+		default_particle_width			.5
+		default_particle_height			.5
+		visual_particle_quota			500
+		emitter							Box
+		{
+			box_em_width       .05
+			box_em_height      .05
+			box_em_depth       .05
+			enabled					true
+			emission_rate				24
+
+			velocity				0
+			time_to_live				1
+		}
+		
+		// Change the colour of the burst
+		affector						Colour
+		{
+			colour_aff_time_colour		0 1 1 1 .8
+			colour_aff_time_colour		0.7 1 1 1 .8
+			colour_aff_time_colour		1 1 1 1 0
+		}
+		
+		affector                           TextureRotator
+		{
+		    tex_rot_rotation               dyn_random
+		    {
+			min                       -30
+			max                        30
+		    }
+		    tex_rot_speed                  0
+		}
+
+//		affector						Scale
+//		{
+//			xyz_scale					dyn_curved_linear
+//		{
+//			    control_point       0 3
+//			    control_point       0.2 0
+//			    control_point       0.6 0
+//			    control_point       1.0 -10
+//		}
+//		}
+
+		affector						Scale
+		{
+			xyz_scale					-1
+
+		}
+
+	}
+
+//	technique
+//	{
+//		lod_index 1
+//		renderer						Billboard
+//		{
+//			billboard_type					point
+//			billboard_rotation_type				vertex
+//		}
+//		material						dust_particle
+//		default_particle_width			.5
+//		default_particle_height			.5
+//		visual_particle_quota			500
+//		emitter							Box
+//		{
+//			enabled					false
+//			box_em_width       .05
+//			box_em_height      .05
+//			box_em_depth       .05
+//			enabled					true
+//			emission_rate				0
+//
+//			velocity				0
+//			time_to_live				1
+//		}
+//		
+//		// Change the colour of the burst
+//		affector						Colour
+//		{
+//			colour_aff_time_colour		0 1 1 1 .8
+//			colour_aff_time_colour		0.7 1 1 1 .8
+//			colour_aff_time_colour		1 1 1 1 0
+//		}
+//		
+//		affector                           TextureRotator
+//		{
+//		    tex_rot_rotation               dyn_random
+//		    {
+//			min                       -30
+//			max                        30
+//		    }
+//		    tex_rot_speed                  0
+//		}
+//
+////		affector						Scale
+////		{
+////			xyz_scale					dyn_curved_linear
+////		{
+////			    control_point       0 3
+////			    control_point       0.2 0
+////			    control_point       0.6 0
+////			    control_point       1.0 -10
+////		}
+////		}
+//
+//		affector						Scale
+//		{
+//			xyz_scale					-1
+//
+//		}
+//
+//	}
+}
+
+

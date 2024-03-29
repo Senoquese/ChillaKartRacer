@@ -1,0 +1,48 @@
+material boxface
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+			scene_blend alpha_blend
+			depth_write off
+
+
+			
+			texture_unit
+			{
+				texture boxoverlay.dds
+				tex_coord_set 0
+				colour_op modulate
+				alpha_op_ex source1 src_manual src_current 0.75
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+// env map
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map cubic_reflection
+			}
+//rimlighting
+			texture_unit
+			{
+				cubic_texture rim.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map cubic_normal
+			}
+		}
+	}
+}

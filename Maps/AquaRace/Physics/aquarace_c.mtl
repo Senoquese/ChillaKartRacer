@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<Materials>
+	<Material name="initialShadingGroup">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+	</Material>
+
+	<Material name="lambert2SG">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+		<Parameter name="WheelParticle" type="STRING" data="water"/>
+		<Parameter name="SurfaceSound" type="STRING" data="sound/Driving_on_snow.wav"/>
+
+	</Material>
+
+	<Material name="slippery">
+		<Parameter name="FrictionPercent" type="FLOAT" data="0"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+	</Material>
+
+</Materials>

@@ -1,0 +1,16 @@
+material cursor
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			texture_unit
+			{
+				texture cursor.png
+			}
+		}
+	}
+}

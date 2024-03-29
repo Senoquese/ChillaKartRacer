@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+	<Widget type="Widget" skin="Panel" position="0 -20 800 800" align="Left Bottom" layer="Back" name="cont">
+		<Property key="Widget_Alpha" value="0"/>
+		<!-- JOIN LOBBY -->
+		<Widget type="Button" skin="Button" position="0 140 700 150" align="Default" layer="Back" name="mm_findgame">
+			<Property key="Widget_Caption" value=""/>
+			<Property key="Widget_InheritsAlpha" value="true"/>
+			<Property key="Text_FontName" value="fat.60"/>
+			<Property key="Text_FontHeight" value="31"/>
+		</Widget>
+		<Widget type="StaticImage" skin="StaticImage" position="0 40 700 350" layer="Back" name="mm_findgameimg">
+			<Property key="Image_Texture" value="ashtonjoinlobby.png"/>
+			<Property key="Widget_Enabled" value="false"/>
+			<Property key="Widget_InheritsAlpha" value="false"/>
+			<Property key="Widget_InheritsPick" value="false"/>
+		</Widget>
+
+		<!-- NEW LOBBY -->
+		<Widget type="Button" skin="Button" position="0 350 425 80" align="Default" layer="Back" name="mm_hostgame">
+			<Property key="Widget_Caption" value=""/>
+			<Property key="Widget_InheritsAlpha" value="true"/>
+			<Property key="Text_FontName" value="fat.60"/>
+			<Property key="Text_FontHeight" value="31"/>
+		</Widget>
+		<Widget type="StaticImage" skin="StaticImage" position="0 265 500 250" layer="Back" name="mm_hostgameimg">
+			<Property key="Image_Texture" value="ashtonnewlobby.png"/>
+			<Property key="Widget_Enabled" value="false"/>
+			<Property key="Widget_InheritsAlpha" value="false"/>
+			<Property key="Widget_InheritsPick" value="false"/>
+		</Widget>
+
+		<!-- Garage -->
+		<Widget type="Button" skin="Button" position="0 420 425 80" align="Default" layer="Back" name="mm_garage">
+			<Property key="Widget_Caption" value=""/>
+			<Property key="Widget_InheritsAlpha" value="true"/>
+			<Property key="Text_FontName" value="fat.60"/>
+			<Property key="Text_FontHeight" value="31"/>
+		</Widget>
+		<Widget type="StaticImage" skin="StaticImage" position="0 335 500 250" layer="Back" name="mm_garageimg">
+			<Property key="Image_Texture" value="ashtongarage.png"/>
+			<Property key="Widget_Enabled" value="false"/>
+			<Property key="Widget_InheritsAlpha" value="false"/>
+			<Property key="Widget_InheritsPick" value="false"/>
+		</Widget>
+
+		<!-- Settings -->
+		<Widget type="Button" skin="Button" position="0 490 425 80" align="Default" layer="Back" name="mm_settings">
+			<Property key="Widget_Caption" value=""/>
+			<Property key="Widget_InheritsAlpha" value="true"/>
+			<Property key="Text_FontName" value="fat.60"/>
+			<Property key="Text_FontHeight" value="31"/>
+		</Widget>
+		<Widget type="StaticImage" skin="StaticImage" position="0 405 500 250" layer="Back" name="mm_settingsimg">
+			<Property key="Image_Texture" value="ashtonsettings.png"/>
+			<Property key="Widget_Enabled" value="false"/>
+			<Property key="Widget_InheritsAlpha" value="false"/>
+			<Property key="Widget_InheritsPick" value="false"/>
+		</Widget>
+
+		<!-- Practice -->
+		<Widget type="Button" skin="Button" position="0 560 425 80" align="Default" layer="Back" name="mm_quickplay">
+			<Property key="Widget_Caption" value=""/>
+			<Property key="Widget_InheritsAlpha" value="true"/>
+			<Property key="Text_FontName" value="fat.60"/>
+			<Property key="Text_FontHeight" value="31"/>
+		</Widget>
+		<Widget type="StaticImage" skin="StaticImage" position="0 475 500 250" layer="Back" name="mm_quickplayimg">
+			<Property key="Image_Texture" value="ashtonpractice.png"/>
+			<Property key="Widget_Enabled" value="false"/>
+			<Property key="Widget_InheritsAlpha" value="false"/>
+			<Property key="Widget_InheritsPick" value="false"/>
+		</Widget>
+
+		<!-- Exit -->
+		<Widget type="Button" skin="Button" position="0 630 160 80" align="Default" layer="Back" name="mm_exit">
+			<Property key="Widget_Caption" value=""/>
+			<Property key="Widget_InheritsAlpha" value="true"/>
+			<Property key="Text_FontName" value="fat.60"/>
+			<Property key="Text_FontHeight" value="31"/>
+		</Widget>
+		<Widget type="StaticImage" skin="StaticImage" position="0 545 500 250" layer="Back" name="mm_exitimg">
+			<Property key="Image_Texture" value="ashtonexit.png"/>
+			<Property key="Widget_Enabled" value="false"/>
+			<Property key="Widget_InheritsAlpha" value="false"/>
+			<Property key="Widget_InheritsPick" value="false"/>
+		</Widget>
+
+	</Widget>
+	<Widget type="StaticText" skin="StaticText" position="8 696 152 24" align="Left Bottom" layer="Back" name="version">
+		<Property key="Widget_Caption" value="version"/>
+		<Property key="Widget_Alpha" value=".75"/>
+	</Widget>
+
+	<Widget type="Button" skin="Button" position="1200 696 80 24" align="Right Bottom" layer="Back" name="mm_credits">
+		<Property key="Widget_Caption" value="Credits"/>
+	</Widget>
+
+	<Widget type="StaticImage" skin="StaticImage" position="1095 15 175 35" align="Right Top" layer="Back">
+		<Property key="Image_Texture" value="senoquese.png"/>
+		<Property key="Widget_Enabled" value="false"/>
+	</Widget>
+</MyGUI>

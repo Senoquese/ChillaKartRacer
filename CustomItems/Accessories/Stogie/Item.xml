@@ -1,0 +1,9 @@
+<Item type="Accessories" name="Stogie">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Smoking is bad! This one is made out of bubblegum." />
+		<Colors amount="2" Color1="0.584 0.420 0.176" Color2="1 0 0" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

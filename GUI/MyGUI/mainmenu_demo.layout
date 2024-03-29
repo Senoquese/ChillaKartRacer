@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="Panel" position="0 0 632 600" align="Left VCenter" layer="Back" name="cont">
+        <Property key="Widget_Alpha" value="0"/>
+        <Widget type="Button" skin="Button" position="160 320 200 48" align="Default" layer="Back" name="mm_findgame">
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_Caption" value="Find Game"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Text_FontHeight" value="31"/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="160 376 200 48" align="Default" layer="Back" name="mm_hostgame">
+            <Property key="Widget_Caption" value="Create Game"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Text_FontHeight" value="31"/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="160 432 200 48" align="Default" layer="Back" name="mm_garage">
+            <Property key="Widget_Caption" value="Garage"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Text_FontHeight" value="31"/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="160 488 200 48" align="Default" layer="Back" name="mm_settings">
+            <Property key="Widget_Caption" value="Settings"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Text_FontHeight" value="31"/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="160 264 200 48" align="Default" layer="Back" name="mm_quickplay">
+            <Property key="Widget_Caption" value="#c5ff02Quick Play"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Text_FontHeight" value="31"/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="160 544 200 48" align="Default" layer="Back" name="mm_exit">
+            <Property key="Widget_Caption" value="Exit"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Text_FontHeight" value="31"/>
+        </Widget>
+    </Widget>
+    <Widget type="StaticText" skin="StaticText" position="8 696 152 24" align="Left Bottom" layer="Back" name="version">
+        <Property key="Widget_Caption" value="version"/>
+        <Property key="Widget_Alpha" value=".75"/>
+    </Widget>
+    <Widget type="Button" skin="Button" position="1200 696 80 24" align="Right Bottom" layer="Back" name="mm_credits">
+        <Property key="Widget_Caption" value="Credits"/>
+    </Widget>
+    <Widget type="StaticText" skin="StaticText" position="8 680 56 16" align="Left Bottom" layer="Back">
+        <Property key="Widget_Caption" value="DEMO"/>
+        <Property key="Widget_Alpha" value=".75"/>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="1192 8 78 49" align="Right Top" layer="Back">
+        <Property key="Image_Texture" value="nimblebit.png"/>
+        <Property key="Widget_Enabled" value="false"/>
+    </Widget>
+    <Widget type="Button" skin="Button" position="540 632 200 48" align="HCenter Bottom" layer="Back" name="upgrade">
+        <Property key="Widget_Caption" value="#c5ff02Buy Game!"/>
+        <Property key="Text_FontName" value="fat.60"/>
+        <Property key="Text_FontHeight" value="31"/>
+    </Widget>
+</MyGUI>

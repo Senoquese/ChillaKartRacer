@@ -1,0 +1,9 @@
+<Item type="Accessories" name="Moustache">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Always in style. Don't let them tell you any different." />
+		<Colors amount="1" Color1="0.2 0.2 0.2" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

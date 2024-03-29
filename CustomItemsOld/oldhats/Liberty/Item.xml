@@ -1,0 +1,9 @@
+<Item type="Hats" name="Liberty">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Give me your tired, your poor, your huddled masses yearning to breathe free." />
+		<Colors amount="1" Color1=".427 .565 .549" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

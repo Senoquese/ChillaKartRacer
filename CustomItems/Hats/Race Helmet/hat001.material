@@ -1,0 +1,53 @@
+material hat001
+{
+	//Material has one technique
+	technique					
+	{
+            //This technique has one pass
+		pass					
+		{
+			//Makes the pixel shader alpha output be used for alpha blending
+			//scene_blend alpha_blend
+			lighting off
+
+            	ambient 0 0 0 1
+            	diffuse 1 1 1 1
+            	specular 0 0 0 1
+            	emissive 0 0 0
+			// double sided
+			cull_hardware none
+      			cull_software none 
+
+			vertex_program_ref NimbleItem_VS
+			{
+			}
+
+			fragment_program_ref NimbleItem_PS
+			{
+                 		param_named Color1 float4 0.1 0.5 1 1
+				param_named NumColors float 1
+				param_named rimFactor float .65
+			}
+			texture_unit
+			{
+				texture hat001_lum.dds
+			}
+			texture_unit
+			{
+				texture hat001_colormask.tga
+			}
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+			}
+			texture_unit
+			{
+				texture hat001_envmask.dds
+			}
+			texture_unit
+			{
+				cubic_texture rim.dds combinedUVW
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+<Item type="Kart" name="Moonmobile">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Low gravity not included." />
+		<Colors amount="2" Color1="1 .82 0" Color2=".07 0.85 0.44" />
+	</Description>
+	<Settings>
+		<Parameter name="DriverPositionX" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionY" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionZ" type="FLOAT" data="0" />
+		<Parameter name="IdleRate" type="FLOAT" data="1" />
+		<Parameter name="IdleVariable" type="BOOL" data="true" />
+		<Parameter name="IdleRateMultiplier" type="FLOAT" data="2" />
+	</Settings>
+</Item>

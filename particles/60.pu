@@ -1,0 +1,24 @@
+system 60
+{
+	technique
+	{
+		position						0 8 5
+		material						60
+		default_particle_width			10
+		default_particle_height			5
+
+		use_alias						$defaultBillboardRenderer
+		emitter							Point
+		{
+			force_emission				true
+			emission_rate				1
+			angle					0
+			direction				0 0 0
+			velocity				0
+			time_to_live				100000
+
+		}
+
+		}
+
+	}

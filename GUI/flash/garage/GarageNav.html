@@ -1,0 +1,35 @@
+<html>
+<head>
+
+<style type="text/css">
+body
+{
+	margin: 0;
+	overflow:hidden;
+}
+</style>
+
+<script type="text/javascript" src="./../Navi.js"></script>
+<script type="text/javascript" src="./../NimbleHelp.js"></script>
+<script type="text/javascript">
+//Action Script callbacks
+function ButtonClick(cat, id)
+{
+	SafeClientCall('ButtonClick', cat, id);
+}
+</script>
+
+</head>
+
+<body>
+
+<object width="188" height="507">
+<param name="movie" value="GarageNav.swf"/>
+<param name="allowScriptAccess" value="always"/>
+<embed src="GarageNav.swf" name="GUIMovie" 
+width="188" height="507" allowScriptAccess="always">
+</embed>
+</object>
+
+</body>
+</html>

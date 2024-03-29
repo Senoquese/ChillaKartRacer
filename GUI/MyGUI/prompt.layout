@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Message" skin="Message" position="566 292 147 135" align="Center" layer="Popup" name="Error">
+        <Property key="Widget_Caption" value="Error"/>
+        <Property key="Message_Caption" value="Prompt"/>
+        <Property key="Message_Message" value="Message"/>
+        <Property key="Message_Button" value="Ok"/>
+    </Widget>
+</MyGUI>

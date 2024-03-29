@@ -1,0 +1,375 @@
+material crowd_crowdtex2
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			scene_blend alpha_blend
+//			depth_write off
+			cull_hardware none
+      			cull_software none
+ 			alpha_rejection greater 200
+
+			texture_unit
+			{
+				anim_texture crowdtex.dds 4 .5
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+
+		}
+	}
+}
+material redseats
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture seats.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material net
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			scene_blend alpha_blend
+//			depth_write off
+			cull_hardware none
+      		cull_software none 
+ 			alpha_rejection greater 128
+
+			texture_unit
+			{
+				texture chainlink.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+
+		}
+	}
+}
+material concrete
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture concrete.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material backboard
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture trim2.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material floor
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture skateramp.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material bluebar
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture ccpipe.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_current src_texture 
+				env_map cubic_reflection
+			}
+
+
+		}
+	}
+}
+material glass
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture falloutglass.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+               texture_unit
+               {
+                   texture glassmap.dds
+                   colour_op_ex modulate_x2 src_current src_texture 
+                   env_map planar
+               }
+		}
+	}
+}
+material blueseats
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture seats3.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material redbar
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture pipe3.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_current src_texture 
+				env_map cubic_reflection
+			}
+
+
+		}
+	}
+}
+material checker
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture finishline.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material trim
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture circuittrim.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material crowd_crowdtex
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			scene_blend alpha_blend
+//			depth_write off
+			cull_hardware none
+      			cull_software none
+ 			alpha_rejection greater 200
+
+			texture_unit
+			{
+				anim_texture crowdtex.dds 4 .7
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+
+		}
+	}
+}

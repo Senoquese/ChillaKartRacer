@@ -1,0 +1,657 @@
+material tagskybox
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			depth_write off
+			diffuse 1 1 1 1
+			ambient 1 1 1 1
+
+			texture_unit
+			{
+				cubic_texture ccsky_front.dds ccsky_back.dds ccsky_left.dds ccsky_right.dds ccsky_top.dds ccsky_bottom.dds separateUV
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+material zglogo
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture zglogo.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+
+		}
+	}
+}
+material ttstairs
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture pipe2.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_current src_texture 
+				env_map cubic_reflection
+			}
+		}
+	}
+}
+material ttstairs2
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture pipe3.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_current src_texture 
+				env_map cubic_reflection
+			}
+		}
+	}
+}
+material ttstairs3
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture pipe4.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_current src_texture 
+				env_map cubic_reflection
+			}
+		}
+	}
+}
+material ttstairs4
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture pipe5.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_current src_texture 
+				env_map cubic_reflection
+			}
+		}
+	}
+}
+material ttconcrete
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture concrete.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material ttroad
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture tarmac.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material bar
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture bar.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_current src_texture 
+				env_map cubic_reflection
+			}
+
+		}
+	}
+}
+material signs1
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture signs2.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+               texture_unit
+               {
+                   texture glassmap.dds
+                   colour_op_ex modulate_x2 src_current src_texture 
+                   env_map planar
+               }
+
+
+		}
+	}
+}
+material scrollsign
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture scrollscreen.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll_anim -0.32 0
+				rotate 0
+			}
+		}
+	}
+}
+material glass
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			scene_blend alpha_blend
+			depth_write off
+
+			texture_unit
+			{
+				texture falloutglass.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+               texture_unit
+               {
+                   texture iceref.dds
+                   colour_op_ex modulate_x4 src_current src_texture 
+                   env_map spherical
+               }
+		}
+	}
+}
+material signs2
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture signs4.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+               texture_unit
+               {
+                   texture glassmap.dds
+                   colour_op_ex modulate_x2 src_current src_texture 
+                   env_map planar
+               }
+
+
+		}
+	}
+}
+material signs3
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture signs5.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+               texture_unit
+               {
+                   texture glassmap.dds
+                   colour_op_ex modulate_x2 src_current src_texture 
+                   env_map planar
+               }
+
+
+		}
+	}
+}
+material ttbumper
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture trim.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material ttchecker
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture finishline.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material tttrim
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture trim2.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material ttdirt
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture dirtstrip.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material ttgrass
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture grass2.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material ttwall
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture wall.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}
+material ttmetalwall
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture ccpipe.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_current src_texture 
+				env_map cubic_reflection
+			}
+		}
+	}
+}
+material ttpipe
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture pipe.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_current src_texture 
+				env_map cubic_reflection
+			}
+		}
+	}
+}
+material ttrail
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture rail.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+		}
+	}
+}

@@ -1,0 +1,73 @@
+system music
+{
+scale	0.005 0.005 0.005
+scale_velocity   0.005
+	technique
+	{
+		// Use the billboard renderer defined in the *.pua script
+
+		material						note1
+		default_particle_width			10
+		default_particle_height			10
+		visual_particle_quota			5000
+		emitter							Point
+		{
+			emission_rate				.39
+			angle						0
+			direction					0 1 0
+			time_to_live				2.5
+			velocity					45
+		}
+		affector						SineForce
+		{
+			force_aff_vector			50 0 50
+			sinef_aff_frequency_min		5
+			sinef_aff_frequency_max		5
+		}
+		affector						Colour
+		{
+			colour_aff_time_colour		0	1 1 1 0
+			colour_aff_time_colour		.5	1 1 1 1
+			colour_aff_time_colour		1	1 1 1 0
+		}
+
+		affector               Scale
+		{
+		   xyz_scale           3
+		}
+	}
+	technique
+	{
+		// Use the billboard renderer defined in the *.pua script
+
+		material						note2
+		default_particle_width			10
+		default_particle_height			10
+		visual_particle_quota			5000
+		emitter							Point
+		{
+			emission_rate				.3
+			angle						2
+			direction					0 1 0
+			time_to_live				2.5
+			velocity					45
+		}
+		affector						SineForce
+		{
+			force_aff_vector			50 0 50
+			sinef_aff_frequency_min		5
+			sinef_aff_frequency_max		5
+		}
+		affector						Colour
+		{
+			colour_aff_time_colour		0	1 1 1 0
+			colour_aff_time_colour		.5	1 1 1 1
+			colour_aff_time_colour		1	1 1 1 0
+		}
+
+		affector               Scale
+		{
+		   xyz_scale           3
+		}
+	}
+}

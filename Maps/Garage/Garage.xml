@@ -1,0 +1,715 @@
+<?xml version="1.0" ?>
+<Map name="Garage" onload="GarageMapLoad" onunload="GarageMapUnload">
+    <Settings>
+        <Parameter name="SkyBox" type="STRING" data="garageskybox" />
+    </Settings>
+    <Scripts>
+        <Script profile="Client" name="Maps/Garage/Scripts/GarageMapClient.lua" />
+    </Scripts>
+    <MapObjects>
+        <MapObject type="OGREModel" name="SingleWorldMesh" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="Static" type="BOOL" data="true" />
+                <Parameter name="CastShadows" type="BOOL" data="false" />
+                <Parameter name="ReceiveShadows" type="BOOL" data="false" />
+                <Parameter name="RenderMeshName" type="STRING" data="garage_r.mesh" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="OGREModel" name="LiftMeshG" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="Static" type="BOOL" data="true" />
+                <Parameter name="CastShadows" type="BOOL" data="true" />
+                <Parameter name="ReceiveShadows" type="BOOL" data="true" />
+                <Parameter name="RenderMeshName" type="STRING" data="shadowlift.mesh" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="OGREModel" name="RadioMesh" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="Static" type="BOOL" data="false" />
+                <Parameter name="CastShadows" type="BOOL" data="false" />
+                <Parameter name="ReceiveShadows" type="BOOL" data="false" />
+                <Parameter name="SetAnimation" type="STRING" data="idle" />
+                <Parameter name="RenderMeshName" type="STRING" data="radio.mesh" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="OGREParticleEffect" name="musicParticles" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="PositionX" type="FLOAT" data="-1.283" />
+                <Parameter name="PositionY" type="FLOAT" data="-0.245" />
+                <Parameter name="PositionZ" type="FLOAT" data="0.1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="Static" type="BOOL" data="false" />
+                <Parameter name="CastShadows" type="BOOL" data="false" />
+                <Parameter name="ReceiveShadows" type="BOOL" data="false" />
+                <Parameter name="Loop" type="BOOL" data="false" />
+                <Parameter name="ResourceName" type="STRING" data="music" />
+                <Parameter name="StartOnLoad" type="BOOL" data="true" />
+            </Parameters>
+        </MapObject>
+        <!-- SOUNDS! -->
+        <MapObject type="SoundSource" name="Radio01" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="SpatialMode" type="STRING" data="GLOBAL"/>
+				<Parameter name="ReferenceDistance" type="FLOAT" data="2"/>
+				<Parameter name="RolloffFactor" type="FLOAT" data="1"/>
+                <Parameter name="PositionX" type="FLOAT" data="-1.319" />
+                <Parameter name="PositionY" type="FLOAT" data="-0.255" />
+                <Parameter name="PositionZ" type="FLOAT" data="0.065" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Radio-Sequence.wav" />
+                <Parameter name="Looping" type="BOOL" data="true" />
+                <Parameter name="SoundType" type="STRING" data="MUSIC" />
+                <Parameter name="MaxDistance" type="FLOAT" data="65" />
+                <Parameter name="Volume" type="FLOAT" data="1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="true" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="false" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="60" />
+                <Parameter name="Priority" type="STRING" data="HIGH" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="Roomtone" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="0" />
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_Roomtone.wav" />
+                <Parameter name="Looping" type="BOOL" data="true" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data=".5" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="true" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="false" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="5" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="15" />
+                <Parameter name="Priority" type="STRING" data="MEDIUM" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="RaceAmb" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="0" />
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Racing.wav" />
+                <Parameter name="Looping" type="BOOL" data="true" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data=".1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="true" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="false" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="5" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="15" />
+                <Parameter name="Priority" type="STRING" data="MEDIUM" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="PlayerEngine" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="0" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Engine_1.wav" />
+                <Parameter name="Looping" type="BOOL" data="true" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data=".1" />
+                <Parameter name="Pitch" type="FLOAT" data=".5" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="true" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="false" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="60" />
+                <Parameter name="Priority" type="STRING" data="MEDIUM" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="AirDrill" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="10" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Air_Drill.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="60" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="Hammering1" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="-10" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Hammering_1.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="90" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="Hammering2" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="10" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="10" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Hammering_2.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="90" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="KartEngine1" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="-10" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="-7" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Kart_Engine_1.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="80" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="KartEngine2" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="10" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="-7" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Kart_Engine_2.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="60" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="KartEngine3" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="3" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="-12" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Kart_Engine_2.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="70" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="Lift" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="-14" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Lift.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="100" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="Ratchet" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="-14" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Ratchet.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="60" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="130" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="Tools1" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="-4" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="12" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Tools_1.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="20" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="90" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="Tools2" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="4" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="12" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Tools_2.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="60" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="Tools3" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="10" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="12" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Tools_3.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="90" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="Tools5" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="-10" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="12" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Tools_5.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="80" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="Tools6" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="-15" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="10" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Tools_6.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="1" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="90" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="KartDrive1" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="-20" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Kart_Drive_1.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="0.2" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="90" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="KartDrive2" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="-20" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Kart_Drive_2.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="0.2" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="90" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="KartDrive3" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="-20" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Kart_Drive_3.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="0.2" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="90" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+        <MapObject type="SoundSource" name="KartDrive4" sync="false">
+            <Profiles>
+                <Profile name="Client" />
+            </Profiles>
+            <Connections />
+            <Parameters>
+                <Parameter name="ReferenceDistance" type="FLOAT" data="1" />
+                <Parameter name="PositionX" type="FLOAT" data="-20" />
+                <Parameter name="PositionY" type="FLOAT" data="0" />
+                <Parameter name="PositionZ" type="FLOAT" data="0" />
+                <Parameter name="ScaleX" type="FLOAT" data="1" />
+                <Parameter name="ScaleY" type="FLOAT" data="1" />
+                <Parameter name="ScaleZ" type="FLOAT" data="1" />
+                <Parameter name="OrientationW" type="FLOAT" data="1" />
+                <Parameter name="OrientationX" type="FLOAT" data="0" />
+                <Parameter name="OrientationY" type="FLOAT" data="0" />
+                <Parameter name="OrientationZ" type="FLOAT" data="0" />
+                <Parameter name="Resource" type="STRING" data="sound\Garage\Garage_AMB_Kart_Drive_4.wav" />
+                <Parameter name="Looping" type="BOOL" data="false" />
+                <Parameter name="MaxDistance" type="FLOAT" data="20" />
+                <Parameter name="Volume" type="FLOAT" data="0.2" />
+                <Parameter name="Pitch" type="FLOAT" data="1" />
+                <Parameter name="PlayAtLoad" type="BOOL" data="false" />
+                <Parameter name="PlayAtRandom" type="BOOL" data="true" />
+                <Parameter name="RandomTimeMin" type="FLOAT" data="30" />
+                <Parameter name="RandomTimeMax" type="FLOAT" data="90" />
+                <Parameter name="Priority" type="STRING" data="LOWEST" />
+            </Parameters>
+        </MapObject>
+    </MapObjects>
+</Map>

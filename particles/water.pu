@@ -1,0 +1,61 @@
+system water
+{
+scale	.1 .1 .1
+	// --------------- Clouds ---------------
+	technique
+	{
+		renderer						Billboard
+		{
+			billboard_type					point
+			billboard_rotation_type				vertex
+		}
+		material						waterspray
+		default_particle_width			1
+		default_particle_height			1
+		visual_particle_quota			200
+		emitter							Box
+		{
+			box_em_width       1
+			box_em_height      .25
+			box_em_depth       1
+			enabled					true
+			emission_rate				80
+			velocity				dyn_random
+			{
+				min				3
+				max				5
+			}
+			angle					45
+			time_to_live				.5
+			direction				0 1 0
+		}
+		
+		
+		affector                           TextureRotator
+		{
+		    tex_rot_rotation               dyn_random
+		    {
+			min                       -30
+			max                        30
+		    }
+		    tex_rot_speed                  10
+		}
+
+		affector						Scale
+		{
+			xyz_scale					40
+		}
+
+		affector               LinearForce
+		{
+		   force_aff_vector    0 -40 0
+		}
+		affector                    Colour
+		{
+		   colour_aff_time_colour   0 1 1 1 1
+		   colour_aff_time_colour   .4 1 1 1 0
+		}
+
+	}
+}
+

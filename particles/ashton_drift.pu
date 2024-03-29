@@ -1,0 +1,63 @@
+system ashton_drift
+{
+fixed_timeout   1
+	technique
+	{
+		material						ashton_drift
+
+		visual_particle_quota			10
+		renderer						Billboard
+		{
+			billboard_type					point
+			billboard_rotation_type			vertex
+		}
+
+		default_particle_width			1
+		default_particle_height			1
+
+		emitter							Circle
+		{
+			enabled					true
+			emission_rate			5
+			force_emission			true
+			circle_em_radius		.1
+
+			velocity					dyn_random
+			{
+				min						1
+				max						2
+			}
+			time_to_live			dyn_random
+			{
+				min						.5
+				max						1.5
+			}
+			direction				0 1 0
+			angle					180
+		}
+		
+		affector						Colour
+		{
+			colour_aff_time_colour		0 1 1 1 .4
+			colour_aff_time_colour		0.2 1 1 1 .4
+			colour_aff_time_colour		0.4 1 1 1 0
+		}
+	
+		affector                           TextureRotator
+		{
+		    tex_rot_rotation               dyn_random
+		    {
+				min                       -60
+				max                        60
+		    }
+		    tex_rot_speed                  0
+		}
+
+		affector						Scale
+		{
+			xyz_scale					.5
+		}
+	}
+}
+
+

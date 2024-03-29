@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<Materials>
+	<Material name="defaultmaterial">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+	</Material>
+
+	<Material name="dirtmaterial">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+		<Parameter name="WheelParticle" type="STRING" data="sandtrack"/>
+		<Parameter name="SurfaceSound" type="STRING" data="sound/Driving_on_gravel.wav"/>
+
+	</Material>
+
+	<Material name="woodmaterial">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+		<Parameter name="SurfaceSound" type="STRING" data="sound/woodbridge.wav"/>
+	</Material>
+
+	<Material name="snowmaterial">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+		<Parameter name="WheelParticle" type="STRING" data="snowplow"/>
+		<Parameter name="SurfaceSound" type="STRING" data="sound/Driving_on_snow.wav"/>
+	</Material>
+
+</Materials>

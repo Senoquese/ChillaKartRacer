@@ -1,0 +1,9 @@
+<Item type="Wheels" name="Floating">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Defying gravity!" />
+		<Colors amount="2" Color1=".15 .15 .15" Color2=".6 .6 .6" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

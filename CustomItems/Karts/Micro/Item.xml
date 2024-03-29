@@ -1,0 +1,15 @@
+<Item type="Kart" name="Micro">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Zip Zip" />
+		<Colors amount="4" Color1="0 0.639 0.412" Color2=".7 .7 .7" Color3="0.494 0.678 0.702" Color4="0.408 0.318 0.145" />
+	</Description>
+	<Settings>
+		<Parameter name="DriverPositionX" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionY" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionZ" type="FLOAT" data="-.11" />
+		<Parameter name="IdleRate" type="FLOAT" data=".025" />
+		<Parameter name="IdleVariable" type="BOOL" data="true" />
+		<Parameter name="IdleRateMultiplier" type="FLOAT" data="2" />
+	</Settings>
+</Item>

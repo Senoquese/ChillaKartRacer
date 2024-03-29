@@ -1,0 +1,9 @@
+<Item type="Hats" name="Party Hat">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Lets get this party started." />
+		<Colors amount="2" Color1="0 0.396 0.675" Color2=".31 0.718 1" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

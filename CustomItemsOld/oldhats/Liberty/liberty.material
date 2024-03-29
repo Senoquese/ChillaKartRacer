@@ -1,0 +1,56 @@
+material liberty
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+			// double sided
+			cull_hardware none
+      			cull_software none 
+
+			vertex_program_ref NimbleItem_VS
+			{
+			}
+
+			fragment_program_ref NimbleItem_PS
+			{
+			// Color# and R G B A	
+                 		param_named Color1 float4 .427 .565 .549 1
+			// # of Colors
+				param_named NumColors float 1
+			// amount of rim lighting (0-1)
+				param_named rimFactor float .4
+			}
+			// base texture
+			texture_unit
+			{
+				texture liberty.dds
+			}
+			// colormask
+			texture_unit
+			{
+				texture liberty_colormask.tga
+			}
+			// shiny cubemap
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+			}
+			// shiny mask
+			texture_unit
+			{
+				texture tool_black.dds
+			}
+			// rimlight cubemap
+			texture_unit
+			{
+				cubic_texture rim.dds combinedUVW
+			}
+		}
+	}
+}

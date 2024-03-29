@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="Panel" position="3 245 75 230" align="Left VCenter" layer="Back" name="boostcont">
+        <Property key="Widget_Alpha" value="0"/>
+         <Widget type="StaticImage" skin="StaticImage" position="0 0 75 230" layer="Back" name="boostbg">
+            <Property key="Image_Texture" value="core_zg.png"/>
+            <Property key="Image_Coord" value="7 254 75 230"/>
+            <Property key="Image_Tile" value="75 230"/>
+            <Property key="Widget_Enabled" value="false"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+	
+	<Widget type="Progress" skin="ProgressFill" position="12 32 49 182" layer="Main" name="boostmeter">
+            <Property key="Progress_StartPoint" value="Bottom"/>
+            <Property key="Progress_Range" value="100"/>
+            <Property key="Progress_Position" value="50"/>
+            <Property key="Progress_AutoTrack" value="false"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+
+        <Widget type="StaticImage" skin="StaticImage" position="0 0 75 230" layer="Overlapped" name="boostfg">
+            <Property key="Image_Texture" value="core_zg.png"/>
+            <Property key="Image_Coord" value="83 254 75 230"/>
+            <Property key="Image_Tile" value="75 230"/>
+            <Property key="Widget_Enabled" value="false"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+    </Widget>
+</MyGUI>

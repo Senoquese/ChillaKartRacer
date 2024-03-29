@@ -1,0 +1,876 @@
+material skybox
+{
+	technique
+	{
+		pass
+		{
+			fog_override true
+			lighting off
+			depth_write off
+			diffuse 1 1 1 1
+			ambient 1 1 1 1
+
+			texture_unit
+			{
+				cubic_texture westfront.dds westback.dds westleft.dds westright.dds westtop.dds westbottom.dds separateUV
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+material fence
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			scene_blend alpha_blend
+			depth_write off
+			cull_hardware none
+      			cull_software none
+ 			alpha_rejection greater 200
+
+			texture_unit
+			{
+				texture chainlink.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+
+		}
+	}
+}
+material sand2
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture sand.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+
+		}
+	}
+}
+material sand
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture sand.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+
+		}
+	}
+}
+material skull
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture skull.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+//rimlighting
+			texture_unit
+			{
+				cubic_texture rim.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map cubic_normal
+			}
+		}
+	}
+}
+material woodend
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture woodstump.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+//rimlighting
+			texture_unit
+			{
+				cubic_texture rim50.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map cubic_normal
+			}
+		}
+	}
+}
+material banner
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture banner.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+//rimlighting
+			texture_unit
+			{
+				cubic_texture rim.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map cubic_normal
+			}
+		}
+	}
+}
+material wood
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture westwood.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+
+		}
+	}
+}
+material wood_green
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture building4.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+//rimlighting
+//			texture_unit
+//			{
+//				cubic_texture rim50.dds combinedUVW
+//				tex_address_mode clamp
+//				colour_op_ex add src_texture src_current
+//				colour_op_multipass_fallback one one
+//				env_map cubic_normal
+//			}
+		}
+	}
+}
+material building
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture buildingdetails.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+//rimlighting
+//			texture_unit
+//			{
+//				cubic_texture rim50.dds combinedUVW
+//				tex_address_mode clamp
+//				colour_op_ex add src_texture src_current
+//				colour_op_multipass_fallback one one
+//				env_map cubic_normal
+//			}
+		}
+	}
+}
+
+material building_shiny
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture buildingdetails.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+			
+			texture_unit
+               	{
+                   	texture stripey.dds
+                   	colour_op_ex modulate_x2 src_current src_texture 
+                   	env_map planar
+               	}
+//rimlighting
+//			texture_unit
+//			{
+//				cubic_texture rim.dds combinedUVW
+//				tex_address_mode clamp
+//				colour_op_ex add src_texture src_current
+//				colour_op_multipass_fallback one one
+//				env_map cubic_normal
+//			}
+
+		}
+	}
+}
+
+material wood_yellow
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture building1.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+//rimlighting
+//			texture_unit
+//			{
+//				cubic_texture rim50.dds combinedUVW
+//				tex_address_mode clamp
+//				colour_op_ex add src_texture src_current
+//				colour_op_multipass_fallback one one
+//				env_map cubic_normal
+//			}
+		}
+	}
+}
+material wood_red
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture building2.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+//rimlighting
+//			texture_unit
+//			{
+//				cubic_texture rim50.dds combinedUVW
+//				tex_address_mode clamp
+//				colour_op_ex add src_texture src_current
+//				colour_op_multipass_fallback one one
+//				env_map cubic_normal
+//			}
+		}
+	}
+}
+material cliff
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture canyonwall.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+//rimlighting
+			texture_unit
+			{
+				cubic_texture rim50.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map cubic_normal
+			}
+		}
+	}
+}
+material cactus
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture cactus.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+//rimlighting
+			texture_unit
+			{
+				cubic_texture rim.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map cubic_normal
+			}
+		}
+	}
+}
+material tumbleweed
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			scene_blend alpha_blend
+ 			alpha_rejection greater 128
+			cull_hardware none
+      		cull_software none 
+			depth_write off
+
+			texture_unit
+			{
+				texture tumbleweed.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+//rimlighting
+//			texture_unit
+//			{
+//				cubic_texture rim50.dds combinedUVW
+//				tex_address_mode clamp
+//				colour_op_ex add src_texture src_current
+//				colour_op_multipass_fallback one one
+//				env_map cubic_normal
+//			}
+
+		}
+	}
+}
+material cave
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture mine.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+
+		}
+	}
+}
+material lantern
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture lantern.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_current src_texture 
+				env_map cubic_reflection
+			}
+//rimlighting
+			texture_unit
+			{
+				cubic_texture rim50.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map cubic_normal
+			}
+		}
+	}
+}
+material rail
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture westrail.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_current src_texture 
+				env_map cubic_reflection
+			}
+
+		}
+	}
+}
+material minecart
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture minecart.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_current src_texture 
+				env_map cubic_reflection
+			}
+//rimlighting
+//			texture_unit
+//			{
+//				cubic_texture rim50.dds combinedUVW
+//				tex_address_mode clamp
+//				colour_op_ex add src_texture src_current
+//				colour_op_multipass_fallback one one
+//				env_map cubic_normal
+//			}
+		}
+	}
+}
+material tnt
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture tnt.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+//rimlighting
+//			texture_unit
+//			{
+//				cubic_texture rim50.dds combinedUVW
+//				tex_address_mode clamp
+//				colour_op_ex add src_texture src_current
+//				colour_op_multipass_fallback one one
+//				env_map cubic_normal
+//			}
+		}
+	}
+}
+material danger
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture danger.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+//rimlighting
+//			texture_unit
+//			{
+//				cubic_texture rim50.dds combinedUVW
+//				tex_address_mode clamp
+//				colour_op_ex add src_texture src_current
+//				colour_op_multipass_fallback one one
+//				env_map cubic_normal
+//			}
+		}
+	}
+}
+material crystal
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0.467 0.814516 1
+		        scene_blend alpha_blend
+//		        depth_write off
+
+			texture_unit
+			{
+				texture crystal.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_current src_texture
+				alpha_op_ex source1 src_manual src_current 0.85
+				env_map cubic_reflection
+			}
+			texture_unit
+               	{
+                   	texture stripey.dds
+                   	colour_op_ex modulate_x2 src_current src_texture 
+                   	env_map planar
+               	}
+//rimlighting
+			texture_unit
+			{
+				cubic_texture rim.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map cubic_normal
+			}
+
+		}
+	}
+}
+
+material wood_blue
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture building3.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+//rimlighting
+//			texture_unit
+//			{
+//				cubic_texture rim50.dds combinedUVW
+//				tex_address_mode clamp
+//				colour_op_ex add src_texture src_current
+//				colour_op_multipass_fallback one one
+//				env_map cubic_normal
+//			}
+		}
+	}
+}
+material wood_white
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture building5.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+//rimlighting
+//			texture_unit
+//			{
+//				cubic_texture rim50.dds combinedUVW
+//				tex_address_mode clamp
+//				colour_op_ex add src_texture src_current
+//				colour_op_multipass_fallback one one
+//				env_map cubic_normal
+//			}
+		}
+	}
+}
+material track
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 1 1 1 1
+			diffuse vertexcolour
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture sandtrack2.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll 0 0
+				rotate 0
+			}
+
+		}
+	}
+}

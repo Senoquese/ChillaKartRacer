@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<Materials>
+	<Material name="defaultmat">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+	</Material>
+
+	<Material name="grassmat">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+		<Parameter name="WheelParticle" type="STRING" data="grass"/>
+		<Parameter name="SurfaceSound" type="STRING" data="sound/Driving_on_grass.wav"/>
+	</Material>
+
+	<Material name="snowmat">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+		<Parameter name="WheelParticle" type="STRING" data="snowplow"/>
+		<Parameter name="SurfaceSound" type="STRING" data="sound/Driving_on_grass.wav"/>
+	</Material>
+</Materials>

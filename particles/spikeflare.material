@@ -1,0 +1,17 @@
+material spikeflare
+{
+	technique
+	{
+		pass
+		{
+			fog_override true
+			lighting off
+			depth_write off
+			scene_blend add
+			texture_unit
+			{
+				texture spikeflare.dds
+			}
+		}
+	}
+}

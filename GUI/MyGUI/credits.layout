@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Window" skin="WindowCSX" position="384 72 512 600" align="Center" layer="Main" name="credits">
+        <Widget type="StaticText" skin="StaticText" position="0 16 504 24">
+            <Property key="Widget_Caption" value="Zero Gear by NimbleBit LLC 2009"/>
+            <Property key="Text_FontHeight" value="22"/>
+            <Property key="Text_TextAlign" value="Center"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="24 48 120 24">
+            <Property key="Widget_Caption" value="Programming"/>
+            <Property key="Text_TextAlign" value="HCenter Top"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="236 48 32 24">
+            <Property key="Widget_Caption" value="Art"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="384 48 72 24">
+            <Property key="Widget_Caption" value="Scripting"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="32 72 104 24">
+            <Property key="Widget_Caption" value="Brian Cronin"/>
+            <Property key="Text_TextAlign" value="HCenter Top"/>
+            <Property key="Text_FontHeight" value="22"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="200 72 104 24">
+            <Property key="Widget_Caption" value="David Marsh"/>
+            <Property key="Text_TextAlign" value="HCenter Top"/>
+            <Property key="Text_FontHeight" value="22"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="376 72 80 24">
+            <Property key="Widget_Caption" value="Ian Marsh"/>
+            <Property key="Text_TextAlign" value="HCenter Top"/>
+            <Property key="Text_FontHeight" value="22"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="216 120 80 24">
+            <Property key="Widget_Caption" value="Sound by"/>
+            <Property key="Text_FontHeight" value="22"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="144 152 224 32" align="HCenter Top">
+            <Property key="Widget_Caption" value="Tapio Liukkonen, Kaamos Sound"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="208 192 80 24">
+            <Property key="Widget_Caption" value="Music by"/>
+            <Property key="Text_TextAlign" value="HCenter Top"/>
+            <Property key="Text_FontHeight" value="22"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="0 232 504 24">
+            <Property key="Widget_Caption" value="Christopher Geehan &amp; Daniel Byrne-McCullough"/>
+            <Property key="Text_TextAlign" value="Center"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="208 304 80 16">
+            <Property key="Widget_Caption" value="Testers"/>
+            <Property key="Text_TextAlign" value="HCenter Top"/>
+            <Property key="Text_FontHeight" value="22"/>
+        </Widget>
+        <Widget type="Edit" skin="WordWrapSimple" position="32 328 440 64">
+            <Property key="Widget_Caption" value="Whalley, Pengwin, CheeToS, Skizot, Seraph, DreadLord, Waldo, Wacko, Turles, ChadyG, dannyswrld, nuR421, Max Spain, Baddcog, Vlayroth, Stephen Pesavento "/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="176 398 144 24">
+            <Property key="Widget_Caption" value="Special Thanks"/>
+            <Property key="Text_TextAlign" value="HCenter Top"/>
+            <Property key="Text_FontHeight" value="22"/>
+        </Widget>
+        <Widget type="Edit" skin="WordWrapSimple" position="32 422 448 98">
+            <Property key="Widget_Caption" value="All of our families and loved ones, Steve Streeting and the Ogre3D community, Henry van Merode, Jeff Hammock, Sean Kennedy,  Ron Carmel, Alan Turing, Erwin Coumans and the Bullet Physics community, Polycount.com, IndieBiz, Valve Software"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="0 208 504 32">
+            <Property key="Widget_Caption" value="HyperDuck Music Studios"/>
+            <Property key="Text_TextAlign" value="Center"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="28 537 444 23" layer="Back">
+            <Property key="Widget_Caption" value="In memory of George Cronin"/>
+            <Property key="Text_TextAlign" value="Center"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="0 272 504 16" layer="Back">
+            <Property key="Widget_Caption" value="Zero Gear FM Hosts: Pencil &amp; Henry the Fist, also feat. Kevin Carville"/>
+            <Property key="Text_TextAlign" value="Center"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="180 249 140 23" layer="Back">
+            <Property key="Widget_Caption" value="HyperDuck.co.uk"/>
+            <Property key="Text_TextAlign" value="Center"/>
+        </Widget>
+    </Widget>
+</MyGUI>

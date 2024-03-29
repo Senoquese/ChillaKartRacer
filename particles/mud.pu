@@ -1,0 +1,121 @@
+system mud
+{
+scale	.5 .5 .5
+	// --------------- Clouds ---------------
+	technique
+	{
+		renderer						Billboard
+		{
+			billboard_type					point
+			billboard_rotation_type				vertex
+		}
+		material						snow
+		default_particle_width			.3
+		default_particle_height			.3
+		visual_particle_quota			160
+		emitter							Box
+		{
+			box_em_width       1
+			box_em_height      .25
+			box_em_depth       1
+			enabled					true
+			emission_rate				20
+			velocity				dyn_random
+			{
+				min				350
+				max				500
+			}
+			all_particle_dimensions			dyn_random
+			{
+				min	.2
+				max	.5
+			}
+			angle					20
+			time_to_live				.3
+			direction				0 1 0
+		}
+		
+				affector                    Colour
+		{
+		   colour_aff_time_colour   0 .33 .21 .12 1
+		}
+
+		affector						Scale
+		{
+			xyz_scale					-1
+		}
+
+		affector               LinearForce
+		{
+		   force_aff_vector    0 -2000 0
+		}
+
+	}
+
+		technique
+	{
+		keep_local   true
+		renderer						Billboard
+		{
+			billboard_type					point
+			billboard_rotation_type				vertex
+		}
+		material						snowclump
+		default_particle_width			.3
+		default_particle_height			.3
+		visual_particle_quota			80
+		emitter							Box
+		{
+			box_em_width       .5
+			box_em_height      .25
+			box_em_depth       .5
+			enabled					true
+			emission_rate				10
+			velocity				dyn_random
+			{
+				min				200
+				max				300
+			}
+			all_particle_dimensions			dyn_random
+			{
+				min	1
+				max	1.5
+			}
+			angle					20
+			time_to_live				.3
+			direction				0 1 0
+		}
+		
+		
+		affector						Scale
+		{
+			xyz_scale					3
+		}
+
+		affector                           TextureRotator
+		{
+		    tex_rot_rotation               dyn_random
+		    {
+			min                       -30
+			max                        30
+		    }
+		    tex_rot_speed                  dyn_random
+		    {	min		-5
+			max			5
+			}	
+		}
+
+		affector               LinearForce
+		{
+		   force_aff_vector    0 -2000 0
+		}
+		affector                    Colour
+		{
+		   colour_aff_time_colour   0 .33 .21 .12 1
+		   colour_aff_time_colour   .5 .33 .21 .12 1
+		   colour_aff_time_colour   .8 .33 .21 .12 0
+
+		}
+	}
+}
+

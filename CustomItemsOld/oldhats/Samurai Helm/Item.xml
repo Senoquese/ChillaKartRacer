@@ -1,0 +1,9 @@
+<Item type="Hats" name="Samurai Helm">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Battle with honor." />
+		<Colors amount="3" Color1="0 .6 0" Color2="1 0 0" Color3="1 0.95 0.57" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

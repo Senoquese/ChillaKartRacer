@@ -1,0 +1,9 @@
+<Item type="Wheels" name="Innertube">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Great for toobin" />
+		<Colors amount="3" Color1=".176 .216 .231" Color2=".631 .631 .631" Color3=".659 .298 .067" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

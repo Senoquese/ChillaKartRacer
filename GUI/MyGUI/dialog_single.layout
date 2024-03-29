@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="Panel" position="-4 -4 1288 728" align="Stretch" layer="Popup" name="cont">
+        <Property key="Widget_Alpha" value=".5"/>
+        <Widget type="Window" skin="WindowC" position="484 268 312 184" align="Center" layer="Main" name="box">
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_Caption" value="Title"/>
+            <Widget type="Edit" skin="WordWrap" position="8 9 284 87" layer="Back" name="bodytext">
+                <Property key="Widget_Caption" value="Are you sure you want to quit?"/>
+                <Property key="Text_TextAlign" value="HCenter VCenter"/>
+            </Widget>
+            <Widget type="Button" skin="ButtonSmall" position="84 105 140 32" layer="Main" name="button">
+                <Property key="Widget_Caption" value="left"/>
+            </Widget>
+        </Widget>
+    </Widget>
+</MyGUI>

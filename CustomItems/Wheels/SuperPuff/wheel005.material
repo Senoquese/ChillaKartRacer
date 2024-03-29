@@ -1,0 +1,53 @@
+material wheel005
+{
+	technique
+	{
+		pass
+		{
+		
+			ambient 0 0 0 0
+			diffuse 0 0 0 0
+			specular 0 0 0 0
+			emissive 0 0 0
+
+			vertex_program_ref NimbleInstancedItem_VS
+			{
+			}
+
+			fragment_program_ref NimbleItem_PS
+			{
+			// Color# and R G B A	
+                 		param_named Color1 float4 1 1 1 1
+			// # of Colors
+				param_named NumColors float 1
+			// amount of rim lighting (0-1)
+				param_named rimFactor float .15
+			}
+			// base texture
+			texture_unit
+			{
+				texture wheel005_lum.dds
+			}
+			// colormask
+			texture_unit
+			{
+				texture wheel005_colormask.tga
+			}
+			// shiny cubemap
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+			}
+			// shiny mask
+			texture_unit
+			{
+				texture wheel005_envmask.dds
+			}
+			// rimlight cubemap
+			texture_unit
+			{
+				cubic_texture rim.dds combinedUVW
+			}
+		}
+	}
+}

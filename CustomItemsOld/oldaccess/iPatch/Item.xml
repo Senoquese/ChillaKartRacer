@@ -1,0 +1,9 @@
+<Item type="Accessories" name="iPatch">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Now smaller and with more features!" />
+		<Colors amount="1" Color1=".2 .2 .2" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

@@ -1,0 +1,15 @@
+<Item type="Kart" name="Barnacle Bucket">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Stomp the competition!" />
+		<Colors amount="3" Color1=".459 .243 .192" Color2="1 .949 .831" Color3="1 .69 .365" />
+	</Description>
+	<Settings>
+		<Parameter name="DriverPositionX" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionY" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionZ" type="FLOAT" data="0" />
+		<Parameter name="IdleRate" type="FLOAT" data="1" />
+		<Parameter name="IdleVariable" type="BOOL" data="true" />
+		<Parameter name="IdleRateMultiplier" type="FLOAT" data="1" />
+	</Settings>
+</Item>

@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="Panel" position="480 624 320 96" align="HCenter Bottom" layer="Back" name="container">
+        <Widget type="StaticText" skin="StaticText" position="24 8 40 16" layer="Back">
+            <Property key="Widget_Caption" value="FPS:"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="64 8 48 16" layer="Back" name="fps">
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_TextColour" value="0 1 0"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="40 32 24 16" layer="Back">
+            <Property key="Widget_Caption" value="In:"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="64 32 40 16" layer="Back" name="in">
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_TextColour" value="0 1 0"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="24 48 32 16" layer="Back">
+            <Property key="Widget_Caption" value="Out:"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="64 48 40 16" layer="Back" name="out">
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_TextColour" value="0 1 0"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="8 72 48 16" layer="Back">
+            <Property key="Widget_Caption" value="S FPS:"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="64 72 40 16" layer="Back" name="sfps">
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_TextColour" value="0 1 0"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="128 8 40 24" layer="Back">
+            <Property key="Widget_Caption" value="Ping:"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="168 8 56 16" layer="Back" name="ping">
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_TextColour" value="0 1 0"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="232 8 40 24" layer="Back">
+            <Property key="Widget_Caption" value="Sync:"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="264 8 32 16" layer="Back" name="sync">
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_TextColour" value="0 1 0"/>
+            <Property key="Text_TextAlign" value="Right Top"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="296 8 24 16" layer="Back">
+            <Property key="Widget_Caption" value="/s"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="112 32 56 16" layer="Back" name="insize">
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_TextColour" value="0 1 0"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="112 48 56 16" layer="Back" name="outsize">
+            <Property key="Text_TextColour" value="0 1 0"/>
+            <Property key="Widget_Caption" value="0"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="176 32 40 16" layer="Back">
+            <Property key="Widget_Caption" value="PPS:"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="176 48 40 16" layer="Back">
+            <Property key="Widget_Caption" value="PPS:"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="216 32 40 16" layer="Back" name="inpps">
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_TextColour" value="0 1 0"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="216 48 40 16" layer="Back" name="outpps">
+            <Property key="Text_TextColour" value="0 1 0"/>
+            <Property key="Widget_Caption" value="0"/>
+        </Widget>
+	<Widget type="StaticText" skin="StaticText" position="100 72 70 16" layer="Back">
+            <Property key="Widget_Caption" value="Lag Time:"/>
+        </Widget>
+	<Widget type="StaticText" skin="StaticText" position="170 72 60 16" layer="Back" name="lagtime">
+            <Property key="Text_TextColour" value="0 1 0"/>
+            <Property key="Widget_Caption" value="0"/>
+        </Widget>
+    </Widget>
+</MyGUI>

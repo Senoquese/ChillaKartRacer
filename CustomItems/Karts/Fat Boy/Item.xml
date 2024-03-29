@@ -1,0 +1,15 @@
+<Item type="Kart" name="Fat Boy">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Chase em all the way to the fallout shelter!" />
+		<Colors amount="4" Color1="0.831 0.831 0.831" Color2="1 0 0" Color3="1 0.981 0" Color4="0.235 0.349 0.141" />
+	</Description>
+	<Settings>
+		<Parameter name="DriverPositionX" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionY" type="FLOAT" data="0.25" />
+		<Parameter name="DriverPositionZ" type="FLOAT" data="-0.031" />
+		<Parameter name="IdleRate" type="FLOAT" data="1" />
+		<Parameter name="IdleVariable" type="BOOL" data="true" />
+		<Parameter name="IdleRateMultiplier" type="FLOAT" data="1" />
+	</Settings>
+</Item>

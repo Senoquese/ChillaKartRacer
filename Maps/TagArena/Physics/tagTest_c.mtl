@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<Materials>
+	<Material name="defaultmaterial">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+	</Material>
+
+	<Material name="initialShadingGroup">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+	</Material>
+
+	<Material name="grassmaterial">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+		<Parameter name="WheelParticle" type="STRING" data="grass"/>
+	</Material>
+
+	<Material name="dirtmaterial">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+		<Parameter name="WheelParticle" type="STRING" data="dust"/>
+	</Material>
+
+	<Material name="slipperymaterial">
+		<Parameter name="FrictionPercent" type="FLOAT" data="0"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+	</Material>
+</Materials>

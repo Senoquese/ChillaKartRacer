@@ -1,0 +1,58 @@
+system slide
+{
+//fixed_timeout   5
+//NOTE: keep_local true should always be on the system level, NOT the technique or emitter level
+keep_local true
+
+
+	technique
+	{
+		material						cloud_particle
+		visual_particle_quota			20
+		renderer						Billboard
+		{
+			billboard_type					point
+			billboard_rotation_type				vertex
+		}
+		
+		emitter							Point
+		{
+			position				0 0 0
+			enabled					true
+			emission_rate				10
+			direction					0 0 -1
+			angle						25
+			time_to_live				.5
+			particle_height				.3
+			particle_width				.3
+			velocity				1
+
+		}
+		
+		affector						Colour
+		{
+			colour_aff_time_colour		0	1 1 1 .8
+			colour_aff_time_colour		1	1 1 1 0
+		}
+		
+		affector						Scale
+		{
+			xyz_scale					1.01
+
+		}
+		affector                           TextureRotator
+		{
+		    tex_rot_rotation               dyn_random
+		    {
+			min                       -30
+			max                        30
+		    }
+		    tex_rot_speed                  0
+		}		
+
+	}
+
+
+}
+
+

@@ -1,0 +1,39 @@
+01:12:02: Creating resource group General
+01:12:02: Creating resource group Internal
+01:12:02: Creating resource group Autodetect
+01:12:02: Registering ResourceManager for type Mesh
+01:12:02: Registering ResourceManager for type Material
+01:12:02: Registering ResourceManager for type Skeleton
+01:12:02: XMLSkeletonSerializer: reading XML data from E:\Games\Steam\steamapps\common\Zero Gear\Assets\CustomItems\Characters\Chinchilla\chinchilla.skeleton.xml...
+01:12:02: XMLSkeletonSerializer: Reading Bones name...
+01:12:02: XMLSkeletonSerializer: Reading Hierarchy data...
+01:12:02: XMLSkeletonSerializer: Reading Bones data...
+01:12:02: XMLSkeletonSerializer: Reading Animations data...
+01:12:02: Animation: nom: celebration et longueur: 0.791667
+01:12:02: Animation: nom: cry et longueur: 0.958333
+01:12:02: Animation: nom: lookback et longueur: 0.416667
+01:12:02: Animation: nom: turn_left et longueur: 0.375
+01:12:02: Animation: nom: turn_right et longueur: 0.375
+01:12:02: Animation: nom: wave et longueur: 0.708333
+01:12:02: Animation: nom: wipeout et longueur: 0.166667
+01:12:02: XMLSkeletonSerializer: Finished. Running SkeletonSerializer...
+01:12:02: Exporting bones..
+01:12:02: Bones exported.
+01:12:02: Exporting animations, count=7
+01:12:02: Exporting animation: celebration
+01:12:02: Animation exported.
+01:12:02: Exporting animation: cry
+01:12:02: Animation exported.
+01:12:02: Exporting animation: lookback
+01:12:02: Animation exported.
+01:12:02: Exporting animation: turn_left
+01:12:02: Animation exported.
+01:12:02: Exporting animation: turn_right
+01:12:02: Animation exported.
+01:12:02: Exporting animation: wave
+01:12:02: Animation exported.
+01:12:02: Exporting animation: wipeout
+01:12:02: Animation exported.
+01:12:02: Unregistering ResourceManager for type Skeleton
+01:12:02: Unregistering ResourceManager for type Material
+01:12:02: Unregistering ResourceManager for type Mesh

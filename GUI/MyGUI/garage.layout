@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+	<Widget type="Tab" skin="Tab" position="0 497 1282 228" align="HStretch Bottom" layer="Back" name="itemtabs">
+		<Property key="Widget_Enabled" value="true"/>
+		<Widget type="TabItem" skin="Default" position="4 26 1273 196" layer="Back">
+			<Property key="Sheet_Select" value="true"/>
+			<Property key="Widget_Caption" value="Karts"/>
+			<Widget type="ScrollView" skin="ScrollView" position="0 0 1274 200" align="Stretch" layer="Back" name="kartbox">
+				<Property key="ScrollView_CanvasAlign" value="Left Top"/>
+				<Property key="ScrollView_VisibleHScroll" value="false"/>
+			</Widget>
+		</Widget>
+		<Widget type="TabItem" skin="Default" position="4 26 1273 196" layer="Back">
+			<Property key="Widget_Caption" value="Wheels"/>
+			<Widget type="ScrollView" skin="ScrollView" position="0 0 1274 200" align="Stretch" layer="Back" name="wheelbox">
+				<Property key="ScrollView_CanvasAlign" value="Left Top"/>
+				<Property key="ScrollView_VisibleHScroll" value="false"/>
+			</Widget>
+		</Widget>
+		<Widget type="TabItem" skin="Default" position="4 26 1273 196" layer="Back">
+			<Property key="Widget_Caption" value="Characters"/>
+			<Widget type="ScrollView" skin="ScrollView" position="0 0 1274 200" align="Stretch" layer="Back" name="charbox">
+				<Property key="ScrollView_CanvasAlign" value="Left Top"/>
+				<Property key="ScrollView_VisibleHScroll" value="false"/>
+			</Widget>
+		</Widget>
+		<Widget type="TabItem" skin="Default" position="4 26 1273 196" layer="Back">
+			<Property key="Widget_Caption" value="Accessories"/>
+			<Widget type="ScrollView" skin="ScrollView" position="0 0 1274 200" align="Stretch" layer="Back" name="accbox">
+				<Property key="ScrollView_CanvasAlign" value="Left Top"/>
+				<Property key="ScrollView_VisibleHScroll" value="false"/>
+			</Widget>
+		</Widget>
+		<Widget type="TabItem" skin="Default" position="4 26 1273 196" layer="Back">
+			<Property key="Widget_Caption" value="Hats"/>
+			<Widget type="ScrollView" skin="ScrollView" position="0 0 1274 200" align="Stretch" layer="Back" name="hatbox">
+				<Property key="ScrollView_CanvasAlign" value="Left Top"/>
+				<Property key="ScrollView_VisibleHScroll" value="false"/>
+			</Widget>
+		</Widget>
+	</Widget>
+	<Widget type="Widget" skin="PanelSmall" position="992 472 288 48" align="Right Bottom" layer="Main" name="nav">
+		<Property key="Widget_Alpha" value="0"/>
+		<Property key="Widget_Enabled" value="true"/>
+		<Widget type="Widget" skin="PanelSmall" position="8 8 280 36" align="Right Top" layer="Back" name="buttonbox">
+			<Property key="Widget_InheritsAlpha" value="false"/>
+			<Widget type="StaticImage" skin="StaticImage" position="8 8 19 19" layer="Main">
+				<Property key="Widget_InheritsAlpha" value="false"/>
+				<Property key="Image_Texture" value="core_zg.png"/>
+				<Property key="Image_Coord" value="70 160 19 19"/>
+				<Property key="Image_Tile" value="19 19"/>
+			</Widget>
+			<Widget type="StaticImage" skin="StaticImage" position="148 8 19 19" layer="Main">
+				<Property key="Widget_InheritsAlpha" value="false"/>
+				<Property key="Image_Texture" value="core_zg.png"/>
+				<Property key="Image_Coord" value="48 175 19 19"/>
+				<Property key="Image_Tile" value="19 19"/>
+			</Widget>
+			<Widget type="Button" skin="Button" position="32 5 104 26" layer="Back" name="save">
+				<Property key="Widget_InheritsAlpha" value="false"/>
+				<Property key="Widget_Caption" value="Save &amp; Exit"/>
+			</Widget>
+			<Widget type="Button" skin="ButtonSmall" position="172 5 104 26" layer="Back" name="exit">
+				<Property key="Widget_InheritsAlpha" value="false"/>
+				<Property key="Widget_Caption" value="Exit"/>
+			</Widget>
+		</Widget>
+	</Widget>
+	<Widget type="Button" skin="Button" position="8 456 104 32" align="Left Bottom" layer="Back" name="randomize">
+		<Property key="Widget_Caption" value="Randomize!"/>
+	</Widget>
+</MyGUI>

@@ -1,0 +1,49 @@
+system crystalglint_eight
+{
+	technique
+	{
+		position						0 0 0
+		use_alias						$defaultBillboardRenderer
+		material						pointflare
+		default_particle_width			25
+		default_particle_height			25
+		visual_particle_quota			5000
+		emitter							MeshSurface
+		{
+			emission_rate				2
+//			force_emission				true
+			mesh_surface_mesh_name		crystals_eight.mesh
+			mesh_surface_distribution	homogeneous
+			time_to_live				5
+			velocity                            0
+		}
+		affector						Colour
+		{
+			colour_aff_time_colour		0	0 0 0
+			colour_aff_time_colour		.4	.362 .5 .5
+			colour_aff_time_colour		.5	.725 .994 1
+			colour_aff_time_colour		.6	.362 .5 .5
+			colour_aff_time_colour		1	0 0 0
+		}
+		affector						Scale
+		{
+			xyz_scale					dyn_curved_linear
+		{
+			    control_point       0	1
+			    control_point       .5	0
+			    control_point       1	-1
+		}
+		}
+
+		affector                           TextureRotator
+		{
+		    tex_rot_rotation               dyn_random
+		    {
+			min                       -30
+			max                        30
+		    }
+		    tex_rot_speed                  .5
+		}
+
+	}
+}

@@ -1,0 +1,15 @@
+<Item type="Kart" name="Baja">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Rough ride 4 wheel drive." />
+		<Colors amount="3" Color1="0.55 0.65 0.75" Color2=".5 .91 0" Color3="1 1 1" />
+	</Description>
+	<Settings>
+		<Parameter name="DriverPositionX" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionY" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionZ" type="FLOAT" data="0" />
+		<Parameter name="IdleRate" type="FLOAT" data="1" />
+		<Parameter name="IdleVariable" type="BOOL" data="true" />
+		<Parameter name="IdleRateMultiplier" type="FLOAT" data="2" />
+	</Settings>
+</Item>

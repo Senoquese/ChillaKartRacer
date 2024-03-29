@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="StaticImage" skin="StaticImage" position="384 104 512 512" align="HCenter VCenter" layer="Back" name="count3">
+        <Property key="Image_Texture" value="countdown_3.png"/>
+        <Property key="Widget_Enabled" value="false"/>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="384 104 512 512" align="HCenter VCenter" layer="Back" name="count2">
+        <Property key="Image_Texture" value="countdown_2.png"/>
+        <Property key="Widget_Enabled" value="false"/>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="384 104 512 512" align="HCenter VCenter" layer="Back" name="count1">
+        <Property key="Image_Texture" value="countdown_1.png"/>
+        <Property key="Widget_Enabled" value="false"/>
+    </Widget>
+</MyGUI>

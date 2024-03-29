@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="Panel" position="534 8 209 76" align="HCenter Top" layer="Back" name="tagbarcont">
+        <Property key="Widget_Alpha" value="0"/>
+        <Widget type="StaticImage" skin="StaticImage" position="0 0 209 76" layer="Back" name="tagbarbg">
+            <Property key="Image_Texture" value="core_zg.png"/>
+            <Property key="Image_Coord" value="696 108 209 76"/>
+            <Property key="Image_Tile" value="209 76"/>
+            <Property key="Widget_Enabled" value="false"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+            <Widget type="StaticText" skin="StaticText" position="0 55 208 16" layer="Back" name="tagbarname">
+                <Property key="Widget_Caption" value="marshmonkey"/>
+                <Property key="Text_TextAlign" value="HCenter VCenter"/>
+                <Property key="Text_FontName" value="ManualFont"/>
+                <Property key="Text_FontHeight" value="17"/>
+            </Widget>
+        </Widget>
+        <Widget type="Progress" skin="ProgressFill" position="12 11 183 32" layer="Main" name="tagbarmeter">
+            <Property key="Progress_StartPoint" value="Left"/>
+            <Property key="Progress_Range" value="100"/>
+            <Property key="Progress_Position" value="100"/>
+            <Property key="Progress_AutoTrack" value="false"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="512 112 256 128" align="HCenter Top" layer="Back" name="alertpos">
+        <Property key="Image_Texture" value="tag_positive.png"/>
+        <Property key="Image_Coord" value="0 0 256 128"/>
+        <Property key="Image_Tile" value="256 128"/>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="512 112 256 128" align="HCenter Top" layer="Back" name="alertneg">
+        <Property key="Image_Texture" value="tag_negative.png"/>
+        <Property key="Image_Coord" value="0 0 256 128"/>
+        <Property key="Image_Tile" value="256 128"/>
+    </Widget>
+</MyGUI>

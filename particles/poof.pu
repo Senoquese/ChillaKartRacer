@@ -1,0 +1,52 @@
+system poof
+{
+fixed_timeout   1
+scale	0.016 0.016 0.016
+scale_velocity   0.016
+
+	technique
+	{
+		material						blurcloud_particle
+		default_particle_width			.05
+		default_particle_height			.05
+		visual_particle_quota			10
+		renderer						Billboard
+		{
+			billboard_type					point
+		}
+		
+		emitter							Point
+		{
+			enabled					true
+			emission_rate				4
+			force_emission				true
+			direction					0 -1 0
+			angle						180
+			time_to_live				.5
+			particle_height				.5
+			particle_width				.5
+			velocity					dyn_curved_linear
+			{
+				    control_point       0 200
+				    control_point       0.013 1
+
+			}
+
+		}
+		
+		affector						Colour
+		{
+			colour_aff_time_colour		0	1 1 1 1
+			colour_aff_time_colour		.3	1 1 1 1
+			colour_aff_time_colour		.8	1 1 1 0
+		}
+
+		affector               Scale
+		{
+		   xyz_scale           220
+		}		
+
+	}
+
+}
+

@@ -1,0 +1,9 @@
+<Item type="Wheels" name="Bottlecaps">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Check the bottom to see if you are a winner!" />
+		<Colors amount="2" Color1="1 0 0" Color2=".077 .677 1" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

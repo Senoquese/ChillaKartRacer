@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<Materials>
+	<Material name="defaultmat">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+	</Material>
+
+	<Material name="slipperymat">
+		<Parameter name="FrictionPercent" type="FLOAT" data="0"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="6"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+	</Material>
+
+	<Material name="bouncymat">
+		<Parameter name="FrictionPercent" type="FLOAT" data="0"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="150"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+		<Parameter name="Force" type="FLOAT" data="1"/>
+		<Parameter name="WheelContact" type="BOOL" data="FALSE"/>
+	</Material>
+
+</Materials>
+

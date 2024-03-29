@@ -1,0 +1,9 @@
+<Item type="Hats" name="Horn Helm">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Quiet and calm, he is a mysterious man with a horn covered in armor." />
+		<Colors amount="3" Color1=".7 .7 .7" Color2=".784 .671 .369" Color3="1 1 1" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

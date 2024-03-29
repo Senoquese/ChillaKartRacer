@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Window" skin="WindowCSX" position="316 60 648 600" align="Center" layer="Main" name="serverbrowser">
+        <Property key="Widget_AlignText" value="ALIGN_LEFT ALIGN_VCENTER"/>
+        <Property key="Window_MinSize" value="648 600"/>
+        <Property key="Window_MaxSize" value="648 2000"/>
+        <Widget type="Button" skin="ButtonSmall" position="160 520 133 34" align="Left Bottom" name="joinserver">
+            <Property key="Widget_Caption" value="Join Server"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="301 520 133 34" align="Left Bottom" name="refreshservers">
+            <Property key="Widget_Caption" value="Refresh List"/>
+        </Widget>
+        <Widget type="MultiList" skin="MultiList" position="0 0 640 504" align="Left VStretch" name="serverlist"/>
+    </Widget>
+</MyGUI>

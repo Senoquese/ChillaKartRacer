@@ -1,0 +1,227 @@
+system smokestack
+{
+//lod_distances	500
+//smooth_lod	true
+scale	0.09 0.09 0.09
+scale_velocity   0.09
+	// ---------------- Fire ----------------
+	technique
+	{
+//		lod_index 0
+		material							blurcloud_particle
+		default_particle_width				60
+		default_particle_height				60
+		visual_particle_quota				500
+
+		renderer						Billboard
+		{
+			billboard_type					point
+			billboard_rotation_type				vertex
+		}
+
+		// Emission of fire particles
+		emitter								Point
+		{
+			emission_rate					6
+			angle							30
+			direction						0 1 0
+			velocity						dyn_random
+			{
+				min							50
+				max							75
+			}
+			time_to_live					dyn_random
+			{
+				min							3
+				max							6
+			}
+		}
+
+		affector                           TextureRotator
+		{
+		    tex_rot_rotation               dyn_random
+		    {
+			min                       -30
+			max                        30
+		    }
+		    tex_rot_speed                  0
+		}
+		
+		// The two observers are switching each other on and off, while they also switch 
+		// between two LinearForceAffectors. This flip/flop mechanism creates a windy-like effect.
+		observer							OnRandom				ObserverRight
+		{
+			observe_interval				0.6
+			random_threshold				0.4
+			handler													DoEnableComponent
+			{
+                enable_component			affector_component		LinearForceLeft			false
+			}
+			handler													DoEnableComponent
+			{
+                enable_component			affector_component		LinearForceRight		true
+			}
+			handler													DoEnableComponent
+			{
+                enable_component			observer_component		ObserverRight			false
+			}
+			handler													DoEnableComponent
+			{
+                enable_component			observer_component		ObserverLeft			true
+			}
+		}
+		observer							OnRandom				ObserverLeft
+		{
+			observe_interval				0.6
+			random_threshold				0.6
+			handler													DoEnableComponent
+			{
+                enable_component			affector_component		LinearForceLeft			true
+			}
+			handler													DoEnableComponent
+			{
+                enable_component			affector_component		LinearForceRight		false
+			}
+			handler													DoEnableComponent
+			{
+                enable_component			observer_component		ObserverRight			true
+			}
+			handler													DoEnableComponent
+			{
+                enable_component			observer_component		ObserverLeft			false
+			}
+		}
+		affector							LinearForce				LinearForceRight
+		{
+			enabled							false
+			force_aff_vector				40 0 0
+		}
+		affector							LinearForce				LinearForceLeft
+		{
+			enabled							false
+			force_aff_vector				-40 0 0
+		}
+
+		affector							Scale
+		{
+			xyz_scale						50
+		}
+
+		affector							Colour
+		{
+			colour_aff_time_colour			0 .75 .75 .75 .5
+			colour_aff_time_colour			1 1 1 1 0
+		}
+	}
+
+//	technique
+//	{
+//		lod_index 1
+//		material							blurcloud_particle
+//		default_particle_width				60
+//		default_particle_height				60
+//		visual_particle_quota				500
+//
+//		renderer						Billboard
+//		{
+//			billboard_type					point
+//			billboard_rotation_type				vertex
+//		}
+//
+//		// Emission of fire particles
+//		emitter								Point
+//		{
+//			enabled					false
+//			emission_rate					0
+//			angle							30
+//			direction						0 1 0
+//			velocity						dyn_random
+//			{
+//				min							50
+//				max							75
+//			}
+//			time_to_live					dyn_random
+//			{
+//				min							3
+//				max							6
+//			}
+//		}
+//
+//		affector                           TextureRotator
+//		{
+//		    tex_rot_rotation               dyn_random
+//		    {
+//			min                       -30
+//			max                        30
+//		    }
+//		    tex_rot_speed                  0
+//		}
+//		
+//		// The two observers are switching each other on and off, while they also switch 
+//		// between two LinearForceAffectors. This flip/flop mechanism creates a windy-like effect.
+//		observer							OnRandom				ObserverRight
+//		{
+//			observe_interval				0.6
+//			random_threshold				0.4
+//			handler													DoEnableComponent
+//			{
+//                enable_component			affector_component		LinearForceLeft			false
+//			}
+//			handler													DoEnableComponent
+//			{
+//                enable_component			affector_component		LinearForceRight		true
+//			}
+//			handler													DoEnableComponent
+//			{
+//                enable_component			observer_component		ObserverRight			false
+//			}
+//			handler													DoEnableComponent
+//			{
+//                enable_component			observer_component		ObserverLeft			true
+//			}
+//		}
+//		observer							OnRandom				ObserverLeft
+//		{
+//			observe_interval				0.6
+//			random_threshold				0.6
+//			handler													DoEnableComponent
+//			{
+//                enable_component			affector_component		LinearForceLeft			true
+//			}
+//			handler													DoEnableComponent
+//			{
+//                enable_component			affector_component		LinearForceRight		false
+//			}
+//			handler													DoEnableComponent
+//			{
+//                enable_component			observer_component		ObserverRight			true
+//			}
+//			handler													DoEnableComponent
+//			{
+//                enable_component			observer_component		ObserverLeft			false
+//			}
+//		}
+//		affector							LinearForce				LinearForceRight
+//		{
+//			enabled							false
+//			force_aff_vector				40 0 0
+//		}
+//		affector							LinearForce				LinearForceLeft
+//		{
+//			enabled							false
+//			force_aff_vector				-40 0 0
+//		}
+//
+//		affector							Scale
+//		{
+//			xyz_scale						50
+//		}
+//
+//		affector							Colour
+//		{
+//			colour_aff_time_colour			0 .1 .1 .1 .5
+//			colour_aff_time_colour			1 .5 .5 .5 0
+//		}
+//	}
+
+}

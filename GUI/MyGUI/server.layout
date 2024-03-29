@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+	<Widget type="Window" skin="WindowCSX" position="240 60 800 600" align="HCenter VCenter" layer="Main" name="server">
+		<Property key="Widget_Caption" value="Server Control Panel"/>
+		<Property key="Widget_InheritsAlpha" value="false"/>
+		<Property key="Widget_InheritsPick" value="false"/>
+		<Property key="Window_MaxSize" value="800 600"/>
+		<Property key="Window_MinSize" value="800 600"/>
+		<Widget type="Tab" skin="Tab" position="-4 0 796 569" name="servertabs">
+			<Widget type="TabItem" skin="Default" position="4 26 787 537">
+				<Property key="Widget_Caption" value="Setup"/>
+				
+				<Widget type="StaticText" skin="StaticText" position="12 7 92 17">
+					<Property key="Widget_Caption" value="Server Name"/>
+				</Widget>
+				<Widget type="Edit" skin="Edit" position="12 31 340 32" name="servername"/>
+				
+				<Widget type="StaticText" skin="StaticText" position="12 87 76 17">
+					<Property key="Widget_Caption" value="Password"/>
+					<Property key="Widget_Visible" value="false"/>
+				</Widget>
+				<Widget type="Edit" skin="Edit" position="12 111 336 32" name="serverpassword">
+					<Property key="Widget_Visible" value="false"/>
+				</Widget>
+				
+				<Widget type="StaticText" skin="StaticText" position="12 167 124 16">
+					<Property key="Widget_Caption" value="Maximum Players"/>
+				</Widget>
+				<Widget type="ComboBox" skin="ComboBox" position="12 191 68 32" name="servermaxplayers">
+					<Property key="ComboBox_AddItem" value="1"/>
+					<Property key="ComboBox_AddItem" value="2"/>
+					<Property key="ComboBox_AddItem" value="3"/>
+					<Property key="ComboBox_AddItem" value="4"/>
+					<Property key="ComboBox_AddItem" value="5"/>
+					<Property key="ComboBox_AddItem" value="6"/>
+					<Property key="ComboBox_AddItem" value="7"/>
+					<Property key="ComboBox_AddItem" value="8"/>
+					<Property key="ComboBox_AddItem" value="9"/>
+					<Property key="ComboBox_AddItem" value="10"/>
+					<Property key="ComboBox_AddItem" value="11"/>
+					<Property key="ComboBox_AddItem" value="12"/>
+					<Property key="ComboBox_ModeDrop" value="true"/>
+				</Widget>
+				<Widget type="Widget" skin="Panel" position="400 31 376 489" name="infopanel">
+					<Property key="Widget_Caption" value="dfgdfg"/>
+					<Property key="Widget_Alpha" value="1"/>
+					
+					<Widget type="StaticText" skin="StaticText" position="12 16 192 24">
+						<Property key="Widget_Caption" value="Sync Rate"/>
+						<Property key="Widget_Alpha" value=".5"/>
+					</Widget>
+					
+					<Widget type="StaticText" skin="StaticText" position="12 40 228 16" name="syncrate">
+						<Property key="Widget_Caption" value="0/s"/>
+					</Widget>
+					
+					<Widget type="StaticText" skin="StaticText" position="12 72 84 16">
+						<Property key="Widget_Caption" value="Server FPS"/>
+						<Property key="Widget_Alpha" value=".5"/>
+					</Widget>
+					
+					<Widget type="StaticText" skin="StaticText" position="12 96 204 16" name="serverfps">
+						<Property key="Widget_Caption" value="200"/>
+					</Widget>
+					
+					<Widget type="StaticText" skin="StaticText" position="12 128 132 16">
+						<Property key="Widget_Caption" value="Clients Connected"/>
+						<Property key="Widget_Alpha" value=".5"/>
+					</Widget>
+					
+					<Widget type="StaticText" skin="StaticText" position="12 152 64 16" name="serverplayers">
+						<Property key="Widget_Caption" value="0"/>
+					</Widget>
+					
+					<Widget type="StaticText" skin="StaticText" position="12 184 80 16">
+						<Property key="Widget_Caption" value="Data In"/>
+						<Property key="Widget_Alpha" value=".5"/>
+					</Widget>
+					
+					<Widget type="StaticText" skin="StaticText" position="12 208 204 16" name="datain">
+						<Property key="Widget_Caption" value="0 kbps"/>
+					</Widget>
+					
+					<Widget type="StaticText" skin="StaticText" position="12 240 128 16">
+						<Property key="Widget_Caption" value="Packet Rate In"/>
+						<Property key="Widget_Alpha" value=".5"/>
+					</Widget>
+					
+					<Widget type="StaticText" skin="StaticText" position="12 264 196 16" name="ppsin">
+						<Property key="Widget_Caption" value="0"/>
+					</Widget>
+					
+					<Widget type="StaticText" skin="StaticText" position="12 296 72 16">
+						<Property key="Widget_Caption" value="Data Out"/>
+						<Property key="Widget_Alpha" value=".5"/>
+					</Widget>
+					
+					<Widget type="StaticText" skin="StaticText" position="12 320 196 16" name="dataout">
+						<Property key="Widget_Caption" value="0 kbps"/>
+					</Widget>
+					
+					<Widget type="StaticText" skin="StaticText" position="12 352 128 16">
+						<Property key="Widget_Caption" value="Packet Rate Out"/>
+						<Property key="Widget_Alpha" value=".5"/>
+					</Widget>
+					
+					<Widget type="StaticText" skin="StaticText" position="12 376 204 16" name="ppsout">
+						<Property key="Widget_Caption" value="0"/>
+					</Widget>
+				</Widget>
+				
+				<Widget type="StaticText" skin="StaticText" position="404 15 92 17" name="infocaption">
+					<Property key="Widget_Caption" value="Server Info"/>
+					<Property key="Widget_Alpha" value=".5"/>
+				</Widget>
+				<Widget type="Button" skin="Button" position="108 463 184 56" name="serverpower">
+					<Property key="Widget_Caption" value="Create Server"/>
+				</Widget>
+				
+				<Widget type="StaticText" skin="StaticText" position="12 251 268 24">
+					<Property key="Widget_Caption" value="Server Type"/>
+				</Widget>
+				<Widget type="ComboBox" skin="ComboBox" position="12 278 116 32" name="announce">
+					<Property key="ComboBox_ModeDrop" value="true"/>
+					<Property key="ComboBox_AddItem" value="Public"/>
+				<Property key="ComboBox_AddItem" value="Friends Only"/>
+					<Property key="ComboBox_AddItem" value="Private"/>
+				</Widget>
+				
+				<Widget type="Button" skin="CheckBox" position="64 278 116 32" name="startspectating">
+					<Property key="Widget_Caption" value="Start as Spectator"/>
+					<Property key="Button_Pressed" value="false"/>
+				</Widget>
+
+				<Widget type="StaticText" skin="StaticText" position="12 331 356 24">
+					<Property key="Widget_Caption" value="CPUs"/>
+				</Widget>
+				<Widget type="ComboBox" skin="ComboBox" position="12 358 68 32" name="minplayers">
+					<Property key="ComboBox_AddItem" value="0"/>
+					<Property key="ComboBox_AddItem" value="1"/>
+					<Property key="ComboBox_AddItem" value="2"/>
+					<Property key="ComboBox_AddItem" value="3"/>
+					<Property key="ComboBox_AddItem" value="4"/>
+					<Property key="ComboBox_AddItem" value="5"/>
+					<Property key="ComboBox_AddItem" value="6"/>
+					<Property key="ComboBox_AddItem" value="7"/>
+					<Property key="ComboBox_AddItem" value="8"/>
+					<Property key="ComboBox_AddItem" value="9"/>
+					<Property key="ComboBox_AddItem" value="10"/>
+					<Property key="ComboBox_AddItem" value="11"/>
+					<Property key="ComboBox_ModeDrop" value="true"/>
+				</Widget>
+			</Widget>
+			<Widget type="TabItem" skin="Default" position="4 26 787 537">
+				<Property key="Widget_Caption" value="Levels"/>
+				<Widget type="List" skin="List" position="24 39 304 384" name="mapcycle"/>
+				<Widget type="List" skin="List" position="456 39 304 384" name="maplist"/>
+				
+				<Widget type="StaticText" skin="StaticText" position="456 15 304 24">
+					<Property key="Widget_Caption" value="Unused Levels"/>
+					<Property key="Text_TextAlign" value="HCenter VCenter"/>
+				</Widget>
+				
+				<Widget type="StaticText" skin="StaticText" position="28 15 296 24">
+					<Property key="Widget_Caption" value="Used Levels"/>
+					<Property key="Text_TextAlign" value="HCenter VCenter"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="348 175 88 40" name="addmap">
+					<Property key="Widget_Caption" value="+"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="348 223 88 40" name="removemap">
+					<Property key="Widget_Caption" value="-"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="28 439 152 32" name="loadmap">
+					<Property key="Widget_Caption" value="Load Selected"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="28 487 152 32" name="nextmap">
+					<Property key="Widget_Caption" value="Next Level"/>
+				</Widget>
+				
+				<Widget type="StaticText" skin="StaticText" position="204 447 124 24">
+					<Property key="Widget_Caption" value="Minutes per Level"/>
+				</Widget>
+				<Widget type="Edit" skin="Edit" position="228 471 64 32" name="maptime"/>
+			</Widget>
+			<Widget type="TabItem" skin="Default" position="4 26 787 537" name="playerstab">
+				<Property key="Widget_Caption" value="Players"/>
+				<Property key="Sheet_Select" value="true"/>
+				<Widget type="List" skin="List" position="20 39 296 169" name="adminplayerlist"/>
+				
+				<Widget type="StaticText" skin="StaticText" position="20 15 292 16">
+					<Property key="Widget_Caption" value="Connected Players"/>
+					<Property key="Text_TextAlign" value="HCenter VCenter"/>
+				</Widget>
+				<Widget type="List" skin="List" position="468 39 296 169" name="adminbanlist">
+					<Property key="Widget_Visible" value="false"/>
+				</Widget>
+				
+				<Widget type="StaticText" skin="StaticText" position="468 16 292 15">
+					<Property key="Widget_Caption" value="Banned Players"/>
+					<Property key="Text_TextAlign" value="HCenter VCenter"/>
+					<Property key="Widget_Visible" value="false"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="540 223 160 32" name="unban">
+					<Property key="Widget_Caption" value="Un-Ban Selected"/>
+					<Property key="Widget_Visible" value="false"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="540 263 160 32" name="unbanall">
+					<Property key="Widget_Caption" value="Un-Ban All"/>
+					<Property key="Widget_Visible" value="false"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="84 223 160 32" name="kick">
+					<Property key="Widget_Caption" value="Kick Selected"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="84 263 160 32" name="ban">
+					<Property key="Widget_Caption" value="Ban Selected"/>
+					<Property key="Widget_Visible" value="false"/>
+				</Widget>
+			</Widget>
+		</Widget>
+	</Widget>
+</MyGUI>

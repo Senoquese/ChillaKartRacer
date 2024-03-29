@@ -1,0 +1,33 @@
+system camflash
+{
+	technique
+	{
+		position						0 0 0
+		use_alias						$defaultBillboardRenderer
+		material						spikeflare
+		default_particle_width			25
+		default_particle_height			25
+		visual_particle_quota			5000
+		emitter							MeshSurface
+		{
+			emission_rate				16
+//			force_emission				true
+			mesh_surface_mesh_name		stands.mesh
+			mesh_surface_distribution	homogeneous
+			time_to_live				.4
+			velocity                            0
+		}
+		affector						Colour
+		{
+			colour_aff_time_colour		0	0 0 0
+			colour_aff_time_colour		.1	1 1 1
+			colour_aff_time_colour		.2	.5 .5 .5
+			colour_aff_time_colour		.4	0 0 0
+		}
+		affector						Scale
+		{
+			xyz_scale					-1
+
+		}
+	}
+}

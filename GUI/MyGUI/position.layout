@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="Panel" position="1000 460 300 400" align="Right Bottom" layer="Back" name="positioncont">
+        <Property key="Widget_Alpha" value="0"/>
+        <Widget type="StaticImage" skin="StaticImage" position="0 -10 200 150" layer="Back" name="positionbg">
+            <Property key="Image_Texture" value="core_zg.png"/>
+            <Property key="Image_Coord" value="799 2 197 99"/>
+            <Property key="Image_Tile" value="197 99"/>
+            <Property key="Widget_Enabled" value="false"/>
+            <Property key="Widget_Alpha" value="0"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+        <Widget type="StaticImage" skin="StaticImage" position="-30 0 250 250" layer="Main" name="position">
+            <Property key="Image_Texture" value="position_1.png"/>
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_TextAlign" value="HCenter Top"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Text_FontHeight" value="250"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="190 180 88 64" layer="Back">
+            <Property key="Text_TextAlign" value="Left Bottom"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Text_FontHeight" value="45"/>
+            <Property key="Widget_Caption" value="/"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="220 180 88 64" layer="Back" name="positionstotal">
+            <Property key="Text_TextAlign" value="Left Bottom"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Text_FontHeight" value="45"/>
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+    </Widget>
+
+    <Widget type="Widget" skin="Panel" position="0 600 400 400" align="Left Bottom" layer="Back" name="lapcont">
+        <Property key="Widget_Alpha" value="0"/>
+        <Widget type="StaticText" skin="StaticText" position="16 72 150 32" layer="Back">
+            <Property key="Widget_Caption" value="LAP                          /"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Text_FontHeight" value="32"/>
+            <Property key="Text_TextColour" value="#b3dd21"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="100 72 48 48" layer="Back" name="lapcurrent">
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Text_FontHeight" value="32"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="168 72 40 32" layer="Back" name="lapstotal">
+            <Property key="Widget_Caption" value="0"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Text_FontHeight" value="32"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+    </Widget>
+</MyGUI>

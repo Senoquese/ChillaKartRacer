@@ -1,0 +1,31 @@
+system camflash_zero
+{
+    technique 
+    {
+        visual_particle_quota                   5000
+        material                                spikeflare
+        default_particle_width                  25
+        default_particle_height                 25
+        renderer                                Billboard
+        {
+        }
+        emitter                                 MeshSurface 
+        {
+            emission_rate                       16
+            time_to_live                        0.4
+            velocity                            0
+            mesh_surface_mesh_name              stands_zero.mesh
+        }
+        affector                                Colour 
+        {
+            colour_aff_time_colour              0    0 0 0 1
+            colour_aff_time_colour              0.1  1 1 1 1
+            colour_aff_time_colour              0.2  0.5 0.5 0.5 1
+            colour_aff_time_colour              0.4  0 0 0 1
+        }
+        affector                                Scale 
+        {
+            xyz_scale                           -1
+        }
+    }
+}

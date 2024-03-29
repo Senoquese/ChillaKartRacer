@@ -1,0 +1,9 @@
+<Item type="Characters" name="Zombie">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Braaaaaaiiiiiiiiinnsssss!!!" />
+		<Colors amount="4" Color1="0.518 0.667 0.443" Color2="0.318 0.447 0.545" Color3="0.906 0.863 0.624" Color4="0.922 0.906 0.816" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

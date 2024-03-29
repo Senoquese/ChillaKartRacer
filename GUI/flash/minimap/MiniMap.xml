@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<minimap>
+	<mask img="mapmask.png" />
+	<background img="mapbackground.png" />
+	<overlay img="overlay.png" />
+	<locator img="locator.png" />
+	<trackables>
+		<object type="kart" img="kartdot.png" />
+	</trackables>
+</minimap>

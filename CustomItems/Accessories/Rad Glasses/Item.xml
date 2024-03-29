@@ -1,0 +1,9 @@
+<Item type="Accessories" name="Rad Glasses">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="I am the voice of my generation!" />
+		<Colors amount="1" Color1="1 .36 .25" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

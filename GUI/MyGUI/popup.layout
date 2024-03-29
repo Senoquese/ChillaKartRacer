@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="PanelSmall" position="384 656 512 56" align="HCenter Bottom" layer="Back" name="popup">
+        <Widget type="Edit" skin="WordWrapSimple" position="8 8 496 40" layer="Back" name="info">
+            <Property key="Widget_Caption" value="Use [freelook] and the mouse in conjunction with [weapfire] to fire a weapon in any direction."/>
+            <Property key="Edit_VisibleVScroll" value="false"/>
+            <Property key="Edit_VisibleHScroll" value="false"/>
+        </Widget>
+    </Widget>
+</MyGUI>

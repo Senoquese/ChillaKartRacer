@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Edit" skin="Edit" position="8 688 512 24" align="Left Bottom" layer="Main" name="chatinput">
+        <Property key="Widget_NeedKey" value="true"/>
+        <Property key="Text_FontName" value="ManualFont"/>
+        <Property key="Text_FontHeight" value="17"/>
+        <Property key="Widget_NeedMouse" value="false"/>
+        <Property key="Widget_Alpha" value="1.0"/>
+    </Widget>
+    <Widget type="Edit" skin="WordWrap" position="8 550 520 134" align="Left Bottom" layer="Main" name="chatview">
+        <Property key="Edit_WordWrap" value="true"/>
+        <Property key="Edit_VisibleVScroll" value="false"/>
+        <Property key="Widget_Enabled" value="false"/>
+        <Property key="Edit_VisibleHScroll" value="false"/>
+        <Property key="Edit_MaxTextLength" value="-1"/>
+        <Property key="Text_FontName" value="ManualFont"/>
+        <Property key="Text_FontHeight" value="17"/>
+    </Widget>
+</MyGUI>

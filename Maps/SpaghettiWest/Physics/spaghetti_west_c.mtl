@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<Materials>
+	<Material name="sandtrack_mat">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+		<Parameter name="WheelParticle" type="STRING" data="sandtrack"/>
+	</Material>
+	
+	<Material name="defaultsurf_mat">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+	</Material>
+
+	<Material name="woodplank_mat">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+		<Parameter name="SurfaceSound" type="STRING" data="sound/woodbridge.wav"/>
+	</Material>
+
+	<Material name="heavysand_mat">
+		<Parameter name="FrictionPercent" type="FLOAT" data="0.2"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="0.5"/>
+		<Parameter name="WheelParticle" type="STRING" data="dust"/>
+		<Parameter name="SurfaceSound" type="STRING" data="sound/Driving_on_sand.wav"/>
+	</Material>
+
+	<Material name="slippery_mat">
+		<Parameter name="FrictionPercent" type="FLOAT" data="0"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+	</Material>
+
+</Materials>

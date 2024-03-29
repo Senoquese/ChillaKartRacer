@@ -1,0 +1,9 @@
+<Item type="Hats" name="July Boom Hat">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Benjamin Franklin invented fireworks." />
+		<Colors amount="4" Color1="1 1 1" Color2="1 0 0" Color3="0.1 0.5 1" Color4=".65 0 0" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

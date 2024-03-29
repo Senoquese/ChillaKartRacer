@@ -1,0 +1,51 @@
+system windowglow
+{
+// lod_distances	800
+	technique
+	{
+//		lod_index 0
+		position						0 0 0
+		material						glowflare
+		default_particle_width			12
+		default_particle_height			12
+		visual_particle_quota			12
+		use_alias						$defaultBillboardRenderer
+		emitter							Point
+		{
+			colour					.5 .475 .332
+			force_emission				true
+			emission_rate				1
+			angle					0
+			direction				0 0 0
+			velocity				0
+			time_to_live				100000
+
+		}
+
+
+	}
+
+//	technique
+//	{
+//		lod_index 1
+//		position						0 0 0
+//		material						glowflare
+//		default_particle_width			15
+//		default_particle_height			15
+//		visual_particle_quota			15
+//		use_alias						$defaultBillboardRenderer
+//		emitter							Point
+//		{
+//			enabled					false
+//			force_emission				true
+//			emission_rate				0
+//			angle					0
+//			direction				0 0 0
+//			velocity				0
+//			time_to_live				100000
+//
+//		}
+//
+//
+//	}
+}

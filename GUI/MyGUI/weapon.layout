@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+	<Widget type="StaticImage" skin="PanelEmpty" position="1136 16 128 256" align="Right Top" layer="Back" name="weaponboxes">
+		<Widget type="StaticImage" skin="StaticImage" position="0 0 128 128" layer="Back" name="weaponbg">
+			<Property key="Image_Texture" value="weaponbg.png"/>
+			<Widget type="StaticImage" skin="StaticImage" position="0 0 128 128" layer="Back" name="weaponimg">
+				<Property key="Image_Texture" value="item_luvbot.png"/>
+			</Widget>
+		</Widget>
+
+		<Widget type="StaticImage" skin="StaticImage" position="64 128 64 64" layer="Back" name="altweaponbg">
+			<Property key="Image_Texture" value="weaponbg.png"/>
+			<Widget type="StaticImage" skin="StaticImage" position="0 0 64 64" layer="Back" name="altweaponimg">
+				<Property key="Image_Texture" value="item_luvbot.png"/>
+			</Widget>
+		</Widget>
+	</Widget>
+</MyGUI>

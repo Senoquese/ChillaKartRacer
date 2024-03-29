@@ -1,0 +1,120 @@
+system dustwind
+{
+lod_distances	500
+smooth_lod	true
+	technique
+	{
+		lod_index 0
+		renderer						Billboard
+		{
+			billboard_type					point
+			billboard_rotation_type				vertex
+		}
+		material						dust_particle
+		default_particle_width			4
+		default_particle_height			4
+		visual_particle_quota			60
+		emitter							Box
+		{
+			box_em_width       50
+			box_em_height      1
+			box_em_depth       50
+			all_particle_dimensions			dyn_random
+			{
+				min                       10
+				max                       40
+			}
+			enabled					true
+			emission_rate				1
+			direction				1 0 0
+			velocity				dyn_random
+			{
+				min                       6
+				max                       10
+			}
+			time_to_live				dyn_random
+			{
+				min                       12
+				max                       18
+			}
+		}
+		
+		// Change the colour of the burst
+		affector						Colour
+		{
+			colour_aff_time_colour		0	1 1 1 0
+			colour_aff_time_colour		0.7	1 1 1 .2
+			colour_aff_time_colour		1	1 1 1 0
+		}
+		
+		affector                           TextureRotator
+		{
+		    tex_rot_rotation               dyn_random
+		    {
+			min                       -30
+			max                        30
+		    }
+		    tex_rot_speed                  .1
+		}
+
+
+	}
+	technique
+	{
+		lod_index 1
+		renderer						Billboard
+		{
+			billboard_type					point
+			billboard_rotation_type				vertex
+		}
+		material						dust_particle
+		default_particle_width			4
+		default_particle_height			4
+		visual_particle_quota			60
+		emitter							Box
+		{
+			box_em_width       50
+			box_em_height      1
+			box_em_depth       50
+			all_particle_dimensions			dyn_random
+			{
+				min                       10
+				max                       40
+			}
+			enabled					false
+			emission_rate				1
+			direction				1 0 0
+			velocity				dyn_random
+			{
+				min                       6
+				max                       10
+			}
+			time_to_live				dyn_random
+			{
+				min                       12
+				max                       18
+			}
+		}
+		
+		// Change the colour of the burst
+		affector						Colour
+		{
+			colour_aff_time_colour		0 1 1 1 0
+			colour_aff_time_colour		0.7 1 1 1 .2
+			colour_aff_time_colour		1 1 1 1 0
+		}
+		
+		affector                           TextureRotator
+		{
+		    tex_rot_rotation               dyn_random
+		    {
+			min                       -30
+			max                        30
+		    }
+		    tex_rot_speed                  .1
+		}
+
+
+	}
+
+}

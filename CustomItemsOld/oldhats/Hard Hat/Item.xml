@@ -1,0 +1,9 @@
+<Item type="Hats" name="Hard Hat">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Spy sappin' mah sentry!" />
+		<Colors amount="1" Color1="1 .551 .101" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

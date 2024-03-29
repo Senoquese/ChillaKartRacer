@@ -1,0 +1,123 @@
+void nimble_item_vs(
+		//Vertex Inputs
+		float4 position		: POSITION,	//Vertex position in model space
+		float2 texCoord0		: TEXCOORD0, //Texture UV set 0
+		float3 normal		: NORMAL,
+
+		//Outputs
+		out float4 oPosition	: POSITION, //Transformed vertex position
+		out float2 uv0		: TEXCOORD0, //UV0
+		out float3 R         	: TEXCOORD1,
+		out float3 rim		: TEXCOORD2,
+
+		//Model Level Inputs
+		uniform float3 eyePositionW,
+		uniform float4x4 worldViewProj,
+		uniform float4x4 worldMat,
+		uniform float4x4 worldViewMat)
+{
+	//Calculate output position
+	oPosition = mul(worldViewProj, position);
+
+	//Simply copy the input vertex UV to the output
+	uv0 = texCoord0;
+
+	//Compute position and normal in world space
+	float3 positionW = mul(worldMat, position).xyz;
+	float3 N = mul((float3x3)worldMat, normal);
+	N = normalize(N);
+
+	//Compute the incident and reflected vectors
+	float3 I = positionW - eyePositionW;
+	R = reflect(I, N);
+
+	rim = mul((float3x3)worldViewMat, normal);
+}
+
+
+void nimble_instanced_item_vs(
+		//Vertex Inputs
+		uniform float3x4 worldMatrix3x4Array[80], 
+		float4 position		: POSITION,	//Vertex position in model space
+		float2 texCoord0		: TEXCOORD0, //Texture UV set 0
+		float index			: TEXCOORD1,
+		float3 normal		: NORMAL,
+
+		//Outputs
+		out float4 oPosition	: POSITION, //Transformed vertex position
+		out float2 uv0		: TEXCOORD0, //UV0
+		out float3 R         	: TEXCOORD1,
+		out float3 rim		: TEXCOORD2,
+
+		//Model Level Inputs
+		uniform float3 eyePositionW,
+		uniform float4x4 viewProjMat,
+		uniform float4x4 viewMat)
+{
+	//transform by indexed matrix
+	float4 transformedPos = float4(mul(worldMatrix3x4Array[index], position).xyz, 1.0);
+
+	//Calculate output position
+	oPosition = mul(viewProjMat, transformedPos);
+
+	//Simply copy the input vertex UV to the output
+	uv0 = texCoord0;
+
+	float3 transformedNorm = mul((float3x3)worldMatrix3x4Array[index], normal);
+
+	//Compute position and normal in world space
+	float3 positionW = transformedPos;//mul(worldMat, transformedPos).xyz;
+	float3 N = transformedNorm;//mul((float3x3)worldMat, transformedNorm);
+	N = normalize(N);
+
+	//Compute the incident and reflected vectors
+	float3 I = positionW - eyePositionW;
+	R = reflect(I, N);
+
+	rim = mul((float3x3)viewMat, transformedNorm);
+}
+
+
+void nimble_item_ps(
+			float2 uv		: TEXCOORD0,
+			float3 R		: TEXCOORD1,
+			float3 rim		: TEXCOORD2,
+			out float4 color	: COLOR,
+
+			uniform float4 Color1,
+			uniform float4 Color2,
+			uniform float4 Color3,
+			uniform float4 Color4,
+			uniform float NumColors,
+			uniform float rimFactor,
+			uniform sampler2D NimbleTexture : TEXUNIT0,
+			uniform sampler2D NimbleMask : TEXUNIT1,
+			uniform samplerCUBE NimbleEnvMap : TEXUNIT2,
+			uniform sampler2D NimbleEnvMapMask : TEXUNIT3,
+			uniform samplerCUBE NimbleRim : TEXUNIT4)
+{
+	float4 diffuseColor = tex2D(NimbleTexture, uv);
+	float4 maskColor = tex2D(NimbleMask, uv);
+	//Fetch reflected environment color
+	float4 reflectedColor = texCUBE(NimbleEnvMap, R);
+	//Fetch the env map mask color
+	float4 evnMapMask = tex2D(NimbleEnvMapMask, uv);
+	//Fetch the rim lighting color
+	float4 rimColor = texCUBE(NimbleRim, rim);
+
+	//color = lerp(diffuseColor, Color1 * diffuseColor, (NumColors > 0) ? maskColor.r);
+	//color = lerp(color, Color2 * diffuseColor, (NumColors > 1) ? maskColor.g);
+	//color = lerp(color, Color3 * diffuseColor, (NumColors > 2) ? maskColor.b);
+	//color = lerp(color, Color4 * diffuseColor, (NumColors > 3) ? maskColor.a);
+
+	color = lerp(diffuseColor, Color1 * diffuseColor, maskColor.r);
+	color = lerp(color, Color2 * diffuseColor, maskColor.g);
+	color = lerp(color, Color3 * diffuseColor, maskColor.b);
+	color = lerp(color, Color4 * diffuseColor, maskColor.a);
+
+	//Factor in the evn map mask
+	color += reflectedColor * evnMapMask;
+
+	color += rimColor * rimFactor;
+	color.a = diffuseColor.a;
+}

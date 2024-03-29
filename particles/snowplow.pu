@@ -1,0 +1,234 @@
+system snowplow
+{
+//keep_local   true
+//scale	.1 .1 .1
+//scale_velocity  .01
+//lod_distances	50
+//smooth_lod	true
+	// --------------- Clouds ---------------
+	technique
+	{
+//		lod_index 0
+		renderer						Billboard
+		{
+			billboard_type					point
+			billboard_rotation_type				vertex
+		}
+		material						snow_particle
+		default_particle_width			.03
+		default_particle_height			.03
+		visual_particle_quota			500
+		emitter							Box
+		{
+			box_em_width       .1
+			box_em_height      .025
+			box_em_depth       .1
+			enabled					true
+			emission_rate				60
+			velocity				dyn_random
+			{
+				min				3.50
+				max				5.00
+			}
+			all_particle_dimensions			dyn_random
+			{
+				min	.05
+				max	.1
+			}
+			angle					20
+			time_to_live				.5
+			direction				0 1 0
+		}
+		
+		
+
+		affector						Scale
+		{
+			xyz_scale					-.65
+		}
+
+		affector               LinearForce
+		{
+		   force_aff_vector    0 -20 0
+		}
+
+	}
+
+		technique
+	{
+//		lod_index 0	
+		renderer						Billboard
+		{
+			billboard_type					point
+			billboard_rotation_type				vertex
+		}
+		material						snowclump
+		default_particle_width			.1
+		default_particle_height			.1
+		visual_particle_quota			500
+		emitter							Box
+		{
+			box_em_width       .05
+			box_em_height      .025
+			box_em_depth       .05
+			enabled					true
+			emission_rate				60
+			velocity				dyn_random
+			{
+				min				2
+				max				3
+			}
+			all_particle_dimensions			dyn_random
+			{
+				min	.1
+				max	.25
+			}
+			angle					20
+			time_to_live				.5
+			direction				0 1 0
+		}
+		
+		
+		affector						Scale
+		{
+			xyz_scale					3
+		}
+
+		affector                           TextureRotator
+		{
+		    tex_rot_rotation               dyn_random
+		    {
+			min                       -30
+			max                        30
+		    }
+		    tex_rot_speed                  dyn_random
+		    {	min		-5
+			max			5
+			}	
+		}
+
+		affector               LinearForce
+		{
+		   force_aff_vector    0 -20 0
+		}
+		affector                    Colour
+		{
+		   colour_aff_time_colour   0 1 1 1 1
+		   colour_aff_time_colour   .5 1 1 1 0
+		}
+	}
+
+//	technique
+//	{
+//		lod_index 1
+//		renderer						Billboard
+//		{
+//			billboard_type					point
+//			billboard_rotation_type				vertex
+//		}
+//		material						snow_particle
+//		default_particle_width			.03
+//		default_particle_height			.03
+//		visual_particle_quota			500
+//		emitter							Box
+//		{
+//			box_em_width       .1
+//			box_em_height      .025
+//			box_em_depth       .1
+//			enabled					false
+//			emission_rate				0
+//			velocity				dyn_random
+//			{
+//				min				3.50
+//				max				5.00
+//			}
+//			all_particle_dimensions			dyn_random
+//			{
+//				min	.05
+//				max	.1
+//			}
+//			angle					20
+//			time_to_live				.5
+//			direction				0 1 0
+//		}
+//		
+//		
+//
+//		affector						Scale
+//		{
+//			xyz_scale					-.65
+//		}
+//
+//		affector               LinearForce
+//		{
+//		   force_aff_vector    0 -20 0
+//		}
+//
+//	}
+//
+//		technique
+//	{
+//		lod_index 1	
+//		renderer						Billboard
+//		{
+//			billboard_type					point
+//			billboard_rotation_type				vertex
+//		}
+//		material						snowclump
+//		default_particle_width			.1
+//		default_particle_height			.1
+//		visual_particle_quota			500
+//		emitter							Box
+//		{
+//			box_em_width       .05
+//			box_em_height      .025
+//			box_em_depth       .05
+//			enabled					false
+//			emission_rate				0
+//			velocity				dyn_random
+//			{
+//				min				2
+//				max				3
+//			}
+//			all_particle_dimensions			dyn_random
+//			{
+//				min	.1
+//				max	.25
+//			}
+//			angle					20
+//			time_to_live				.5
+//			direction				0 1 0
+//		}
+//		
+//		
+//		affector						Scale
+//		{
+//			xyz_scale					3
+//		}
+//
+//		affector                           TextureRotator
+//		{
+//		    tex_rot_rotation               dyn_random
+//		    {
+//			min                       -30
+//			max                        30
+//		    }
+//		    tex_rot_speed                  dyn_random
+//		    {	min		-5
+//			max			5
+//			}	
+//		}
+//
+//		affector               LinearForce
+//		{
+//		   force_aff_vector    0 -20 0
+//		}
+//		affector                    Colour
+//		{
+//		   colour_aff_time_colour   0 1 1 1 1
+//		   colour_aff_time_colour   .5 1 1 1 0
+//		}
+//	}
+
+}
+

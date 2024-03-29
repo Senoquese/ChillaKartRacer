@@ -1,0 +1,15 @@
+<Item type="Karts" name="Barrel">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="More fun than a barrel of monkies!" />
+		<Colors amount="3" Color1="0.612 0.412 0.153"  Color2="0.953 0.702 0" Color3="0.545 0.545 0.545" />
+	</Description>
+	<Settings>
+		<Parameter name="DriverPositionX" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionY" type="FLOAT" data=".075" />
+		<Parameter name="DriverPositionZ" type="FLOAT" data="-.015" />
+		<Parameter name="IdleRate" type="FLOAT" data=".5" />
+		<Parameter name="IdleVariable" type="BOOL" data="true" />
+		<Parameter name="IdleRateMultiplier" type="FLOAT" data="2" />
+	</Settings>
+</Item>

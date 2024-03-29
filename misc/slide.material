@@ -1,0 +1,59 @@
+material lambert1
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 0.5 0.5 0.5 1
+			specular 0 0 0 1
+			emissive 0 0 0
+		}
+	}
+}
+material slide
+{
+	technique
+	{
+		pass
+		{
+			depth_write off
+			lighting on
+			scene_blend alpha_blend
+			cull_hardware none
+			cull_software none 
+			ambient .5 .5 .5 0
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+
+			texture_unit
+			{
+				texture slide.dds
+				tex_coord_set 0
+				colour_op add
+				scroll_anim .5 0
+				rotate 0
+			}
+////rimlighting
+//			texture_unit
+//			{
+//				cubic_texture rim.dds combinedUVW
+//				tex_address_mode clamp
+//				colour_op_ex add src_texture src_current
+//				colour_op_multipass_fallback one one
+//				env_map cubic_normal
+//			}
+//set alpha			
+			texture_unit
+			{
+			   texture slide_alpha.dds
+			   tex_coord_set 1
+			   colour_op alpha_blend
+			}
+
+		}
+	}
+}

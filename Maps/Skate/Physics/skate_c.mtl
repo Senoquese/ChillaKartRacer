@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<Materials>
+	<Material name="default">
+		<Parameter name="FrictionPercent" type="FLOAT" data="1"/>
+		<Parameter name="RestitutionPercent" type="FLOAT" data="0"/>
+		<Parameter name="MaxSpeedPercent" type="FLOAT" data="1"/>
+	</Material>
+</Materials>

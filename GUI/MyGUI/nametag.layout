@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="StaticText" skin="StaticText" position="0 0 256 16" layer="Back" name="nametag">
+        <Property key="Text_FontName" value="ManualFont"/>
+        <Property key="Text_TextAlign" value="HCenter VCenter"/>
+        <Property key="Text_FontHeight" value="17"/>
+        <Property key="Widget_Caption" value="name"/>
+    </Widget>
+</MyGUI>

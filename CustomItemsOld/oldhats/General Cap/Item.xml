@@ -1,0 +1,9 @@
+<Item type="Hats" name="General Cap">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Large and in charge." />
+		<Colors amount="3" Color1=".451 .58 .22" Color2=".8 0 0" Color3=".898 .829 .343" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

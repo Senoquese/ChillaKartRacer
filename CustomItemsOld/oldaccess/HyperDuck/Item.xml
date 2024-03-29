@@ -1,0 +1,9 @@
+<Item type="Accessories" name="HyperDuck">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="http://hyperduck.co.uk" />
+		<Colors amount="2" Color1="0.965 0.776 0.031" Color2=".863 .145 .145" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="Panel" position="-4 -4 1288 728" align="Stretch" layer="Popup" name="cont">
+        <Property key="Widget_Alpha" value=".5"/>
+        <Widget type="Widget" skin="Panel" position="388 64 512 620" align="Center" name="center">
+            <Property key="Widget_Alpha" value="0"/>
+            <Widget type="StaticImage" skin="StaticImage" position="128 8 256 160">
+                <Property key="Image_Texture" value="zglogo.png"/>
+                <Property key="Widget_InheritsAlpha" value="false"/>
+                <Property key="Widget_Enabled" value="false"/>
+            </Widget>
+            <Widget type="Button" skin="Button" position="156 304 200 48" align="Default" name="esc_resume">
+                <Property key="Widget_InheritsAlpha" value="false"/>
+                <Property key="Widget_Caption" value="Resume"/>
+                <Property key="Text_FontName" value="fat.60"/>
+                <Property key="Text_FontHeight" value="31"/>
+            </Widget>
+            <Widget type="Button" skin="Button" position="156 368 200 48" align="Default" name="esc_invitefriends">
+                <Property key="Widget_Caption" value="Invite Friends"/>
+                <Property key="Widget_InheritsAlpha" value="false"/>
+                <Property key="Text_FontName" value="fat.60"/>
+                <Property key="Text_FontHeight" value="31"/>
+            </Widget>
+            <Widget type="Button" skin="Button" position="156 432 200 48" align="Default" name="esc_settings">
+                <Property key="Widget_Caption" value="Settings"/>
+                <Property key="Widget_InheritsAlpha" value="false"/>
+                <Property key="Text_FontName" value="fat.60"/>
+                <Property key="Text_FontHeight" value="31"/>
+            </Widget>
+            <Widget type="Button" skin="Button" position="156 240 200 48" align="Default" name="esc_server">
+                <Property key="Widget_Caption" value="My Server"/>
+                <Property key="Widget_InheritsAlpha" value="false"/>
+                <Property key="Text_FontName" value="fat.60"/>
+                <Property key="Text_FontHeight" value="31"/>
+            </Widget>
+            <Widget type="Button" skin="Button" position="156 496 200 48" align="Default" name="esc_quit">
+                <Property key="Widget_InheritsAlpha" value="false"/>
+                <Property key="Text_FontName" value="fat.60"/>
+                <Property key="Text_FontHeight" value="31"/>
+                <Property key="Widget_Caption" value="Quit"/>
+            </Widget>
+            <Widget type="Button" skin="Button" position="156 432 200 48" layer="Back" name="esc_browser">
+                <Property key="Widget_InheritsAlpha" value="false"/>
+                <Property key="Widget_Caption" value="Find Game"/>
+                <Property key="Text_FontName" value="fat.60"/>
+                <Property key="Text_FontHeight" value="31"/>
+                <Property key="Widget_Visible" value="false"/>
+                <Property key="Widget_Enabled" value="false"/>
+            </Widget>
+        </Widget>
+    </Widget>
+</MyGUI>

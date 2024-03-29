@@ -1,0 +1,9 @@
+<Item type="Hats" name="Flower">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Beware of giant bees." />
+		<Colors amount="3" Color1=".8 .251 1" Color2="1 1 1" Color3="1 .918 0" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

@@ -1,0 +1,78 @@
+system electricity2
+{
+scale	0.007 0.007 0.007
+scale_velocity   0.01
+
+	technique
+	{
+		renderer Billboard
+		{
+			billboard_type				oriented_shape
+			billboard_origin			bottom_center
+		}
+		material						electricbeam
+		default_particle_width			80
+		default_particle_height			0
+		visual_particle_quota			6
+		emitter							Line
+		{
+			line_em_end					1 0 0
+			line_em_min_increment		50
+			line_em_max_increment		100
+			line_em_max_deviation		0
+			emission_rate				40
+			time_to_live				9000000000
+		}
+
+		affector						Line
+		{
+			line_aff_max_deviation		100
+			line_aff_time_step			0.025
+			line_aff_end				1 0 0
+			line_aff_drift				0.3
+		}
+		
+		affector						Align
+		{
+			align_aff_resize			true
+		}
+	}
+
+
+	// We take a second technique for the other beam
+	technique
+	{
+		renderer Billboard
+		{
+			billboard_type				oriented_shape
+			billboard_origin			bottom_center
+		}
+		material						electricbeam
+		default_particle_width			80
+		default_particle_height			0
+		visual_particle_quota			6
+		emitter							Line
+		{
+			line_em_end					1 0 0
+			line_em_min_increment		50
+			line_em_max_increment		100
+			line_em_max_deviation		0
+			emission_rate				40
+			time_to_live				9000000000
+		}
+
+		affector						Line
+		{
+			line_aff_max_deviation		100
+			line_aff_time_step			0.025
+			line_aff_end				1 0 0
+			line_aff_drift				0.3
+		}
+		
+		affector						Align
+		{
+			align_aff_resize			true
+		}
+	}
+
+}

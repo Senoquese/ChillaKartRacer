@@ -1,0 +1,9 @@
+<Item type="Hats" name="Jester Hat">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Official Attire of the Guild of Fools and Joculators" />
+		<Colors amount="4" Color1="0.153 0.816 0" Color2="1 0.965 0" Color3="0.424 0 1" Color4="0.6 0.6 0.6" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

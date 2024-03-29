@@ -1,0 +1,15 @@
+<Item type="Kart" name="56 Cruiser">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Dropped and chopped." />
+		<Colors amount="3" Color1="0.55 0.65 0.75" Color2=".1 0.1 0.1" Color3="1 .5 0" />
+	</Description>
+	<Settings>
+		<Parameter name="DriverPositionX" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionY" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionZ" type="FLOAT" data="0" />
+		<Parameter name="IdleRate" type="FLOAT" data="1" />
+		<Parameter name="IdleVariable" type="BOOL" data="true" />
+		<Parameter name="IdleRateMultiplier" type="FLOAT" data="2" />
+	</Settings>
+</Item>

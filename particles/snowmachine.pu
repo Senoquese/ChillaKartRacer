@@ -1,0 +1,111 @@
+system snowmachine
+{
+lod_distances	100 150
+smooth_lod	false
+	technique
+	{
+		lod_index 0
+		use_alias						$defaultBillboardRenderer
+		material						snow_particle_add
+		default_particle_width			.075
+		default_particle_height			.075
+
+		visual_particle_quota			250
+		
+		emitter							Box
+		{
+			position					0 100 0
+			box_em_width				10
+			box_em_height				1
+			box_em_depth				10
+			emission_rate				50
+			angle						50
+			direction					-1 -2 -1
+			velocity					10
+			time_to_live				7.5
+		}
+
+		affector						LinearForce
+		{
+			force_aff_vector			0 -1 0
+		}
+		affector							Colour
+		{
+			colour_aff_time_colour			0 0 0 0 
+			colour_aff_time_colour			.15 1 1 1
+			colour_aff_time_colour			.95 1 1 1
+			colour_aff_time_colour			1 0 0 0
+		}
+	}
+	technique
+	{
+		lod_index 1
+		use_alias						$defaultBillboardRenderer
+		material						snow_particle_add
+		default_particle_width			.075
+		default_particle_height			.075
+
+		visual_particle_quota			125
+		
+		emitter							Box
+		{
+			position					0 100 0
+			box_em_width				10
+			box_em_height				1
+			box_em_depth				10
+			emission_rate				25
+			angle						50
+			direction					-1 -2 -1
+			velocity					10
+			time_to_live				7.5
+		}
+
+		affector						LinearForce
+		{
+			force_aff_vector			0 -1 0
+		}
+		affector							Colour
+		{
+			colour_aff_time_colour			0 0 0 0 
+			colour_aff_time_colour			.15 1 1 1
+			colour_aff_time_colour			.95 1 1 1
+			colour_aff_time_colour			1 0 0 0
+		}
+	}
+	technique
+	{
+		lod_index 2
+		use_alias						$defaultBillboardRenderer
+		material						snow_particle_add
+		default_particle_width			.075
+		default_particle_height			.075
+
+		visual_particle_quota			500
+		
+		emitter							Box
+		{
+			enabled					false
+			position					0 100 0
+			box_em_width				10
+			box_em_height				1
+			box_em_depth				10
+			emission_rate				0
+			angle						50
+			direction					-1 -2 -1
+			velocity					10
+			time_to_live				7.5
+		}
+
+		affector						LinearForce
+		{
+			force_aff_vector			0 -1 0
+		}
+		affector							Colour
+		{
+			colour_aff_time_colour			0 0 0 0 
+			colour_aff_time_colour			.15 1 1 1
+			colour_aff_time_colour			.95 1 1 1
+			colour_aff_time_colour			1 0 0 0
+		}
+	}
+}

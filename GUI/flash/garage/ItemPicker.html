@@ -1,0 +1,70 @@
+<html>
+<head>
+
+<style type="text/css">
+body
+{
+	margin: 0;
+	overflow:hidden;
+}
+</style>
+
+<script type="text/javascript" src="./../Navi.js"></script>
+<script type="text/javascript" src="./../NimbleHelp.js"></script>
+<script type="text/javascript">
+//Action Script callbacks
+function QueryCustomItems(type, offset, maxResults)
+{
+	//SetCustomItem("Hat 1", "./../../../../CustomItems/Hats/Baseball Cap/icon.png", "000000;", "note 1", "brian");
+	//SetCustomItem("Hat 2", "./../../../CustomItems/Hats/Baseball Cap/icon.png", "000000;", "note 2", "brian");
+	//SetCustomItem("Hat 3", "../../../../CustomItems/Hats/Baseball Cap/icon.png", "000000;", "note 3", "brian");
+	//SetCustomItem("Hat 4", "../../../CustomItems/Hats/Baseball Cap/icon.png", "000000;", "note 4", "brian");
+	SafeClientCall('QueryCustomItems', type, offset, maxResults);
+}
+
+function ItemSelected(type, name)
+{
+	SafeClientCall('ItemSelected', type, name);
+}
+
+function BucketClicked(index)
+{
+	SafeClientCall('BucketClicked', index);
+}
+
+//Action Script calls
+function SwitchCategory(type, count, equippedIndex, equippedColors)
+{
+	GetMovie("GUIMovie").SwitchCategory(type, count, equippedIndex, equippedColors);
+}
+
+function SetCustomItem(name, iconPath, colors, description, author)
+{
+	GetMovie("GUIMovie").SetCustomItem(name, iconPath, colors, description, author);
+}
+
+function SetBucketColor(index, color)
+{
+	GetMovie("GUIMovie").SetBucketColor(index, color);
+}
+
+//function TEST()
+//{
+//	SwitchCategory("Hats", 4, 1, "000000;");
+//}
+</script>
+
+</head>
+
+<body>
+
+<object width="308" height="600">
+<param name="movie" value="ItemPicker.swf"/>
+<param name="allowScriptAccess" value="always"/>
+<embed src="ItemPicker.swf" name="GUIMovie" 
+width="308" height="600" allowScriptAccess="always">
+</embed>
+</object>
+
+</body>
+</html>

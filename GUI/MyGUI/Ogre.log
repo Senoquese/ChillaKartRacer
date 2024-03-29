@@ -1,0 +1,40 @@
+03:26:58: Creating resource group General
+03:26:58: Creating resource group Internal
+03:26:58: Creating resource group Autodetect
+03:26:58: SceneManagerFactory for type 'DefaultSceneManager' registered.
+03:26:58: Registering ResourceManager for type Material
+03:26:58: Registering ResourceManager for type Mesh
+03:26:58: Registering ResourceManager for type Skeleton
+03:26:58: MovableObjectFactory for type 'ParticleSystem' registered.
+03:26:58: OverlayElementFactory for type Panel registered.
+03:26:58: OverlayElementFactory for type BorderPanel registered.
+03:26:58: OverlayElementFactory for type TextArea registered.
+03:26:58: Registering ResourceManager for type Font
+03:26:58: ArchiveFactory for archive type FileSystem registered.
+03:26:58: ArchiveFactory for archive type Zip registered.
+03:26:58: FreeImage version: 3.10.0
+03:26:58: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+03:26:58: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2
+03:26:58: DDS codec registering
+03:26:58: Registering ResourceManager for type HighLevelGpuProgram
+03:26:58: Registering ResourceManager for type Compositor
+03:26:58: MovableObjectFactory for type 'Entity' registered.
+03:26:58: MovableObjectFactory for type 'Light' registered.
+03:26:58: MovableObjectFactory for type 'BillboardSet' registered.
+03:26:58: MovableObjectFactory for type 'ManualObject' registered.
+03:26:58: MovableObjectFactory for type 'BillboardChain' registered.
+03:26:58: MovableObjectFactory for type 'RibbonTrail' registered.
+03:26:58: Loading library .\RenderSystem_GL
+03:26:58: Installing plugin: GL RenderSystem
+03:26:58: OpenGL Rendering Subsystem created.
+03:26:58: Plugin successfully installed
+03:26:58: Loading library .\RenderSystem_Direct3D9
+03:26:58: Installing plugin: D3D9 RenderSystem
+03:26:58: D3D9 : Direct3D9 Rendering Subsystem created.
+03:26:58: D3D9: Driver Detection Starts
+03:26:58: D3D9: Driver Detection Ends
+03:26:58: Plugin successfully installed
+03:26:58: *-*-* OGRE Initialising
+03:26:58: *-*-* Version 1.7.0dev-unstable (Cthugha)
+03:26:58: Creating resource group Bootstrap
+03:26:58: OGRE EXCEPTION(7:InternalErrorException): ../../../Dependencies/MyGUI/MyGUI2.2.2_source/Media/Common/packs/OgreCore.zip - error whilst opening archive: Unable to read zip file. in ZipArchive::checkZzipError at ..\..\OgreMain\src\OgreZip.cpp (line 281)

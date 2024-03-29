@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="StaticImage" skin="StaticImage" position="517 641 247 74" align="HCenter Bottom" layer="Back" name="warmup">
+        <Property key="Image_Texture" value="spectating.png"/>
+        <Property key="Widget_Enabled" value="false"/>
+    </Widget>
+</MyGUI>

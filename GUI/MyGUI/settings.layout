@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+	<Widget type="Window" skin="WindowCSX" position="240 60 800 600" align="HCenter VCenter" layer="Main" name="settings">
+		<Property key="Widget_Caption" value="Settings"/>
+		<Property key="Widget_InheritsAlpha" value="false"/>
+		<Property key="Widget_InheritsPick" value="false"/>
+		<Property key="Window_MinSize" value="800 600"/>
+		<Property key="Window_MaxSize" value="800 600"/>
+		<Widget type="Button" skin="ButtonSmall" position="341 534 104 24" name="applysettings">
+			<Property key="Widget_Caption" value="Apply"/>
+		</Widget>
+		<Widget type="Tab" skin="Tab" position="-3 2 792 524">
+			<Widget type="Sheet" skin="Default" position="4 26 783 492">
+				<Property key="Widget_Caption" value="Graphics"/>
+				<Widget type="StaticText" skin="StaticText" position="8 83 104 24">
+					<Property key="Widget_Caption" value="Full Screen *"/>
+				</Widget>
+				<Widget type="ComboBox" skin="ComboBox" position="8 107 192 24" name="fullscreen">
+					<Property key="ComboBox_AddItem" value="Yes"/>
+					<Property key="ComboBox_AddItem" value="No"/>
+					<Property key="ComboBox_ModeDrop" value="true"/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 147 128 24">
+					<Property key="Widget_Caption" value="VSync *"/>
+				</Widget>
+				<Widget type="ComboBox" skin="ComboBox" position="8 171 192 24" name="vsync">
+					<Property key="ComboBox_ModeDrop" value="true"/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 200 128 24">
+					<Property key="Widget_Caption" value="AA *"/>
+				</Widget>
+				<Widget type="ComboBox" skin="ComboBox" position="8 230 192 24" name="antialiasing">
+					<Property key="ComboBox_ModeDrop" value="true"/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 275 104 24">
+					<Property key="Widget_Caption" value="Resolution *"/>
+				</Widget>
+				<Widget type="ComboBox" skin="ComboBox" position="8 299 192 24" name="resolution">
+					<Property key="ComboBox_ModeDrop" value="true"/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 403 144 24">
+					<Property key="Widget_Caption" value="Texture Filter"/>
+				</Widget>
+				<Widget type="ComboBox" skin="ComboBox" position="8 427 192 24" name="texturefilter">
+					<Property key="ComboBox_ModeDrop" value="true"/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 27 120 24">
+					<Property key="Widget_Caption" value="Shadows"/>
+				</Widget>
+				<Widget type="ComboBox" skin="ComboBox" position="8 51 192 24" name="shadows">
+					<Property key="ComboBox_AddItem" value="Yes"/>
+					<Property key="ComboBox_AddItem" value="No"/>
+					<Property key="ComboBox_ModeDrop" value="true"/>
+				</Widget>
+				
+				<Widget type="HScroll" skin="HSlider" position="8 366 192 16" layer="Back" name="fov"/>
+				<Widget type="StaticText" skin="StaticText" position="8 339 101 21" layer="Back">
+					<Property key="Widget_Caption" value="FOV"/>
+				</Widget>
+
+				<Widget type="StaticText" skin="StaticText" position="251 465 285 23" layer="Back">
+					<Property key="Widget_Caption" value="* setting requires a restart to take effect"/>
+				</Widget>
+			</Widget>
+			<Widget type="Sheet" skin="Default" position="4 26 783 492">
+				<Property key="Widget_Caption" value="Sound"/>
+				<Widget type="StaticText" skin="StaticText" position="8 19 160 24">
+					<Property key="Widget_Caption" value="Effects Volume"/>
+				</Widget>
+				<Widget type="HScroll" skin="HSlider" position="8 51 192 16" name="effectsVolume">
+					<Property key="Scroll_Range" value="101"/>
+					<Property key="Scroll_Position" value="50"/>
+					<Property key="Widget_Enabled" value="true"/>
+					<Property key="Widget_NeedMouse" value="true"/>
+					<Property key="Widget_Show" value="true"/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 83 104 24">
+					<Property key="Widget_Caption" value="Music Volume"/>
+				</Widget>
+				<Widget type="HScroll" skin="HSlider" position="8 115 192 16" name="musicVolume">
+					<Property key="Scroll_Range" value="101"/>
+					<Property key="Scroll_Position" value="50"/>
+				</Widget>
+			</Widget>
+			<Widget type="Sheet" skin="Default" position="4 26 783 492">
+				<Property key="Widget_Caption" value="Controls"/>
+				<Property key="Sheet_Select" value="true"/>
+				<Widget type="StaticText" skin="StaticText" position="8 19 128 24">
+					<Property key="Widget_Caption" value="Boost"/>
+					<Property key="Widget_AlignText" value="ALIGN_HCENTER ALIGN_VCENTER"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="136 19 96 24" name="InputControlBoost">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="232 19 96 24" name="InputControlBoost2">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 55 128 24">
+					<Property key="Widget_Caption" value="Weapon Throw"/>
+					<Property key="Widget_AlignText" value="ALIGN_HCENTER ALIGN_VCENTER"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="136 55 96 24" name="InputUseItemUp">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="232 55 96 24" name="InputUseItemUp2">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="136 95 96 24" name="InputUseItemDown">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="232 95 96 24" name="InputUseItemDown2">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 95 128 24">
+					<Property key="Widget_AlignText" value="ALIGN_HCENTER ALIGN_VCENTER"/>
+					<Property key="Widget_Caption" value="Weapon Drop"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="136 455 96 24" name="InputHop">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="232 455 96 24" name="InputHop2">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 455 128 24">
+					<Property key="Widget_AlignText" value="ALIGN_HCENTER ALIGN_VCENTER"/>
+					<Property key="Widget_Caption" value="Hop"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="136 135 96 24" name="InputControlReset">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="232 135 96 24" name="InputControlReset2">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="491 455 128 24" name="DefaultControls">
+					<Property key="Widget_Caption" value="Reset to defaults"/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 135 128 24">
+					<Property key="Widget_Caption" value="Reset Vehicle"/>
+					<Property key="Widget_AlignText" value="ALIGN_HCENTER ALIGN_VCENTER"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="136 175 96 24" name="InputControlAccel">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="232 175 96 24" name="InputControlAccel2">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 175 128 24">
+					<Property key="Widget_AlignText" value="ALIGN_HCENTER ALIGN_VCENTER"/>
+					<Property key="Widget_Caption" value="Forward"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="136 215 96 24" name="InputControlReverse">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="232 215 96 24" name="InputControlReverse2">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 215 128 24">
+					<Property key="Widget_AlignText" value="ALIGN_HCENTER ALIGN_VCENTER"/>
+					<Property key="Widget_Caption" value="Reverse"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="136 295 96 24" name="InputControlRight">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="232 295 96 24" name="InputControlRight2">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 295 128 24">
+					<Property key="Widget_AlignText" value="ALIGN_HCENTER ALIGN_VCENTER"/>
+					<Property key="Widget_Caption" value="Turn Right"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="136 255 96 24" name="InputControlLeft">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="232 255 96 24" name="InputControlLeft2">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 255 128 24">
+					<Property key="Widget_AlignText" value="ALIGN_HCENTER ALIGN_VCENTER"/>
+					<Property key="Widget_Caption" value="Turn Left"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="136 335 96 24" name="InputControlMouseLook">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="232 335 96 24" name="InputControlMouseLook2">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 335 128 24">
+					<Property key="Widget_AlignText" value="ALIGN_HCENTER ALIGN_VCENTER"/>
+					<Property key="Widget_Caption" value="Free Aim"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="136 375 96 24" name="InputShowPlayers">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="232 375 96 24" name="InputShowPlayers2">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 375 128 24">
+					<Property key="Widget_AlignText" value="ALIGN_HCENTER ALIGN_VCENTER"/>
+					<Property key="Widget_Caption" value="Player List"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="136 415 96 24" name="InputAllChat">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="232 415 96 24" name="InputAllChat2">
+					<Property key="Widget_Caption" value=""/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="8 415 128 24">
+					<Property key="Widget_AlignText" value="ALIGN_HCENTER ALIGN_VCENTER"/>
+					<Property key="Widget_Caption" value="Chat All"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="136 455 96 24" name="InputEscape">
+					<Property key="Widget_Caption" value=""/>
+					<Property key="Widget_Visible" value="false"/>
+					<Property key="Widget_Enabled" value="false"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="232 455 96 24" name="InputEscape2">
+					<Property key="Widget_Caption" value=""/>
+					<Property key="Widget_Visible" value="false"/>
+					<Property key="Widget_Enabled" value="false"/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="379 19 128 24" layer="Back">
+					<Property key="Widget_Caption" value="Mouse Sensitivity"/>
+				</Widget>
+				<Widget type="HScroll" skin="HSlider" position="515 21 196 16" layer="Back" name="mouseslider">
+					<Property key="Scroll_Position" value="50"/>
+					<Property key="Scroll_Range" value="100"/>
+				</Widget>
+				<Widget type="Button" skin="CheckBox" position="379 55 221 24" layer="Back" name="mouselook">
+					<Property key="Widget_Caption" value="Automatic Mouse Look"/>
+					<Property key="Button_Pressed" value="true"/>
+				</Widget>
+				<Widget type="Button" skin="CheckBox" position="379 90 241 24" layer="Back" name="gamepadmouselook">
+					<Property key="Widget_Caption" value="Game Pad Mouse Look Enabled"/>
+					<Property key="Button_Pressed" value="false"/>
+				</Widget>
+				<Widget type="StaticText" skin="StaticText" position="361 135 128 24" layer="Back">
+					<Property key="Widget_Caption" value="Camera Left"/>
+					<Property key="Text_TextAlign" value="Center"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="491 135 96 24" layer="Back" name="InputControlCameraLeft"/>
+				<Widget type="StaticText" skin="StaticText" position="361 175 128 24" layer="Back">
+					<Property key="Text_TextAlign" value="Center"/>
+					<Property key="Widget_Caption" value="Camera Right"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="491 175 96 24" layer="Back" name="InputControlCameraRight"/>
+			<Widget type="StaticText" skin="StaticText" position="361 215 128 24" layer="Back">
+					<Property key="Widget_Caption" value="Camera Up"/>
+					<Property key="Text_TextAlign" value="Center"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="491 215 96 24" layer="Back" name="InputControlCameraUp"/>
+				<Widget type="StaticText" skin="StaticText" position="361 255 128 24" layer="Back">
+					<Property key="Text_TextAlign" value="Center"/>
+					<Property key="Widget_Caption" value="Camera Down"/>
+				</Widget>
+				<Widget type="Button" skin="ButtonSmall" position="491 255 96 24" layer="Back" name="InputControlCameraDown"/>
+			</Widget>
+			<Widget type="Sheet" skin="Default" position="4 26 783 492">
+				<Property key="Widget_Caption" value="Multiplayer"/>
+				<Widget type="StaticText" skin="StaticText" position="8 19 128 24">
+					<Property key="Widget_AlignText" value="ALIGN_HCENTER ALIGN_VCENTER"/>
+					<Property key="Widget_Caption" value="Player Name"/>
+				</Widget>
+				<Widget type="Edit" skin="Edit" position="136 19 192 24" name="playername">
+					<Property key="Widget_Colour" value="#b9fd01"/>
+				</Widget>
+			</Widget>
+		</Widget>
+	</Widget>
+</MyGUI>

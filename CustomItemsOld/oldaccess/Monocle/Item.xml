@@ -1,0 +1,9 @@
+<Item type="Accessories" name="Monocle">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="A proper genlteman's vision aid." />
+		<Colors amount="2" Color1="1 0.95 0.57" Color2="0.55 0.65 0.75" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

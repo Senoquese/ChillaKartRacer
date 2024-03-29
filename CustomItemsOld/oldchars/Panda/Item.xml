@@ -1,0 +1,9 @@
+<Item type="Characters" name="Panda">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Do not let his cuddly appearance deceive you." />
+		<Colors amount="2" Color1="0 0 0" Color2="1 1 1" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

@@ -1,0 +1,234 @@
+system tornado
+{
+scale	0.005 0.005 0.005
+scale_velocity   0.005
+
+//	technique
+//	{
+//		renderer						Billboard
+//		{			
+//			sorting						true
+//		}
+//		material						tornado_particle
+//		default_particle_width			150
+//		default_particle_height			150
+//		visual_particle_quota			3000
+//		emitter							Circle
+//		{
+//			circle_em_radius			40
+//			emission_rate				30
+//			angle						20
+//			direction					0 1 0
+//			velocity					600
+//			time_to_live				4
+//		}
+//		affector						Vortex
+//		{
+//			vortex_aff_vector			0 1 0
+//			vortex_aff_speed			12
+//		}
+//		affector						Colour
+//		{
+//			colour_aff_time_colour		0	1 1 1 1
+//			colour_aff_time_colour		0.5	.5 .5 .5 1
+//		}
+//		affector               Scale
+//		{
+//		   xyz_scale           300
+//		}
+//	}
+
+	technique
+	{
+		renderer						Billboard
+		{			
+			sorting						true
+		}
+		material						tornado_particle
+		default_particle_width			200
+		default_particle_height			200
+		visual_particle_quota			300
+		emitter							Point
+		{
+			emission_rate				16
+			angle						180
+			direction					0 1 0
+			velocity					150
+			time_to_live				.7
+		}
+//		affector						Vortex
+//		{
+//			vortex_aff_vector			0 1 0
+//			vortex_aff_speed			6
+//		}
+		affector						Colour
+		{
+			colour_aff_time_colour		0	1 1 1 .0
+			colour_aff_time_colour		.1	1 1 1 .5
+			colour_aff_time_colour		.5	1 1 1 .5
+			colour_aff_time_colour		1	1 1 1 0
+		}
+		affector               Scale
+		{
+		   xyz_scale           200
+		}
+	}
+	technique
+	{
+		renderer						Billboard
+		{
+			billboard_type					point
+			billboard_rotation_type				vertex
+		}
+		material						debris
+		default_particle_width			100
+		default_particle_height			100
+		visual_particle_quota			200
+		emitter							Circle
+		{
+			circle_em_radius			10
+			emission_rate				1
+			angle						45
+			direction					0 1 0
+			velocity					200
+			time_to_live				2
+		}
+		
+		affector						Vortex
+		{
+			vortex_aff_vector			0 1 0
+			vortex_aff_speed			2
+		}		
+		affector                           TextureRotator
+		{
+		    tex_rot_rotation               dyn_random
+		    {
+			min                       -30
+			max                        30
+		    }
+		    tex_rot_speed                  4
+		}
+
+		affector               Scale
+		{
+		   xyz_scale           50
+		}
+
+
+
+		affector						Colour
+		{
+			colour_aff_time_colour		0	1 1 1 1
+			colour_aff_time_colour		0.8	1 1 1 1
+			colour_aff_time_colour		1	1 1 1 0
+		}
+
+
+	}
+	technique
+	{
+		renderer						Billboard
+		{
+			billboard_type					point
+			billboard_rotation_type				vertex
+		}
+		material						debris2
+		default_particle_width			100
+		default_particle_height			100
+		visual_particle_quota			200
+		emitter							Circle
+		{
+			circle_em_radius			10
+			emission_rate				1
+			angle						45
+			direction					0 1 0
+			velocity					200
+			time_to_live				2
+		}
+		
+		affector						Vortex
+		{
+			vortex_aff_vector			0 1 0
+			vortex_aff_speed			2
+		}		
+		affector                           TextureRotator
+		{
+		    tex_rot_rotation               dyn_random
+		    {
+			min                       -30
+			max                        30
+		    }
+		    tex_rot_speed                  4
+		}
+
+		affector               Scale
+		{
+		   xyz_scale           50
+		}
+
+
+		affector						Colour
+		{
+			colour_aff_time_colour		0	1 1 1 1
+			colour_aff_time_colour		0.8	1 1 1 1
+			colour_aff_time_colour		1	1 1 1 0
+		}
+
+
+	}
+	technique
+	{
+		renderer						Billboard
+		{
+			billboard_type					point
+			billboard_rotation_type				vertex
+		}
+		material						debris3
+		default_particle_width			300
+		default_particle_height			300
+		visual_particle_quota			200
+		emitter							Circle
+		{
+			circle_em_radius			10
+			emission_rate				1
+			angle						25
+			direction					0 1 0
+			velocity					100
+			time_to_live				2
+		}
+		
+		affector						Vortex
+		{
+			vortex_aff_vector			0 1 0
+			vortex_aff_speed			2
+		}		
+		affector                           TextureRotator
+		{
+		    tex_rot_rotation               dyn_random
+		    {
+			min                       -30
+			max                        30
+		    }
+		    tex_rot_speed                  4
+		}
+
+		affector               Scale
+		{
+		   xyz_scale           50
+		}
+
+
+		affector						Colour
+		{
+			colour_aff_time_colour		0	1 1 1 1
+			colour_aff_time_colour		0.8	1 1 1 1
+			colour_aff_time_colour		1	1 1 1 0
+		}
+
+
+	}
+}
+
+
+
+

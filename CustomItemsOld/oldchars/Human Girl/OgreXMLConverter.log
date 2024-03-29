@@ -1,0 +1,52 @@
+00:28:00: Creating resource group General
+00:28:00: Creating resource group Internal
+00:28:00: Creating resource group Autodetect
+00:28:00: Registering ResourceManager for type Mesh
+00:28:00: Registering ResourceManager for type Material
+00:28:00: Registering ResourceManager for type Skeleton
+00:28:00: XMLSkeletonSerializer writing  skeleton data to E:\Games\Steam\steamapps\common\Zero Gear\Assets\CustomItems\Characters\Human Girl\rider002.skeleton.xml...
+00:28:00: Populating DOM...
+00:28:00: Exporting bones..
+00:28:00: There are 21 bones.
+00:28:00:    Exporting Bone number 0
+00:28:00:    Exporting Bone number 1
+00:28:00:    Exporting Bone number 2
+00:28:00:    Exporting Bone number 3
+00:28:00:    Exporting Bone number 4
+00:28:00:    Exporting Bone number 5
+00:28:00:    Exporting Bone number 6
+00:28:00:    Exporting Bone number 7
+00:28:00:    Exporting Bone number 8
+00:28:00:    Exporting Bone number 9
+00:28:00:    Exporting Bone number 10
+00:28:00:    Exporting Bone number 11
+00:28:00:    Exporting Bone number 12
+00:28:00:    Exporting Bone number 13
+00:28:00:    Exporting Bone number 14
+00:28:00:    Exporting Bone number 15
+00:28:00:    Exporting Bone number 16
+00:28:00:    Exporting Bone number 17
+00:28:00:    Exporting Bone number 18
+00:28:00:    Exporting Bone number 19
+00:28:00:    Exporting Bone number 20
+00:28:00: Bones exported.
+00:28:00: Exporting animations, count=7
+00:28:00: Exporting animation: celebration
+00:28:00: Animation exported.
+00:28:00: Exporting animation: cry
+00:28:00: Animation exported.
+00:28:00: Exporting animation: lookback
+00:28:00: Animation exported.
+00:28:00: Exporting animation: turn_left
+00:28:00: Animation exported.
+00:28:00: Exporting animation: turn_right
+00:28:00: Animation exported.
+00:28:00: Exporting animation: wave
+00:28:00: Animation exported.
+00:28:00: Exporting animation: wipeout
+00:28:00: Animation exported.
+00:28:00: DOM populated, writing XML file..
+00:28:00: XMLSkeletonSerializer export successful.
+00:28:00: Unregistering ResourceManager for type Skeleton
+00:28:00: Unregistering ResourceManager for type Material
+00:28:00: Unregistering ResourceManager for type Mesh

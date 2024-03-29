@@ -1,0 +1,9 @@
+<Item type="Accessories" name="3D Glasses">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Make everything POP" />
+		<Colors amount="2" Color1="1 0 0" Color2="0 0 1" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

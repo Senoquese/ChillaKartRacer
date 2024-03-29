@@ -1,0 +1,9 @@
+<Item type="Wheels" name="Race Tire">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Replace every other lap." />
+		<Colors amount="3" Color1="1 1 1" Color2=".15 .15 .15" Color3=".9 .9 .9" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

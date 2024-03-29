@@ -1,0 +1,117 @@
+system targethit
+{
+fixed_timeout   3
+scale	0.035 0.035 0.035
+scale_velocity   0.035
+	technique
+	{
+		emitted_system_quota					10
+		visual_particle_quota					10
+		material								pointflare
+		use_alias								$defaultBillboardRenderer
+		emitter									Point
+		{
+			emits								system_particle	targethitb
+			angle								5
+			emission_rate						5
+			force_emission   true
+			direction							0 1 .5
+			velocity							600
+			time_to_live						2
+		}
+		affector								LinearForce
+		{
+			force_aff_vector					0 -800 0
+		}
+	}
+}
+
+system targethitb
+{
+fixed_timeout   3
+scale	0.035 0.035 0.035
+scale_velocity   0.035
+keep_local								true
+	technique
+	{
+		default_particle_width					160
+		default_particle_height					160
+		visual_particle_quota					1
+		material								pointflare
+		use_alias								$defaultBillboardRenderer
+		
+
+		emitter									Point
+		{
+			angle								360
+			emission_rate						1
+			force_emission						true
+			direction							0 0 0
+			velocity							0
+			time_to_live						7
+		}
+		affector						TextureRotator
+		{
+//			tex_rot_use_own_rotation	true
+			tex_rot_speed		1
+			tex_rot_rotation	360
+
+		}
+		affector                                    Colour
+		{
+			colour_aff_time_colour                  0	0 0 0		1
+			colour_aff_time_colour                  0.05	1 .5 .5		1
+			colour_aff_time_colour                  0.15	1 .5 1		1
+			colour_aff_time_colour                  0.3	0 0 0		1
+			colour_aff_time_colour                  1	0 0 0		1
+		}
+		affector						Scale
+		{
+			xyz_scale					dyn_curved_linear
+		{
+			    control_point       0 1
+			    control_point       0.05 500
+			    control_point       0.3 -1000
+		}
+		}
+
+	}
+	technique
+	{
+		default_particle_width					10
+		default_particle_height					10
+		visual_particle_quota					100
+		use_alias								$defaultBillboardRenderer
+		material								glowflare
+
+		emitter									Point
+		{
+			angle								360
+			emission_rate						50
+			direction							0 -1 0
+			velocity							100
+			time_to_live						1.5
+		}
+		affector								LinearForce
+		{
+			force_aff_vector					0 -200 0
+		}
+		affector                                    Colour
+		{
+			colour_aff_time_colour                  0	0 0 0		1
+			colour_aff_time_colour                  0.05	1 .5 .5		1
+			colour_aff_time_colour                  0.15	1 .5 1		1
+			colour_aff_time_colour                  0.25	0 0 0		1
+			colour_aff_time_colour                  1	0 0 0		1
+		}
+		affector                   Vortex
+		{
+			vortex_aff_vector      0 1 0
+			vortex_aff_speed       4
+		}
+		affector               Scale
+		{
+		   xyz_scale           100
+		}
+	}
+}

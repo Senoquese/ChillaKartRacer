@@ -1,0 +1,143 @@
+system space
+//the final frontier
+{
+	scale .1 .1 .1
+	scale_velocity .1
+//white stars
+	technique
+	{
+		// Use the billboard renderer defined in the *.pua script
+		use_alias						$defaultBillboardRenderer
+		material						glowflare
+		default_particle_width			20
+		default_particle_height			20
+		visual_particle_quota			1500
+		emitter							SphereSurface
+		{
+			position					0 0 0
+			sphere_surface_em_radius	1000
+			emission_rate				150
+			velocity					0
+			time_to_live				8
+			all_particle_dimensions			dyn_random
+			{
+				min	20
+				max	80
+			}
+		}
+		affector						Colour
+		{
+			colour_aff_time_colour		0	0 0 0
+			colour_aff_time_colour		.5	1 1 1
+			colour_aff_time_colour		1	0 0 0
+		}
+
+	}
+
+//red stars
+	technique
+	{
+		// Use the billboard renderer defined in the *.pua script
+		use_alias						$defaultBillboardRenderer
+		material						glowflare
+		default_particle_width			20
+		default_particle_height			20
+		visual_particle_quota			1500
+		emitter							SphereSurface
+		{
+			position					0 0 0
+			sphere_surface_em_radius	1000
+			emission_rate				50
+			velocity					0
+			time_to_live				8
+			all_particle_dimensions			dyn_random
+			{
+				min	20
+				max	80
+			}
+		}
+		affector						Colour
+		{
+			colour_aff_time_colour		0	0 0 0
+			colour_aff_time_colour		.5	1 .6 .5
+			colour_aff_time_colour		1	0 0 0
+		}
+
+	}
+
+//blue stars
+	technique
+	{
+		// Use the billboard renderer defined in the *.pua script
+		use_alias						$defaultBillboardRenderer
+		material						glowflare
+		default_particle_width			20
+		default_particle_height			20
+		visual_particle_quota			1500
+		emitter							SphereSurface
+		{
+			position					0 0 0
+			sphere_surface_em_radius	1000
+			emission_rate				50
+			velocity					0
+			time_to_live				8
+			all_particle_dimensions			dyn_random
+			{
+				min	20
+				max	80
+			}
+		}
+		affector						Colour
+		{
+			colour_aff_time_colour		0	0 0 0
+			colour_aff_time_colour		.5	.6 .8 1
+			colour_aff_time_colour		1	0 0 0
+		}
+
+	}
+
+////shooting stars
+//	technique
+//	{
+//		// Set the quota low
+//		visual_particle_quota					20
+//		material								gradient
+//		renderer								RibbonTrail
+//		{
+//			ribbontrail_vertex_colours			true
+//			ribbontrail_max_elements			10
+//			ribbontrail_length					300
+//			ribbontrail_width					20
+//			ribbontrail_random_initial_colour		false
+//			ribbontrail_initial_colour			1 1 1 1
+//			ribbontrail_colour_change			0 0 0 0
+//		}
+//		emitter							SphereSurface
+//		{
+//			position					0 0 0
+//			sphere_surface_em_radius	10000
+//			emission_rate				8
+//			velocity					0
+//			time_to_live				2
+//			all_particle_dimensions			20
+//
+//		}
+////		affector						Colour
+////		{
+////			colour_aff_time_colour		0	0 0 0
+////			colour_aff_time_colour		.2	1 1 1
+////			colour_aff_time_colour		.5	1 1 1
+////			colour_aff_time_colour		.8	0 0 0
+////		}
+//
+//		affector                   Vortex
+//		{
+//		    vortex_aff_vector      -.5 -.5 0
+//		    vortex_aff_speed       1
+//		}
+//
+//	}
+
+
+
+}

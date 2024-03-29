@@ -1,0 +1,9 @@
+<Item type="Hats" name="Football Helmet">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Blue 42! Blue 42! Hut, Hut, HIKE!" />
+		<Colors amount="4" Color1="0.78 0.341 0.102" Color2="0.78 0.98 1" Color3="0 0.201 0.694" Color4="0.5 0.5 0.5" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

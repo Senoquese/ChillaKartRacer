@@ -1,0 +1,25 @@
+system 4x
+{
+	technique
+	{
+		position						0 6 0
+		material						4x
+		default_particle_width			4
+
+		default_particle_height			2 
+
+		use_alias						$defaultBillboardRenderer
+		emitter							Point
+		{
+			force_emission				true
+			emission_rate				1
+			angle					0
+			direction				0 0 0
+			velocity				0
+			time_to_live				100000
+
+		}
+
+		}
+
+}

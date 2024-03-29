@@ -1,0 +1,9 @@
+<Item type="Wheels" name="Tracks">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Improved grip on any surface!" />
+		<Colors amount="2" Color1="0.353 0.388 0.122" Color2=".29 .29 .29" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

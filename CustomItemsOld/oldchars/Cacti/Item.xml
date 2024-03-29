@@ -1,0 +1,9 @@
+<Item type="Characters" name="Cacti">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="All hat sales are final on this character." />
+		<Colors amount="3" Color1="0.486 0.686 0.059" Color2="1 0.996 0.757" Color3="0 0 0" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

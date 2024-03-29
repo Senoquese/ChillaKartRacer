@@ -1,0 +1,51 @@
+system crystalglow
+{
+lod_distances	400
+	technique
+	{
+		lod_index 0
+		position						0 0 0
+		material						crystalglow
+		default_particle_width			50
+		default_particle_height			50
+		visual_particle_quota			50
+		use_alias						$defaultBillboardRenderer
+		emitter							Point
+		{
+			force_emission				true
+			emission_rate				1
+			angle					0
+			direction				0 0 0
+			velocity				0
+			time_to_live				100000
+
+		}
+
+
+	}
+
+	technique
+	{
+		lod_index 1
+		position						0 0 0
+		material						crystalglow
+		default_particle_width			50
+		default_particle_height			50
+		visual_particle_quota			50
+		use_alias						$defaultBillboardRenderer
+		emitter							Point
+		{
+			enabled					false
+			force_emission				true
+			emission_rate				0
+			angle					0
+			direction				0 0 0
+			velocity				0
+			time_to_live				100000
+
+		}
+
+
+	}
+}
+

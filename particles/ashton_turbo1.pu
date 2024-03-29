@@ -1,0 +1,50 @@
+system ashton_turbo1
+{
+fixed_timeout   1
+	scale	0.005 0.005 0.005
+	scale_velocity   0.005
+
+	technique
+	{
+		material						gradient
+		visual_particle_quota			10
+		renderer						Billboard
+		{
+			billboard_type				oriented_self
+			billboard_origin			bottom_center
+		}
+		
+		emitter							Point
+		{
+			enabled						true
+			force_emission				true
+			emission_rate				5
+			direction					0 1 0
+			angle						90
+			time_to_live				.2
+			particle_height				dyn_random
+			{
+				min						20
+				max						30
+			}
+			particle_width				6
+			velocity					dyn_random
+			{
+				min						800
+				max						600
+			}
+		}
+		
+		affector						Colour
+		{
+			colour_aff_time_colour		0		0.5 0.75 1
+			colour_aff_time_colour		0.1	 	0 0.25 0.45
+			colour_aff_time_colour		1	 	0 0 0
+		}
+		
+		affector						LinearForce
+		{
+			force_aff_vector			0 -1000 0
+		}
+	}
+}

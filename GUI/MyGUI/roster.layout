@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Window" skin="Window" position="340 60 600 600" align="Center" layer="Main" name="roster">
+        <Property key="Widget_Alpha" value=".9"/>
+        <Property key="Widget_InheritsAlpha" value="false"/>
+        <Property key="Window_MinSize" value="600 600"/>
+        <Property key="Window_MaxSize" value="600 600"/>
+        <Widget type="MultiList" skin="MultiList" position="0 34 592 529" name="playerlist">
+            <Property key="Widget_Alpha" value="0.75"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="CheckBox" position="8 5 120 27" name="kickcheck">
+            <Property key="Widget_Caption" value="Vote to kick"/>
+            <Property key="Widget_Visible" value="false"/>
+            <Property key="Widget_Enabled" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="CheckBox" position="128 5 120 27" name="mutecheck">
+            <Property key="Widget_Caption" value="Mute player"/>
+            <Property key="Widget_Visible" value="false"/>
+            <Property key="Widget_Enabled" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="CheckBox" position="248 5 120 27" name="hidecheck">
+            <Property key="Widget_Caption" value="Hide kart"/>
+            <Property key="Widget_Visible" value="false"/>
+            <Property key="Widget_Enabled" value="false"/>
+        </Widget>
+    </Widget>
+</MyGUI>

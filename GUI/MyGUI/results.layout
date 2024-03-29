@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="StaticImage" skin="StaticImage" position="340 61 600 598" align="Center" layer="Back" name="standingscont">
+        <Property key="Image_Texture" value="standings_bg.png"/>
+        <Property key="Widget_Enabled" value="false"/>
+        <Widget type="RenderBox" skin="RenderBox" position="16 192 175 76" layer="Back" name="renderbox1"/>
+        <Widget type="RenderBox" skin="RenderBox" position="208 192 175 76" layer="Back" name="renderbox2"/>
+        <Widget type="RenderBox" skin="RenderBox" position="408 192 175 76" layer="Back" name="renderbox3"/>
+        <Widget type="StaticText" skin="StaticText" position="16 286 175 22" layer="Back" name="name1">
+            <Property key="Text_TextAlign" value="HCenter VCenter"/>
+            <Property key="Text_FontName" value="fat.17"/>
+            <Property key="Widget_Caption" value="Murphy"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="208 286 184 22" layer="Back" name="name2">
+            <Property key="Text_TextAlign" value="HCenter VCenter"/>
+            <Property key="Widget_Caption" value="eeen"/>
+            <Property key="Text_FontName" value="fat.17"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="408 286 175 22" layer="Back" name="name3">
+            <Property key="Widget_Caption" value="marshmonkey"/>
+            <Property key="Text_TextAlign" value="HCenter VCenter"/>
+            <Property key="Text_FontName" value="fat.17"/>
+        </Widget>
+        <Widget type="List" skin="List" position="16 328 568 248" layer="Back" name="results"/>
+    </Widget>
+</MyGUI>

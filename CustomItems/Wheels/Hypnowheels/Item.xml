@@ -1,0 +1,9 @@
+<Item type="Wheels" name="Hypnowheels">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Designed to mesmerize your opponents, or perhaps even yourself! Do not look directy at the Hypnowheel!" />
+		<Colors amount="3" Color1=".15 .15 .15" Color2=".85 .85 .85" Color3=".31 .03 .54" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

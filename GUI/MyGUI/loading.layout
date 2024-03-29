@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="PanelEmpty" position="-4 -4 1288 728" align="Stretch" layer="Popup" name="cont">
+        <Property key="Widget_Alpha" value="1"/>
+        <Property key="Widget_Enabled" value="false"/>
+        <Widget type="StaticImage" skin="StaticImage" position="-2 -2 1286 726" align="Stretch" layer="Back">
+            <Property key="Image_Texture" value="loading.png"/>
+            <Property key="Image_Coord" value="0 0 1 1"/>
+        </Widget>
+        <Widget type="StaticImage" skin="StaticImage" position="240 60 800 600" align="HCenter VCenter" layer="Back">
+            <Property key="Image_Texture" value="loading.png"/>
+            <Property key="Image_Coord" value="0 0 800 600"/>
+            <Property key="Image_Tile" value="800 600"/>
+        </Widget>
+    </Widget>
+</MyGUI>

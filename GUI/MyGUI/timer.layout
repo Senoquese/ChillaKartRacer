@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="Panel" position="523 5 246 99" align="HCenter Top" layer="Back" name="timercont">
+        <Property key="Widget_Alpha" value="0"/>
+        <Widget type="StaticImage" skin="StaticImage" position="0 0 246 99" layer="Back" name="timerbg">
+            <Property key="Image_Texture" value="core_zg.png"/>
+            <Property key="Image_Coord" value="425 120 246 99"/>
+            <Property key="Image_Tile" value="246 99"/>
+            <Property key="Widget_Enabled" value="false"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="39 16 168 72" align="Default" layer="Back" name="timer">
+            <Property key="Widget_Caption" value="00:00"/>
+            <Property key="Text_TextAlign" value="HCenter VCenter"/>
+            <Property key="Text_FontName" value="fat.60"/>
+            <Property key="Text_FontHeight" value="50"/>
+            <Property key="Text_TextColour" value="#c5ff02"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_InheritsPick" value="false"/>
+        </Widget>
+    </Widget>
+</MyGUI>

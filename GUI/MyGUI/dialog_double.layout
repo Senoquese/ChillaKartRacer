@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Window" skin="WindowC" position="484 268 312 184" align="Center" layer="Back">
+        <Property key="Widget_Caption" value="Title"/>
+        <Widget type="Edit" skin="WordWrap" position="8 9 284 87" layer="Back" name="bodytext">
+            <Property key="Widget_Caption" value="Are you sure you want to quit?"/>
+            <Property key="Text_TextAlign" value="HCenter VCenter"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="12 105 128 32" layer="Back" name="leftbutton">
+            <Property key="Widget_Caption" value="left"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="160 105 128 32" layer="Back" name="rightbutton">
+            <Property key="Widget_Caption" value="right"/>
+        </Widget>
+    </Widget>
+</MyGUI>

@@ -1,0 +1,59 @@
+system boost
+{
+//NOTE: keep_local true should always be on the system level, NOT the technique or emitter level
+//keep_local true
+//scale	0.005 0.005 0.005
+//scale_velocity   0.005
+
+
+	// --------------- flashbolt ---------------
+	technique
+	{
+		material						tireflame
+		visual_particle_quota			500
+		renderer						Billboard
+		{
+			billboard_type				oriented_self
+		}
+		
+
+		emitter							Point
+		{
+			enabled					true
+			emission_rate				150
+			position				0 0 0
+			direction					0 1 0
+			angle						180
+			time_to_live				.15
+			particle_height				1
+			particle_width				1
+			velocity					5
+		}
+		
+		// Start with a normal coloured texture and fade out
+		affector						Colour
+		{
+			colour_aff_time_colour		0	1 1 1
+			colour_aff_time_colour		0.1	.3 .3 .3
+			colour_aff_time_colour		0.3	0 0 0
+		}
+		
+//		affector						Scale
+//		{
+//			xyz_scale					-1000
+//		}
+
+		affector                     SphereCollider
+		{
+		    position                 0 .2 0
+		    sphere_collider_radius   .4
+		    collision_intersection   box
+		    collision_type           flow
+		    collision_friction       0.2
+		    collision_bouncyness     0.4
+		}		
+
+	}
+
+}
+

@@ -1,0 +1,11 @@
+<Item type="Hats" name="Propeller Hat">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Prepare for Lift-Off!" />
+		<Colors amount="4" Color1="0.204 0.259 1" Color2="1 0 0" Color3="1 0.9 0" Color4="0 0.804 0.188" />
+	</Description>
+	<Settings>
+		<Parameter name="IdleRate" type="FLOAT" data="0.3" />
+		<Parameter name="IdleVariable" type="BOOL" data="true" />
+	</Settings>
+</Item>

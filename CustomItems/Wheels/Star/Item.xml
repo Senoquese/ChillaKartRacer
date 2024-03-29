@@ -1,0 +1,9 @@
+<Item type="Wheels" name="Star">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Driven by the power of stars." />
+		<Colors amount="4" Color1=".15 .15 .15" Color2="1 .525 0" Color3=".6 .6 .6" Color4="1 .69 0" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

@@ -1,0 +1,15 @@
+<Item type="Kart" name="Tank">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="My Tank Is Fight!" />
+		<Colors amount="4" Color1="0.353 0.388 0.122" Color2="1 0.941 0" Color3="1 1 1" Color4="0.812 0 0" />
+	</Description>
+	<Settings>
+		<Parameter name="DriverPositionX" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionY" type="FLOAT" data="0.25" />
+		<Parameter name="DriverPositionZ" type="FLOAT" data="-0.031" />
+		<Parameter name="IdleRate" type="FLOAT" data="1" />
+		<Parameter name="IdleVariable" type="BOOL" data="true" />
+		<Parameter name="IdleRateMultiplier" type="FLOAT" data="1" />
+	</Settings>
+</Item>

@@ -1,0 +1,9 @@
+<Item type="Wheels" name="Dubs">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Rollin' on Dubs." />
+		<Colors amount="2" Color1=".15 .15 .15" Color2=".6 .6 .6" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

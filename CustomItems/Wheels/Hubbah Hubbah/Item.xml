@@ -1,0 +1,9 @@
+<Item type="Wheels" name="Hubbah Hubbah">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Shiny AND round." />
+		<Colors amount="2" Color1="1 1 1" Color2=".15 .15 .15" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

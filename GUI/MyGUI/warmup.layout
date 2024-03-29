@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="StaticImage" skin="StaticImage" position="512 8 256 128" align="HCenter Top" layer="Back" name="warmup">
+        <Property key="Image_Texture" value="warmup.png"/>
+        <Property key="Widget_Enabled" value="false"/>
+    </Widget>
+</MyGUI>

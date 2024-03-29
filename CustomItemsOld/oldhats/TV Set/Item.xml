@@ -1,0 +1,9 @@
+<Item type="Hats" name="TV Set">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Look Ma!" />
+		<Colors amount="1" Color1=".34 .76 0"/>
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

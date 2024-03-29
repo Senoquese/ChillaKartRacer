@@ -1,0 +1,95 @@
+UseModule("SyncedKart", "Scripts/SyncedObjects")
+UseModule("SyncedBall", "Scripts/SyncedObjects")
+UseModule("SyncedBallController", "Scripts/SyncedObjects")
+
+--A silly name I know, but this is just a helper to create ScriptObjects
+function CreateScriptObjectCreator(path, type)
+
+	return function () local so = ScriptObject() so:SetPath(path)
+					   so:SetFileName(type) so:SetTypeName(type) return ToIObject(so) end
+
+end
+
+
+function CreateScriptObject()
+
+	return function () return ToIObject(ScriptObject()) end
+
+end
+
+
+function CreateSoundSourceObject()
+
+	return function () return ToIObject(SoundSource()) end
+
+end
+
+
+function CreateOGREParticleEffectObject()
+
+	return function () return ToIObject(OGREParticleEffect()) end
+
+end
+
+
+function CreateOGREModelObject()
+
+	return function () return ToIObject(OGREModel()) end
+
+end
+
+
+function CreateBulletCylinderObject()
+
+    return function () return ToIObject(BulletCylinder()) end
+
+end
+
+
+function CreateSyncedObjectFactory()
+
+	local coreObjectFactory = WorldObjectFactory()
+
+	coreObjectFactory:AddCreator(WorldObjectCreator("SyncedKart",
+								 ScriptValueWrapper(CreateScriptObjectCreator("Scripts/SyncedObjects", "SyncedKart"), "SyncedKart")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("WorldMesh",
+								 ScriptValueWrapper(CreateScriptObjectCreator("Scripts/SyncedObjects", "WorldMesh"), "WorldMesh")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("SyncedBall",
+								 ScriptValueWrapper(CreateScriptObjectCreator("Scripts/SyncedObjects", "SyncedBall"), "SyncedBall")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("SyncedBallController",
+								 ScriptValueWrapper(CreateScriptObjectCreator("Scripts/SyncedObjects", "SyncedBallController"), "SyncedBallController")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("WeaponBox",
+								 ScriptValueWrapper(CreateScriptObjectCreator("Scripts/SyncedObjects", "WeaponBox"), "WeaponBox")))
+	--Weapons
+	coreObjectFactory:AddCreator(WorldObjectCreator("SyncedIceCube",
+								 ScriptValueWrapper(CreateScriptObjectCreator("Scripts/SyncedObjects/Weapons", "SyncedIceCube"), "SyncedIceCube")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("SyncedFakeItem",
+								 ScriptValueWrapper(CreateScriptObjectCreator("Scripts/SyncedObjects/Weapons", "SyncedFakeItem"), "SyncedFakeItem")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("SyncedSeaMine",
+								 ScriptValueWrapper(CreateScriptObjectCreator("Scripts/SyncedObjects/Weapons", "SyncedSeaMine"), "SyncedSeaMine")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("SyncedLUVBot",
+								 ScriptValueWrapper(CreateScriptObjectCreator("Scripts/SyncedObjects/Weapons", "SyncedLUVBot"), "SyncedLUVBot")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("SyncedPuncher",
+								 ScriptValueWrapper(CreateScriptObjectCreator("Scripts/SyncedObjects/Weapons", "SyncedPuncher"), "SyncedPuncher")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("SyncedTwister",
+								 ScriptValueWrapper(CreateScriptObjectCreator("Scripts/SyncedObjects/Weapons", "SyncedTwister"), "SyncedTwister")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("SyncedRepulsor",
+								 ScriptValueWrapper(CreateScriptObjectCreator("Scripts/SyncedObjects/Weapons", "SyncedRepulsor"), "SyncedRepulsor")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("SyncedSpring",
+								 ScriptValueWrapper(CreateScriptObjectCreator("Scripts/SyncedObjects/Weapons", "SyncedSpring"), "SyncedSpring")))
+								 
+	--Vanilla IObjects
+	coreObjectFactory:AddCreator(WorldObjectCreator("ScriptObject",
+								 ScriptValueWrapper(CreateScriptObject(), "ScriptObject")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("SoundSource",
+								 ScriptValueWrapper(CreateSoundSourceObject(), "SoundSource")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("OGREParticleEffect",
+								 ScriptValueWrapper(CreateOGREParticleEffectObject(), "OGREParticleEffect")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("OGREModel",
+								 ScriptValueWrapper(CreateOGREModelObject(), "OGREModel")))
+	coreObjectFactory:AddCreator(WorldObjectCreator("BulletCylinder",
+								 ScriptValueWrapper(CreateBulletCylinderObject(), "BulletCylinder")))
+
+	return coreObjectFactory
+
+end

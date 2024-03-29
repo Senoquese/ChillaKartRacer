@@ -1,0 +1,9 @@
+<Item type="Hats" name="Road Cone">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Handy for diverting the flow of traffic." />
+		<Colors amount="1" Color1="1 0.417 0" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

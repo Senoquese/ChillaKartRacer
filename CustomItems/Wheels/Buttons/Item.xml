@@ -1,0 +1,9 @@
+<Item type="Wheels" name="Buttons">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Keep your pants on." />
+		<Colors amount="2" Color1=".669 .591 .510" Color2=".802 .625 .412" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

@@ -1,0 +1,15 @@
+<Item type="Kart" name="Formula 2">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Fast and low." />
+		<Colors amount="2" Color1="1 0 0" Color2="1 1 1" />
+	</Description>
+	<Settings>
+		<Parameter name="DriverPositionX" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionY" type="FLOAT" data="0" />
+		<Parameter name="DriverPositionZ" type="FLOAT" data="0" />
+		<Parameter name="IdleRate" type="FLOAT" data="1" />
+		<Parameter name="IdleVariable" type="BOOL" data="true" />
+		<Parameter name="IdleRateMultiplier" type="FLOAT" data="2" />
+	</Settings>
+</Item>

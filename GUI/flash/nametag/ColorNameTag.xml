@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nametag>
+	<tag left="tagLeft_grey.png" middle="tagMiddle_grey.png" right="tagRight_grey.png" arrow="tagArrow_grey.png" textY="8" />
+	<font face="Arial Bold" size="14" color="FFFFFF" stroke="000000" />
+</nametag>

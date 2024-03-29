@@ -1,0 +1,9 @@
+<Item type="Wheels" name="Starfish">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Starfish (also called sea stars) are any echinoderms belonging to the class Asteroidea." />
+		<Colors amount="3" Color1="1 0 0" Color2="1 1 1" Color3=".9 .849 .731" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

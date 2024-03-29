@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+        <Widget type="StaticImage" skin="StaticImage" position="100 0 650 400" layer="Back">
+            <Property key="Image_Texture" value="zglogo.png"/>
+            <Property key="Widget_InheritsAlpha" value="false"/>
+            <Property key="Widget_Enabled" value="false"/>
+        </Widget>
+</MyGUI>

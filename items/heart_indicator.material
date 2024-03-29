@@ -1,0 +1,82 @@
+material heartwhite
+{
+	technique
+	{
+		pass
+		{
+		scene_blend add
+		depth_write off
+
+		      texture_unit Color1
+		      {
+        colour_op_ex source1 src_manual src_current 1 1 1
+	  alpha_op_ex source1 src_manual src_current 0.1
+		      }
+
+		}
+	}
+}
+material heartpink
+{
+  technique
+  {
+    pass
+    {
+      
+      texture_unit Color1
+      {
+        colour_op_ex source1 src_manual src_current 1 .292 .471
+	  alpha_op_ex source1 src_manual src_current 0.5
+      }
+
+			texture_unit
+			{
+				cubic_texture cubemap.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_current src_texture 
+				env_map cubic_reflection
+			}
+
+//rimlighting
+			texture_unit
+			{
+				cubic_texture rim.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map cubic_normal
+			}
+
+    }
+  }
+}
+
+material heartarrow
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+			
+			texture_unit
+			{
+				texture heartarrow.dds
+			}
+//rimlighting
+			texture_unit
+			{
+				cubic_texture rim.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map cubic_normal
+			}
+		}
+	}
+}

@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Window" skin="WindowC" position="0 0 299 311" align="Right Top" layer="Main" name="_Main">
+        <Property key="Widget_Caption" value="Color Picker"/>
+        <Widget type="Widget" skin="PanelSmall" position="7 7 134 262">
+            <Widget type="StaticImage" skin="StaticImage" position="2 2 128 256" align="Left Top" name="widget_ColorRect">
+                <Property key="Image_Texture" value="ColourGradient"/>
+                <Widget type="StaticImage" skin="StaticImage" position="0 0 16 16" name="image_Picker">
+                    <Property key="Image_Texture" value="Pick.png"/>
+                    <Property key="Image_Coord" value="0 0 16 16"/>
+                    <Property key="Image_Tile" value="16 16"/>
+                    <Property key="Image_Index" value="0"/>
+                </Widget>
+            </Widget>
+        </Widget>
+        <Widget type="Widget" skin="PanelSmall" position="147 7 22 262">
+            <Widget type="VScroll" skin="VColourSlider" position="2 2 16 256" name="scroll_Range">
+                <Property key="Scroll_Range" value="512"/>
+                <Property key="Scroll_Position" value="0"/>
+                <Property key="Scroll_Page" value="1"/>
+                <Property key="Scroll_ViewPage" value="32"/>
+            </Widget>
+        </Widget>
+        <Widget type="Widget" skin="PanelEmpty" position="176 7 106 171">
+            <Widget type="StaticImage" skin="StaticImage" position="0 12 19 19" name="checkmark_ColorView">
+                <Property key="Widget_InheritsAlpha" value="false"/>
+                <Property key="Image_Texture" value="core_zg.png"/>
+                <Property key="Image_Coord" value="70 160 19 19"/>
+                <Property key="Image_Tile" value="19 19"/>
+            </Widget>
+            <Widget type="StaticText" skin="RawRect" position="23 3 80 36" name="widget_ColorView"/>
+            <Widget type="StaticText" skin="RawRect" position="23 45 80 36" name="widget_ColorView2"/>
+            <Widget type="StaticText" skin="RawRect" position="23 87 80 36" name="widget_ColorView3"/>
+            <Widget type="StaticText" skin="RawRect" position="23 129 80 36" name="widget_ColorView4"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="228 242 56 26" name="edit_Blue">
+            <Property key="Edit_CursorPosition" value="0"/>
+            <Property key="Widget_Caption" value="256"/>
+            <Property key="Widget_AlignText" value="Center"/>
+            <Property key="Edit_MaxTextLength" value="3"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="176 241 48 26">
+            <Property key="Widget_AlignText" value="Right VCenter"/>
+            <Property key="Widget_Caption" value="Blue"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="176 213 48 26">
+            <Property key="Widget_AlignText" value="Right VCenter"/>
+            <Property key="Widget_Caption" value="Green"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="228 215 56 26" name="edit_Green">
+            <Property key="Widget_AlignText" value="Center"/>
+            <Property key="Widget_Caption" value="256"/>
+            <Property key="Edit_MaxTextLength" value="3"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="176 187 48 24">
+            <Property key="Widget_Caption" value="Red"/>
+            <Property key="Widget_AlignText" value="Right VCenter"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="228 188 56 26" name="edit_Red">
+            <Property key="Widget_Caption" value="256"/>
+            <Property key="Widget_AlignText" value="Center"/>
+            <Property key="Edit_MaxTextLength" value="3"/>
+        </Widget>
+        
+        <Widget type="Button" skin="Button" position="176 7 107 26" name="button_OK">
+            <Property key="Widget_Caption" value="OK"/>
+            <Property key="Widget_Visible" value="false"/>
+        </Widget>
+        <Widget type="Button" skin="Button" position="176 41 107 26" name="Button_Cancel">
+            <Property key="Widget_Caption" value="Cancel"/>
+            <Property key="Widget_Enabled" value="false"/>
+            <Property key="Widget_Visible" value="false"/>
+        </Widget>
+        
+    </Widget>
+</MyGUI>

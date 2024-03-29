@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="PanelEmpty" position="1243 686 32 32" align="Right Bottom" layer="Back" name="signal">
+        <Property key="Widget_Enabled" value="false"/>
+        <Widget type="StaticImage" skin="StaticImage" position="0 0 32 32" name="4">
+            <Property key="Image_Texture" value="core_zg.png"/>
+            <Property key="Image_Coord" value="681 193 32 32"/>
+            <Property key="Image_Tile" value="32 32"/>
+            <Property key="Widget_Visible" value="false"/>
+        </Widget>
+        <Widget type="StaticImage" skin="StaticImage" position="0 0 32 32" name="3">
+            <Property key="Image_Texture" value="core_zg.png"/>
+            <Property key="Image_Tile" value="32 32"/>
+            <Property key="Image_Coord" value="714 193 32 32"/>
+            <Property key="Widget_Visible" value="false"/>
+        </Widget>
+        <Widget type="StaticImage" skin="StaticImage" position="0 0 32 32" name="2">
+            <Property key="Image_Texture" value="core_zg.png"/>
+            <Property key="Image_Coord" value="747 193 32 32"/>
+            <Property key="Image_Tile" value="32 32"/>
+            <Property key="Widget_Visible" value="false"/>
+        </Widget>
+        <Widget type="StaticImage" skin="StaticImage" position="0 0 32 32" name="1">
+            <Property key="Image_Texture" value="core_zg.png"/>
+            <Property key="Image_Coord" value="780 193 32 32"/>
+            <Property key="Image_Tile" value="32 32"/>
+            <Property key="Widget_Visible" value="false"/>
+        </Widget>
+    </Widget>
+    <Widget type="Widget" skin="PanelEmpty" position="1108 688 192 56" align="Right Bottom" layer="Back" name="notification">
+        <Property key="Widget_Visible" value="false"/>
+        <Property key="Widget_Enabled" value="false"/>
+        <Widget type="StaticImage" skin="StaticImage" position="29 6 24 24">
+            <Property key="Image_Texture" value="core_zg.png"/>
+            <Property key="Image_Coord" value="2 202 48 48"/>
+            <Property key="Image_Tile" value="48 48"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="57 12 74 24">
+            <Property key="Widget_Caption" value="High Ping!"/>
+            <Property key="Text_FontName" value="ManualFont"/>
+            <Property key="Text_FontHeight" value="17"/>
+        </Widget>
+    </Widget>
+</MyGUI>

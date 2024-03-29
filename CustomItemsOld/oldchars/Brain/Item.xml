@@ -1,0 +1,9 @@
+<Item type="Characters" name="Brain">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="The brain is basically a wrinkled bag of skin, filled with warm water, veins, and thought muscles." />
+		<Colors amount="1" Color1=".699 .564 .564" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

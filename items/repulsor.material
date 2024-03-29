@@ -1,0 +1,64 @@
+material repulsor_out
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+			scene_blend add
+			depth_write off
+
+			texture_unit
+			{
+				texture repulsor.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll_anim 1 2
+				rotate 0
+			}
+		}
+	}
+}
+material repulsor_in
+{
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+			scene_blend add
+			depth_write off
+
+			texture_unit
+			{
+				texture repulsor.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll_anim -.1 -4
+				rotate 0
+
+			}
+//rimlighting
+			texture_unit
+			{
+				cubic_texture rim50.dds combinedUVW
+				tex_address_mode clamp
+				colour_op_ex add src_texture src_current
+				colour_op_multipass_fallback one one
+				env_map cubic_normal
+			}
+		}
+	}
+}

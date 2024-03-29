@@ -1,0 +1,9 @@
+<Item type="Hats" name="Baseball Cap">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Fitted for large heads." />
+		<Colors amount="3" Color1=".357 .572 1" Color2=".2 .2 .2" Color3="1 1 1" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

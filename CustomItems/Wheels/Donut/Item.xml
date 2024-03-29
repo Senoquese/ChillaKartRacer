@@ -1,0 +1,9 @@
+<Item type="Wheels" name="Donut">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Food of the gods." />
+		<Colors amount="2" Color1="1 .412 .706" Color2=".812 .502 .247" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

@@ -1,0 +1,17 @@
+material plus_7
+{
+	technique
+	{
+		pass
+		{
+			fog_override true
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			texture_unit
+			{
+				texture plus_7.dds
+			}
+		}
+	}
+}

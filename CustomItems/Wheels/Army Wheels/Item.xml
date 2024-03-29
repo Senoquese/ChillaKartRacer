@@ -1,0 +1,9 @@
+<Item type="Wheels" name="Army Wheels">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="Through mud and blood and sand and snow!" />
+		<Colors amount="2" Color1="0.404 0.435 0.212" Color2="0.188 0.188 0.188" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>

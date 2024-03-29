@@ -1,0 +1,9 @@
+<Item type="Accessories" name="Clown Nose">
+	<Description>
+		<Author data="NimbleBit" />
+		<Note data="+1 to clowning around" />
+		<Colors amount="1" Color1=".83 0 0 1" />
+	</Description>
+	<Settings>
+	</Settings>
+</Item>
