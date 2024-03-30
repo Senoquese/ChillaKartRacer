@@ -1,9 +1,0 @@
-<Item type="Hats" name="Cowboy Hat">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Good gear for rustlin' up some varmints." />
-		<Colors amount="3" Color1="1 .76 .37" Color2="1 0 0" Color3="1 1 1" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

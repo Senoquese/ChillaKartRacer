@@ -1,9 +1,0 @@
-<Item type="Accessories" name="Race Goggles">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Garunteed protection from wind, dust, bugs, and most forms of fire." />
-		<Colors amount="3" Color1="0.1 0.5 1" Color2="0.1 0.5 1" Color3="0.55 0.65 0.75" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

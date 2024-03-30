@@ -1,9 +1,0 @@
-<Item type="Characters" name="Sock Monkey">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Nothing is cooler than a sock monkey." />
-		<Colors amount="3" Color1="0 1 0" Color2="1 1 1" Color3="1 0 0.76" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

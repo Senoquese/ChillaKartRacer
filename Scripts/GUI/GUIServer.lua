@@ -122,7 +122,8 @@ function GUIServer:SaveServerSettings()
     self.serverSettings.minPlayers = self.minPlayers:GetItemNameAt(self.minPlayers:GetIndexSelected()):AsUTF8()
     self.serverSettings.maxPlayers = self.maxPlayers:GetItemNameAt(self.maxPlayers:GetIndexSelected()):AsUTF8()
     self.serverSettings.mapTime = self.mapTime:GetCaption():AsUTF8()
-    self.serverSettings.kartCC = 150
+    self.serverSettings.kartCC = self.kartCC:GetItemNameAt(self.kartCC:GetIndexSelected()):AsUTF8()
+    self.serverSettings.startSpectator = self.startSpectator:GetCaption():AsUTF8()
     self.serverSettings.mapCycle = {}
     for j=0,self.mapCycleList:GetItemCount()-1 do
         local map = self.mapCycleList:GetItemNameAt(j):AsUTF8()
@@ -143,6 +144,8 @@ function GUIServer:SetupTabSetup()
     GetMyGUISystem():RegisterEvent(self.maxPlayers, "eventComboChangePosition", self.listChangePosSlot)
     self.minPlayers = ToComboBox(self.serverCont:FindWidget(self.serverPrefix .. "minplayers"))
     GetMyGUISystem():RegisterEvent(self.minPlayers, "eventComboChangePosition", self.listChangePosSlot)
+    self.kartCC = ToComboBox(self.serverCont:FindWidget(self.serverPrefix .. "kartCC"))
+    self.startSpectator = ToComboBox(self.serverCont:FindWidget(self.serverPrefix .. "startspectator"))
     self.serverAnnounce = ToComboBox(self.serverCont:FindWidget(self.serverPrefix .. "announce"))
 
     self.serverStart = self.serverCont:FindWidget(self.serverPrefix .. "serverpower")
@@ -205,7 +208,8 @@ function GUIServer:SetupTabSetup()
     -- end
 
     self:ShowInfoPanel(false)
-
+    self.kartCC:SetIndexSelected(1)
+    self.startSpectator:SetIndexSelected(0)
 end
 
 
@@ -477,7 +481,7 @@ function GUIServer:ListChangePosition(params)
     print("list change postiion: "..wname)
 
     if wname == self.maxPlayers:GetName() then
-        local newMax = self.maxPlayers:GetItemNameAt(self.maxPlayers:GetIndexSelected()):AsUTF8()
+        local newMax = tonumber(self.maxPlayers:GetItemNameAt(self.maxPlayers:GetIndexSelected()):AsUTF8())
         local min = self.minPlayers:GetItemNameAt(self.minPlayers:GetIndexSelected()):AsUTF8()
         print("max: "..newMax.." min:"..min)
         if newMax <= min then
@@ -488,8 +492,8 @@ function GUIServer:ListChangePosition(params)
         print("GetServerManager():SetMaxPlayers("..newMax..")")
         CMD("GetServerManager():SetMaxPlayers("..newMax..")")
     elseif wname == self.minPlayers:GetName() then
-        local newMin = self.minPlayers:GetItemNameAt(self.minPlayers:GetIndexSelected()):AsUTF8()
-        local max = self.maxPlayers:GetItemNameAt(self.maxPlayers:GetIndexSelected()):AsUTF8()
+        local newMin = tonumber(self.minPlayers:GetItemNameAt(self.minPlayers:GetIndexSelected()):AsUTF8())
+        local max = tonumber(self.maxPlayers:GetItemNameAt(self.maxPlayers:GetIndexSelected()):AsUTF8())
         if newMin >= max then
             newMin = max - 1
             self.minPlayers:SetIndexSelected(newMin)

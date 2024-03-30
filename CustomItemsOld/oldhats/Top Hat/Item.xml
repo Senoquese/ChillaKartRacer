@@ -1,9 +1,0 @@
-<Item type="Hats" name="Top Hat">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Tall, flat-crowned and broad-brimmed." />
-		<Colors amount="2" Color1="0.15 0.15 0.15" Color2="1 0 0" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

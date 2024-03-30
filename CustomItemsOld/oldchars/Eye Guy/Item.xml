@@ -1,9 +1,0 @@
-<Item type="Characters" name="Eye Guy">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Objects in mirror may be closer than they appear." />
-		<Colors amount="4" Color1="0.6 0 1" Color2="1 1 1" Color3="0.5 0.95 0" Color4="0.949 0.427 0.490" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

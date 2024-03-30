@@ -1,0 +1,612 @@
+material falloutskybox
+{
+	technique
+	{
+		pass
+		{
+			fog_override true
+			lighting off
+			depth_write off
+			diffuse 1 1 1 1
+			ambient 1 1 1 1
+
+			texture_unit
+			{
+				cubic_texture rainbowroad_sky_pz.png rainbowroad_sky_nz.png rainbowroad_sky_nx.png rainbowroad_sky_px.png rainbowroad_sky_py.png rainbowroad_sky_ny.png separateUV
+				tex_address_mode clamp
+			}
+		}
+	}
+}
+
+material Dsfc_RR_Road_road {
+	receive_shadows on
+	technique {
+		pass {
+			fog_override true
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+			emissive 1 1 1
+
+			// - base_color_texture
+			texture_unit {
+				texture Dsfc_R_tairu_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+			texture_unit {
+				texture Dsfc_R_tairu_emm.png
+				tex_address_mode wrap
+				colour_op add
+			}
+			texture_spm {
+				texture Dsfc_R_tairu_spm.png
+				tex_address_mode wrap
+				colour_op add
+			}
+			texture_unit
+			{
+				texture glasscubemap2.dds
+				env_map spherical
+				colour_op add
+			}
+		}
+	}
+}
+
+material Dsfc_R_tairuhuti {
+	receive_shadows on
+	technique {
+		pass {
+			fog_override true
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+			emissive 1 1 1
+
+			// - base_color_texture
+			texture_unit {
+				texture Dsfc_R_tairuhuti_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+			texture_unit
+			{
+				texture glasscubemap2.dds
+				env_map spherical
+				colour_op add
+			}
+		}
+	}
+}
+
+
+material Dsfc_R_tairuhutinaname {
+	receive_shadows on
+	technique {
+		pass {
+			fog_override true
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+			emissive 1 1 1
+
+			// - base_color_texture
+			texture_unit {
+				texture Dsfc_R_tairuhutinaname_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+			texture_unit
+			{
+				texture glasscubemap2.dds
+				env_map spherical
+				colour_op add
+			}
+		}
+	}
+}
+
+material Dsfc_gateBlockA {
+	receive_shadows on
+	technique {
+		pass {
+			fog_override true
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+			emissive 1 1 1
+
+			// - base_color_texture
+			texture_unit {
+				texture Dsfc_StartGateBlockA_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+			texture_unit
+			{
+				texture glasscubemap2.dds
+				env_map spherical
+				colour_op add
+			}
+		}
+	}
+}
+
+material Dsfc_startPanel {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture Dsfc_startpanel_Emm.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material Dsfc_Jump {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture Dsfc_Jump_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material m_mist {
+	technique {
+		pass {
+			lighting off
+			depth_write off
+			scene_blend alpha_blend
+			cull_software none
+			cull_hardware none
+ 			receive_shadows off
+			diffuse 1 1 1 0.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture mist_01_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material dp3_TreeB_plane {
+	technique {
+		pass {
+			lighting off
+
+			scene_blend alpha_blend
+			cull_software none
+			cull_hardware none
+ 			alpha_rejection greater 128
+ 			receive_shadows off
+			diffuse 1 1 1 0.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture sfcdp3_PlaneTree_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material Dsfc_StartLogo {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture Dsfc_StartLogo_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material Dsfc_CubeMap_light {
+	technique {
+		pass {
+			lighting off
+
+			fog_override true
+			scene_blend alpha_blend
+			cull_software none
+			cull_hardware none
+ 			alpha_rejection greater 128
+ 			receive_shadows off
+			diffuse 1 1 1 0.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture Dsfc_cubemap2.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material Dsfc_CubeMap_light2 {
+	technique {
+		pass {
+			lighting off
+
+			fog_override true
+			scene_blend alpha_blend
+			cull_software none
+			cull_hardware none
+ 			alpha_rejection greater 128
+ 			receive_shadows off
+			diffuse 1 1 1 0.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture Dsfc_cubemap2.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material Dsfc_R_StartLine {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture Dsfc_RR_StartLine_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material dp3_CliffOutside {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture sfcdp3_CliffOutside_alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material Dsfc_StarKanban {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture Dsfc_StartKanban_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material dp3_YamaB {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture sfcdp3_yama_B_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material GardenLight {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture GardenLight_01_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material Dsfc_gatestar {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture Dsfc_gateStar_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material dp3_KinopioHouse {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture DsfcRR_KinopioHouse_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material dp3_TreeB_FakeLeaf {
+	technique {
+		pass {
+			lighting off
+
+			scene_blend alpha_blend
+			cull_software none
+			cull_hardware none
+ 			alpha_rejection greater 128
+ 			receive_shadows off
+			diffuse 1 1 1 0.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture sfcdp3_TreeB_FakeLeaf_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material dp3_house_wood {
+	technique {
+		pass {
+			lighting off
+
+			scene_blend alpha_blend
+			cull_software none
+			cull_hardware none
+ 			alpha_rejection greater 128
+ 			receive_shadows off
+			diffuse 1 1 1 0.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture sfcdp3_KinopioHouseDoor_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material Dsfc_R_saku {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture Dsfc_R_saku_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material dp3_YamaA {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture sfcdp3_grass_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material dp3_grass_OutSide {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture sfcdp3_grass_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material Dsfc_jumppanel {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture Dsfc_jumpcomb_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+
+material dp3_YamaC {
+	receive_shadows on
+	technique {
+		pass {
+			diffuse 1 1 1 1.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture sfcdp3_yama_C_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material dp3_TreeB_LeafBase {
+	technique {
+		pass {
+			lighting off
+
+			scene_blend alpha_blend
+			cull_software none
+			cull_hardware none
+ 			alpha_rejection greater 128
+ 			receive_shadows off
+			diffuse 1 1 1 0.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture sfcdp3_TreeB_LeafBase_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+
+material ef_waterF {
+	technique
+	{
+		pass
+		{
+			lighting off
+
+			ambient 0 0 0 1
+			diffuse 1 1 1 1
+			specular 0 0 0 1
+			emissive 0 0 0
+			scene_blend alpha_blend
+			depth_write off
+			cull_hardware none
+		        cull_software none 
+
+			texture_unit
+			{
+				texture water.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll_anim 0.01 -0.025
+				rotate 0
+			}
+			texture_unit
+			{
+				texture water.dds
+				tex_coord_set 0
+				colour_op modulate
+				scale 1 1
+				scroll_anim -0.01 0.025
+				rotate 0
+			}
+//metal map
+			texture_unit
+			{
+				texture glasscubemap2.dds
+				env_map spherical
+				colour_op add
+			}
+		}
+	}
+}
+
+material dp3_ForestEnkei {
+	technique {
+		pass {
+			cull_hardware none
+			diffuse 1 1 1 0.0
+			specular 0 0.0 0 0 0
+
+			// - base_color_texture
+			texture_unit {
+				texture sfcdp3_ForestEnkei_Alb.png
+				tex_address_mode wrap
+				colour_op modulate
+			}
+		}
+	}
+}
+

@@ -1,9 +1,0 @@
-<Item type="Hats" name="Beanie">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Feeling chilly? Try this on." />
-		<Colors amount="1" Color1="0 1 0" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

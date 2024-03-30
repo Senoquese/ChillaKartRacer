@@ -1,5 +1,4 @@
 UseModule("IBase", "Scripts/")
-UseModule("GUIMiniMap", "Scripts/GUI/")
 
 --CLIENTMAPLOADER CLASS START
 
@@ -16,9 +15,6 @@ function ClientMapLoader:__init() super()
 	self.mapSerializer = MapSerializer("Client", GetClientWorld())
 	self.map = nil
 	self.mapName = ""
-
-	self.miniMap = nil
-
 end
 
 
@@ -81,16 +77,6 @@ end
 function ClientMapLoader:LoadSettings(mapName)
 
     print("Start ClientMapLoader:LoadSettings()")
-
-	--Minimap
-	local miniMapSetting = self.map:GetSetting("MiniMap", false)
-	if IsValid(miniMapSetting) and string.len(miniMapSetting:GetStringData()) > 0 then
-		--BRIAN TODO: Testing without minimap for performance
-		--self.miniMap = GUIMiniMap()
-		--The mini map is in Assets\GUI\flash\minimap, so this code will generate the correct path from that directory
-		--self.miniMap:SetMap(self.map, "..\\..\\..\\Maps\\" .. mapName .. "\\Graphics\\" .. miniMapSetting:GetStringData())
-		--self.miniMap:SetVisible(true)
-	end
 
 	--SkyBox
 	local skyBoxSetting = self.map:GetSetting("SkyBox", false)
@@ -171,11 +157,6 @@ function ClientMapLoader:UnInitIBase()
 	self.mapSerializer = nil
 	self:Unload()
 
-	if IsValid(self.miniMap) then
-		self.miniMap:UnInit()
-		self.miniMap = nil
-	end
-
 	if IsValid(self.camFreeMove) then
 		self.camFreeMove:UnInit()
 		self.camFreeMove = nil
@@ -227,12 +208,6 @@ function ClientMapLoader:Unload()
 		GetCameraManager():RemoveAllControllers()
 	else
 		print("Warning: CameraManager was invalid in ClientMapLoader:Unload()")
-	end
-
-	--Destroy the minimap
-	if IsValid(self.miniMap) then
-		self.miniMap:UnInit()
-		self.miniMap = nil
 	end
 
 	if IsValid(GetOGRESystem()) then

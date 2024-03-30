@@ -1,9 +1,0 @@
-<Item type="Hats" name="Hollyday Cap">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="+2 to Jollyness." />
-		<Colors amount="2" Color1="1 0 0" Color2="1 1 1" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

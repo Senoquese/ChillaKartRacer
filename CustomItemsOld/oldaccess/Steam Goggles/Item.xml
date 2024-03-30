@@ -1,9 +1,0 @@
-<Item type="Accessories" name="Steam Goggles">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Best used onboard giant steam powered dirigibles." />
-		<Colors amount="4" Color1="0.55 0.65 0.75" Color2=".54 .303 .148" Color3=".25 .25 .25" Color4="1 0.95 0.57" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

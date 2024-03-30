@@ -23,11 +23,11 @@ function RaceClient:__init(setMap) super()
 		error("No map passed to GameMode Race in init")
 	end
 
-    self.achievements = AchievementManager()
+	self.achievements = AchievementManager()
 
 	self.spectatorTimer = WTimer()
 
-    self.spectatorManager = SpectatorManager()
+	self.spectatorManager = SpectatorManager()
 
 	self:LoadMapSettings()
 
@@ -42,7 +42,7 @@ function RaceClient:__init(setMap) super()
 	self.raceNodeManager = nil
 	self:InitNodes()
 
-    self.raceCheckpointManager = RaceCheckpointManager(self.map, self.raceNodeManager)
+	self.raceCheckpointManager = RaceCheckpointManager(self.map, self.raceNodeManager)
 
 	self.processSlot = self:CreateSlot("ProcessSlot", "Process")
 	GetScriptSystem():GetSignal("ProcessEnd", true):Connect(self.processSlot)
@@ -59,7 +59,7 @@ function RaceClient:__init(setMap) super()
 	self.camFollowObjChanged = self:CreateSlot("CamFollowObjChanged", "CamFollowObjChanged")
 	GetCameraManager():GetSignal("FollowObjectChanged", true):Connect(self.camFollowObjChanged)
 
-    --Called when the spectated object is uninited
+	--Called when the spectated object is uninited
 	self.specObjUnInitSlot = self:CreateSlot("SpecObjUnInit", "SpecObjUnInit")
 	self.spectatorManager:GetSignal("FollowObjUnInit", true):Connect(self.specObjUnInitSlot)
 
@@ -93,12 +93,12 @@ function RaceClient:__init(setMap) super()
 		i = i + 1
 	end
 
-    -- Listen for fire key
-    self.keyEventSlot = self:CreateSlot("KeyEvent","KeyEvent")
-    GetClientInputManager():GetSignal("KeyReleasedIgnoreFocus", true):Connect(self.keyEventSlot)
-    
-    -- Find track music
-    local objIter = GetClientWorld():GetObjectIterator()
+	-- Listen for fire key
+	self.keyEventSlot = self:CreateSlot("KeyEvent","KeyEvent")
+	GetClientInputManager():GetSignal("KeyReleasedIgnoreFocus", true):Connect(self.keyEventSlot)
+	
+	-- Find track music
+	local objIter = GetClientWorld():GetObjectIterator()
 	while not objIter:IsEnd() do
 		local worldObject = objIter:Get()
 		if IsValid(worldObject) and worldObject:GetTypeName() == "SoundSource" and worldObject:GetName() == "Soundtrack" then
@@ -223,11 +223,11 @@ function RaceClient:InitGUI()
 	self.raceStandings = GUIRaceStandings()
 	self.raceStandings:SetVisible(false)
 
-    self.warmupGUI = GetMyGUISystem():LoadLayout("warmup.layout", "Warmup_")
-    self.warmupGUI:SetVisible(false)
-    
-    self.spectatorGUI = GetMyGUISystem():LoadLayout("spectator.layout", "Spectator_")
-    self.spectatorGUI:SetVisible(false)
+	self.warmupGUI = GetMyGUISystem():LoadLayout("warmup.layout", "Warmup_")
+	self.warmupGUI:SetVisible(false)
+	
+	self.spectatorGUI = GetMyGUISystem():LoadLayout("spectator.layout", "Spectator_")
+	self.spectatorGUI:SetVisible(false)
 
 	--Does the roster need to be updated?
 	self.rosterDirty = true
@@ -249,13 +249,13 @@ function RaceClient:UnInitGUI()
 	self.raceStandings:UnInit()
 	self.raceStandings = nil
 
-    GetMyGUISystem():UnloadLayout(self.warmupGUI)
+	GetMyGUISystem():UnloadLayout(self.warmupGUI)
 	self.warmupGUI = nil
 
-    GetMyGUISystem():UnloadLayout(self.spectatorGUI)
+	GetMyGUISystem():UnloadLayout(self.spectatorGUI)
 	self.spectatorGUI = nil
 
-    
+	
 	--We no longer control the roster
 	GetMenuManager():GetRoster():SetManuallyControlled(false)
 
@@ -294,102 +294,103 @@ function RaceClient:LoadMapSettings()
 		self.observeCamLookAt.z = camParam:GetFloatData()
 	end
 
-    self.camFreeMove = CamControllerGoTo(self.observeCamPos, self.observeCamLookAt, GetCamera())
+	self.camFreeMove = CamControllerGoTo(self.observeCamPos, self.observeCamLookAt, GetCamera())
 	--self.camFreeMove:SetPosition(self.observeCamPos)
 	--self.camFreeMove:SetLookAt(self.observeCamLookAt)
 
 end
 
 function RaceClient:GoToSpectator()
-    self.spectatorTimer:Reset()
-    self.spectatorTimer:Stop()
-    
-    self.mainPlayer:SetControllerEnabled(false)
-    
-    -- Find a player to follow
-    local racingPlayer = self:GetRacingPlayer()
-            
-    -- Give camera control to the spectator manager 
-    if IsValid(racingPlayer) then
-        self.spectatorManager:SetFollowPlayer(racingPlayer)
-        self.spectatorManager:SetEnabled(true)
-    end
-    
-    self.spectatorGUI:SetVisible(true)
-    
+	self.spectatorTimer:Reset()
+	self.spectatorTimer:Stop()
+	
+	self.mainPlayer:SetControllerEnabled(false)
+	
+	-- Find a player to follow
+	local racingPlayer = self:GetRacingPlayer()
+			
+	-- Give camera control to the spectator manager 
+	if IsValid(racingPlayer) then
+		self.spectatorManager:SetFollowPlayer(racingPlayer)
+		self.spectatorManager:SetEnabled(true)
+	end
+	
+	self.spectatorGUI:SetVisible(true)
+	
 end
 
 function RaceClient:SetPlayerState(player, newPlayerState)
 
 	player.userData.state = newPlayerState
 
-    --Based on the player state, manage their controller
+
+	--Based on the player state, manage their controller
 	if player.userData.state == self.raceStates.PLAYER_STATE_WAIT_FOR_PLAYERS then
 		player:SetControllerEnabled(true)
 	elseif player.userData.state == self.raceStates.PLAYER_STATE_COUNTDOWN then
 		player:SetControllerEnabled(true)
 	elseif player.userData.state == self.raceStates.PLAYER_STATE_RACE then
-	    print("State PLAYER_STATE_RACE")
-	    player:GetController().boostBurned = 0
-	    player:GetController().weaponsUsed = false
+		print("State PLAYER_STATE_RACE")
+		player:GetController().boostBurned = 0
+		player:GetController().weaponsUsed = false
 		player:SetControllerEnabled(true)
 	elseif player.userData.state == self.raceStates.PLAYER_STATE_RACE_FINISHED then
 		--player:SetControllerEnabled(false)
 		if player == self.mainPlayer and IsClient() then
-		    GetSoundSystem():EmitSound(ASSET_DIR .. "sound/AMB_Goal.wav", WVector3(), 0.6, 10, false, SoundSystem.HIGH)
-		    
-		    -- Check for iced finish
-		    if player == self.mainPlayer then
-		        print("Iced at finish: "..tostring(player:GetController():GetWheelFriction()))
-		        print("Place: "..player.userData.place)
-		        if player:GetController():GetWheelFriction() == 0 and player.userData.place == 1 then
-		            self.achievements:Unlock(self.achievements.AVMT_FROZEN_FINISH)
-		        end
-		    end
-		    
-		    -- Check for overachiever
-		    if player == self.mainPlayer then
-		        print("Overachiever: "..tostring(self.overachiever))
-		        if self.overachiever then
-		            self.achievements:Unlock(self.achievements.AVMT_OVERACHIEVER)
-		        end
-		    end
-		    
-		    -- Check for pwnt
-		    if player == self.mainPlayer then
-		        if IsValid(self.placeTime) and player.userData.place == 1 and GetClientSystem():GetTime() - self.placeTime < 2 then
-		            self.achievements:Unlock(self.achievements.AVMT_PWNT)
-		        end
-		    end
-		    
-		    -- Check for screwed
-		    if player == self.mainPlayer then
-		        if IsValid(self.placeTime) and player.userData.place ~= 1 and GetClientSystem():GetTime() - self.placeTime < 2 then
-		            self.achievements:Unlock(self.achievements.AVMT_SCREWED)
-		        end
-		    end
-		    
-		    -- Check for easy rider
-		    if player == self.mainPlayer then
-		        print("Boost Burned: "..player:GetController().boostBurned)
-		        if player.userData.place == 1 and player:GetController().boostBurned == 0 then
-		            self.achievements:Unlock(self.achievements.AVMT_EASY_RIDER)
-		        end
-		    end
-		    
-		    -- Check for pacifist
-		    if player == self.mainPlayer then
-		        if player.userData.place == 1 and player:GetController().weaponsUsed == false then
-		            self.achievements:Unlock(self.achievements.AVMT_PACIFIST)
-		        end
-		    end
-		    
-		    -- Check for butterfly
-		    if player == self.mainPlayer then
-		        if player.userData.place == 1 and player:GetController().inAir then
-		            self.achievements:Unlock(self.achievements.AVMT_FLOAT_BUTTERFLY)
-		        end
-		    end
+			GetSoundSystem():EmitSound(ASSET_DIR .. "sound/AMB_Goal.wav", WVector3(), 0.6, 10, false, SoundSystem.HIGH)
+			
+			-- Check for iced finish
+			if player == self.mainPlayer then
+				print("Iced at finish: "..tostring(player:GetController():GetWheelFriction()))
+				print("Place: "..player.userData.place)
+				if player:GetController():GetWheelFriction() == 0 and player.userData.place == 1 then
+					self.achievements:Unlock(self.achievements.AVMT_FROZEN_FINISH)
+				end
+			end
+			
+			-- Check for overachiever
+			if player == self.mainPlayer then
+				print("Overachiever: "..tostring(self.overachiever))
+				if self.overachiever then
+					self.achievements:Unlock(self.achievements.AVMT_OVERACHIEVER)
+				end
+			end
+			
+			-- Check for pwnt
+			if player == self.mainPlayer then
+				if IsValid(self.placeTime) and player.userData.place == 1 and GetClientSystem():GetTime() - self.placeTime < 2 then
+					self.achievements:Unlock(self.achievements.AVMT_PWNT)
+				end
+			end
+			
+			-- Check for screwed
+			if player == self.mainPlayer then
+				if IsValid(self.placeTime) and player.userData.place ~= 1 and GetClientSystem():GetTime() - self.placeTime < 2 then
+					self.achievements:Unlock(self.achievements.AVMT_SCREWED)
+				end
+			end
+			
+			-- Check for easy rider
+			if player == self.mainPlayer then
+				print("Boost Burned: "..player:GetController().boostBurned)
+				if player.userData.place == 1 and player:GetController().boostBurned == 0 then
+					self.achievements:Unlock(self.achievements.AVMT_EASY_RIDER)
+				end
+			end
+			
+			-- Check for pacifist
+			if player == self.mainPlayer then
+				if player.userData.place == 1 and player:GetController().weaponsUsed == false then
+					self.achievements:Unlock(self.achievements.AVMT_PACIFIST)
+				end
+			end
+			
+			-- Check for butterfly
+			if player == self.mainPlayer then
+				if player.userData.place == 1 and player:GetController().inAir then
+					self.achievements:Unlock(self.achievements.AVMT_FLOAT_BUTTERFLY)
+				end
+			end
 		end
 	elseif player.userData.state == self.raceStates.PLAYER_STATE_SHOW_WINNERS then
 		player:SetControllerEnabled(true)
@@ -398,10 +399,10 @@ function RaceClient:SetPlayerState(player, newPlayerState)
 	end
 
 	if player == self.mainPlayer then
-	    self.spectatorGUI:SetVisible(false)
+		self.spectatorGUI:SetVisible(false)
 	
-	    --player:GetController():SetBoostPercent(1)
-	    --player:GetController():SetBoostPercent(0)
+		--player:GetController():SetBoostPercent(1)
+		--player:GetController():SetBoostPercent(0)
 		if self:GetPlayerState(self.mainPlayer) == self.raceStates.PLAYER_STATE_WAIT_FOR_PLAYERS then
 			--Load all we want before the race starts
 			self:SetLoadingAllowed(true)
@@ -409,7 +410,7 @@ function RaceClient:SetPlayerState(player, newPlayerState)
 
 		--Show or Hide the race laps GUI if the main player is racing or not
 		if self:GetPlayerState(self.mainPlayer) == self.raceStates.PLAYER_STATE_RACE or 
-           self:GetPlayerState(self.mainPlayer) == self.raceStates.PLAYER_STATE_COUNTDOWN then
+		   self:GetPlayerState(self.mainPlayer) == self.raceStates.PLAYER_STATE_COUNTDOWN then
 			--Loading now would interrupt gameplay
 			self:SetLoadingAllowed(false)
 
@@ -427,63 +428,65 @@ function RaceClient:SetPlayerState(player, newPlayerState)
 			--Load all we want when the winners are being shown as nobody is playing
 			self:SetLoadingAllowed(true)
 			self:ShowStandingsGUI(true)
-		    --self.camFreeMove:SetPosition(self.observeCamPos)
+			--self.camFreeMove:SetPosition(self.observeCamPos)
 			--self.camFreeMove:SetLookAt(self.observeCamLookAt)
 			
 			
 			--
-            self.spectatorManager:SetEnabled(false)
+			self.spectatorManager:SetEnabled(false)
 			GetCameraManager():AddController(self.camFreeMove, 2)
 			GetCamera():SetPosition(self.observeCamPos)
 			GetCamera():GetLookAt():SetPosition(self.observeCamLookAt)
 			--
 			
 			if self.mainPlayer.userData.place == 1 then
-			    GetSoundSystem():EmitSound(ASSET_DIR .. "sound/win.wav", WVector3(), 0.2, 10, false, SoundSystem.HIGH)
-			    if GetClientManager().indieSlider then
-			        self.achievements:Unlock(self.achievements.AVMT_INDIE_GAMER)
-			    end
+				GetSoundSystem():EmitSound(ASSET_DIR .. "sound/win.wav", WVector3(), 0.2, 10, false, SoundSystem.HIGH)
+				if GetClientManager().indieSlider then
+					self.achievements:Unlock(self.achievements.AVMT_INDIE_GAMER)
+				end
 			end
 		else
 			self:ShowStandingsGUI(false)
 			GetCameraManager():RemoveController(self.camFreeMove)
 		end
 
-        -- Spectator states
-        if self:IsPlayerSpectating(self.mainPlayer) then
+		-- Spectator states
+		if self:IsPlayerSpectating(self.mainPlayer) then
 			--It is okay to load while the player is spectating as it won't screw up their gameplay
-            self:SetLoadingAllowed(true)
-            
-            self.spectatorTimer:Reset()
-            --[[
-            -- Find a player to follow
-            local racingPlayer = self:GetRacingPlayer()
-            
-            -- Give camera control to the spectator manager 
-            if IsValid(racingPlayer) then
-                self.spectatorManager:SetFollowPlayer(racingPlayer)
-                self.spectatorManager:SetEnabled(true)
-            end
-            --]]
-        end
+			self:SetLoadingAllowed(true)
+			
+			self.spectatorTimer:Reset()
+
+		end
 		
+		if player == GetPlayerManager():GetPlayer(1) and ServerSettingsManager().startSpectator == "Yes" then
+			player:SetControllerEnabled(false)
+			player:GetController():SetEnabled(false)
+			player:GetController():SetEnableControls(false)
+			self.spectatorManager:SetEnabled(true)
+			self:GoToSpectator()
+			self.spectatorTimer:Reset()
+			local racingPlayer = self:GetRacingPlayer()
+			self.spectatorManager:SetFollowPlayer(racingPlayer)
+			return
+		end
 	end
 
 end
 
 function RaceClient:KeyEvent(keyParams)
-    local key = keyParams:GetParameter("Key", true):GetIntData()
-    --print("key pressed:"..key)
-    if self:IsPlayerSpectating(self.mainPlayer) and GetClientInputManager():GetKeyCodeMatches(key, "UseItemUp") then
-        -- Switch follow player
-        local newFollow = self:GetRacingPlayer(self.spectatorManager:GetFollowPlayer())
-        if IsValid(newFollow) then
-            print("newFollow:"..newFollow:GetName())
-            self.spectatorManager:SetFollowPlayer(newFollow)
-        end
-    end
+	local key = keyParams:GetParameter("Key", true):GetIntData()
+	--print("key pressed:"..key)
+	if self:IsPlayerSpectating(self.mainPlayer) and GetClientInputManager():GetKeyCodeMatches(key, "UseItemUp") then
+		-- Switch follow player
+		local newFollow = self:GetRacingPlayer(self.spectatorManager:GetFollowPlayer())
+		if IsValid(newFollow) then
+			print("newFollow:"..newFollow:GetName())
+			self.spectatorManager:SetFollowPlayer(newFollow)
+		end
+	end
 
-    -- REFRESH LAYOUT FOR THE POSITION (DEBUG ONLY SENOQUESE)
+	-- REFRESH LAYOUT FOR THE POSITION (DEBUG ONLY SENOQUESE)
  --    self.racePosition:UnInit()
 	-- self.racePosition = nil
 	-- self.racePosition = GUIRacePosition(0, 0, 0, 0)
@@ -492,11 +495,11 @@ end
 
 function RaceClient:GetRacingPlayer(notPlayer)
 
-    local racers = {}
+	local racers = {}
 
-    local i = 1
+	local i = 1
 	local numPlayers = GetPlayerManager():GetNumberOfPlayers()
-    while i < (numPlayers + 1) do
+	while i < (numPlayers + 1) do
 		local player = GetPlayerManager():GetPlayer(i)
 		if player ~= self.mainPlayer and player ~= notPlayer and (self:GetPlayerState(player) == self.raceStates.PLAYER_STATE_RACE or self:GetPlayerState(player) == self.raceStates.PLAYER_STATE_COUNTDOWN) then
 			table.insert(racers, player)
@@ -505,9 +508,9 @@ function RaceClient:GetRacingPlayer(notPlayer)
 	end
 	
 	if #racers > 0 then
-	    return racers[math.modf((Random() * #racers) + 1)]
+		return racers[math.modf((Random() * #racers) + 1)]
 	else
-	    return nil
+		return nil
 	end
 	
 end
@@ -540,7 +543,7 @@ end
 
 function RaceClient:Process()
 
-    local frameTime = GetFrameTime()
+	local frameTime = GetFrameTime()
 	if self.gameState == self.raceStates.GAME_STATE_WAIT_FOR_PLAYERS then
 		self:ProcessStateWaitForPlayers(frameTime)
 	elseif self.gameState == self.raceStates.GAME_STATE_COUNTDOWN then
@@ -549,70 +552,70 @@ function RaceClient:Process()
 		self:ProcessStateRace(frameTime)
 	elseif self.gameState == self.raceStates.GAME_STATE_SHOW_WINNERS then
 		self:ProcessStateShowWinners(frameTime)
-    end
+	end
 
 	self:ProcessGUI(frameTime)
 
 	self.raceCheckpointMarkerManager:Process(frameTime)
 	
 	if self.visualizationEnabled then
-	    self:DrawToNode()
+		self:DrawToNode()
 	end
 
 end
 
 function RaceClient:ProcessSpectatorState(frameTime)
 
-    if self.spectatorTimer:GetTimeSeconds() == 0 then
-        -- Check if the player we're following is still racing
-        local followPlayer = self.spectatorManager:GetFollowPlayer()
-        if not IsValid(followPlayer) or self:GetPlayerState(followPlayer) ~= self.raceStates.PLAYER_STATE_RACE then
-            -- Switch to another racing player
-            local racer = self:GetRacingPlayer()
-            if IsValid(racer) then
-                self.spectatorManager:SetFollowPlayer(racer)
-            end
-        end
-    elseif self.spectatorTimer:GetTimeSeconds() > 1.0 then
-        self:GoToSpectator()
-    end
+	if self.spectatorTimer:GetTimeSeconds() == 0 then
+		-- Check if the player we're following is still racing
+		local followPlayer = self.spectatorManager:GetFollowPlayer()
+		if not IsValid(followPlayer) or self:GetPlayerState(followPlayer) ~= self.raceStates.PLAYER_STATE_RACE then
+			-- Switch to another racing player
+			local racer = self:GetRacingPlayer()
+			if IsValid(racer) then
+				self.spectatorManager:SetFollowPlayer(racer)
+			end
+		end
+	elseif self.spectatorTimer:GetTimeSeconds() > 1.0 then
+		self:GoToSpectator()
+	end
 
 end
 
 function RaceClient:DrawToNode()
-    local playerCheckpoint = self.raceCheckpointManager:GetPlayerCheckpoint(self.mainPlayer)
-    
-    if IsValid(playerCheckpoint) then
-        local playerCP = self.raceCheckpointManager:GetCheckpoint(playerCheckpoint)
-        
-        if IsValid(playerCP) then
-            local nodeA, distA = self.raceNodeManager:GetNextClosestNode(playerCP, self.mainPlayer:GetPosition())
-            local nodePlane = nodeA:Get():GetPlane()
-            if not IsValid(self.mainPlayer.userData.node) or nodeA:Get():GetIndex() ~= self.mainPlayer.userData.node then
-                self.mainPlayer.userData.node = nodeA:Get():GetIndex()
-                print("node:"..self.mainPlayer.userData.node)
-            end
-            local side = nodePlane:GetPointOnSide(self.mainPlayer:GetPosition())
-            if not IsValid(self.line) then
-                self.line = OGRELines()    
-            end
-            self.line:Init(Parameters())
-            self.line:Begin()
-            if side == WPlane.POSITIVE_SIDE then
-                local onto = nodeA:Get():GetNextNode():GetPosition() - nodeA:GetPosition()
-                local toKart = self.mainPlayer:GetPosition() - nodeA:GetPosition()
-                local proj = toKart:Project(onto)
-                self.line:AddLine(nodeA:GetPosition()+WVector3(0,0.5,0), nodeA:GetPosition()+proj+WVector3(0,0.5,0), WColorValue(0, 1, 0, 0))
-            else
-                local onto = nodeA:Get():GetPrevNode():GetPosition() - nodeA:GetPosition()
-                local toKart = self.mainPlayer:GetPosition() - nodeA:GetPosition()
-                local proj = toKart:Project(onto)
-                self.line:AddLine(nodeA:GetPosition()+WVector3(0,0.5,0), nodeA:GetPosition()+proj+WVector3(0,0.5,0), WColorValue(0, 0, 1, 0))
-            end
-            self.line:End()
-            --print(distA)
-        end
-    end
+	local playerCheckpoint = self.raceCheckpointManager:GetPlayerCheckpoint(self.mainPlayer)
+	
+	if IsValid(playerCheckpoint) then
+		local playerCP = self.raceCheckpointManager:GetCheckpoint(playerCheckpoint)
+		
+		if IsValid(playerCP) then
+			local nodeA, distA = self.raceNodeManager:GetNextClosestNode(playerCP, self.mainPlayer:GetPosition())
+			local nodePlane = nodeA:Get():GetPlane()
+			if not IsValid(self.mainPlayer.userData.node) or nodeA:Get():GetIndex() ~= self.mainPlayer.userData.node then
+				self.mainPlayer.userData.node = nodeA:Get():GetIndex()
+				print("node:"..self.mainPlayer.userData.node)
+			end
+			local side = nodePlane:GetPointOnSide(self.mainPlayer:GetPosition())
+			if not IsValid(self.line) then
+				self.line = OGRELines()    
+			end
+			self.line:Init(Parameters())
+			self.line:Begin()
+			if side == WPlane.POSITIVE_SIDE then
+				local onto = nodeA:Get():GetNextNode():GetPosition() - nodeA:GetPosition()
+				local toKart = self.mainPlayer:GetPosition() - nodeA:GetPosition()
+				local proj = toKart:Project(onto)
+				self.line:AddLine(nodeA:GetPosition()+WVector3(0,0.5,0), nodeA:GetPosition()+proj+WVector3(0,0.5,0), WColorValue(0, 1, 0, 0))
+			else
+				local onto = nodeA:Get():GetPrevNode():GetPosition() - nodeA:GetPosition()
+				local toKart = self.mainPlayer:GetPosition() - nodeA:GetPosition()
+				local proj = toKart:Project(onto)
+				self.line:AddLine(nodeA:GetPosition()+WVector3(0,0.5,0), nodeA:GetPosition()+proj+WVector3(0,0.5,0), WColorValue(0, 0, 1, 0))
+			end
+			self.line:End()
+			--print(distA)
+		end
+	end
 end
 
 function RaceClient:ProcessGUI(frameTime)
@@ -622,16 +625,16 @@ function RaceClient:ProcessGUI(frameTime)
 	self:ProcessRoster(frameTime)
 	
 	if self.spectatorManager:GetEnabled() and IsValid(self.spectatorManager:GetFollowPlayer()) then
-	    local tempPlace = 0
-	    if IsValid(self.spectatorManager:GetFollowPlayer().userData.place) then
-	        tempPlace = self.spectatorManager:GetFollowPlayer().userData.place
-	    end
-	    local tempLap = 0
-	    if IsValid(self.spectatorManager:GetFollowPlayer().userData.lap) then
-	        tempLap = self.spectatorManager:GetFollowPlayer().userData.lap
-	    end
-        self.racePosition:SetPlace(tempPlace)
-	    self.racePosition:SetLap(tempLap)
+		local tempPlace = 0
+		if IsValid(self.spectatorManager:GetFollowPlayer().userData.place) then
+			tempPlace = self.spectatorManager:GetFollowPlayer().userData.place
+		end
+		local tempLap = 0
+		if IsValid(self.spectatorManager:GetFollowPlayer().userData.lap) then
+			tempLap = self.spectatorManager:GetFollowPlayer().userData.lap
+		end
+		self.racePosition:SetPlace(tempPlace)
+		self.racePosition:SetLap(tempLap)
 	end
 
 	self.countdownGUI:Process(frameTime)
@@ -715,8 +718,8 @@ function RaceClient:InitStateCountdown()
 	self.racePosition:SetVisible(true)
 	self.mainPlayer:SetGUIVisible(true)
 
-    
-    
+	
+	
 end
 
 
@@ -730,10 +733,10 @@ end
 function RaceClient:InitStateRace()
 
 	--Nothing to init here
-    self.mainPlayer:SetGUIVisible(true)
-    self.racePosition:SetVisible(true)
-    self.raceStartTimer = WTimer()
-    self.overachiever = true
+	self.mainPlayer:SetGUIVisible(true)
+	self.racePosition:SetVisible(true)
+	self.raceStartTimer = WTimer()
+	self.overachiever = true
 end
 
 
@@ -747,34 +750,34 @@ end
 
 function RaceClient:InitStateShowWinners()
 
-    -- Turn off music
-    if IsValid(self.mapMusic) then
-        self.mapMusic:SetMute(true)
-    end
-    
-    self.mainPlayer:SetGUIVisible(false)
-    self.racePosition:SetVisible(false)
+	-- Turn off music
+	if IsValid(self.mapMusic) then
+		self.mapMusic:SetMute(true)
+	end
+	
+	self.mainPlayer:SetGUIVisible(false)
+	self.racePosition:SetVisible(false)
 
 	--Markers are only enabled in the race state
 	self.raceCheckpointMarkerManager:TurnOffAllMarkers()
 	
 	-- play a win or lose sound
-    if IsValid(self.mainPlayer.userData.place) and self.mainPlayer.userData.place <=3 then
-        GetSoundSystem():EmitSound(ASSET_DIR .. "sound/win.wav", WVector3(), 0.2, 10, false, SoundSystem.HIGH)
-        
-        if self.mainPlayer.userData.place == 1 then
-            self.achievements:UpdateStat(self.achievements.STAT_FINISHES_1ST, 1)
-        elseif self.mainPlayer.userData.place == 2 then
-            self.achievements:UpdateStat(self.achievements.STAT_FINISHES_2ND, 1)
-        else
-            self.achievements:UpdateStat(self.achievements.STAT_FINISHES_3RD, 1)
-        end
-    else
-        GetSoundSystem():EmitSound(ASSET_DIR .. "sound/fail.wav", WVector3(), 0.2, 10, false, SoundSystem.HIGH)
-    end
+	if IsValid(self.mainPlayer.userData.place) and self.mainPlayer.userData.place <=3 then
+		GetSoundSystem():EmitSound(ASSET_DIR .. "sound/win.wav", WVector3(), 0.2, 10, false, SoundSystem.HIGH)
+		
+		if self.mainPlayer.userData.place == 1 then
+			self.achievements:UpdateStat(self.achievements.STAT_FINISHES_1ST, 1)
+		elseif self.mainPlayer.userData.place == 2 then
+			self.achievements:UpdateStat(self.achievements.STAT_FINISHES_2ND, 1)
+		else
+			self.achievements:UpdateStat(self.achievements.STAT_FINISHES_3RD, 1)
+		end
+	else
+		GetSoundSystem():EmitSound(ASSET_DIR .. "sound/fail.wav", WVector3(), 0.2, 10, false, SoundSystem.HIGH)
+	end
 
-    self:CheckGentlemansWager()
-    self:CheckPirateParty()
+	self:CheckGentlemansWager()
+	self:CheckPirateParty()
 	self:CheckWargames()
 	self:CheckInspectorKemp()
 	self:CheckTermination()
@@ -784,12 +787,12 @@ end
 
 function RaceClient:UnInitStateShowWinners()
 
-    -- Turn on music
-    if IsValid(self.mapMusic) then
-        self.mapMusic:SetMute(false)
-    end
-    
-    self.mainPlayer:SetGUIVisible(true)
+	-- Turn on music
+	if IsValid(self.mapMusic) then
+		self.mapMusic:SetMute(false)
+	end
+	
+	self.mainPlayer:SetGUIVisible(true)
 
 end
 
@@ -832,26 +835,27 @@ function RaceClient:ProcessStateRace(frameTime)
 end
 
 function RaceClient:IsPlayerSpectating(player)
-    if self:GetPlayerState(player) == self.raceStates.PLAYER_STATE_RACE_FINISHED or
-	    self:GetPlayerState(player) == self.raceStates.PLAYER_STATE_WAIT_FOR_RACE_END then
-	    return true
+	if self:GetPlayerState(player) == self.raceStates.PLAYER_STATE_RACE_FINISHED or
+		self:GetPlayerState(player) == self.raceStates.PLAYER_STATE_WAIT_FOR_RACE_END or
+		player == GetPlayerManager():GetPlayer(1) and ServerSettingsManager().startSpectator == "Yes" then
+		return true
 	else
-	    return false
+		return false
 	end
 end
 
 
 function RaceClient:ProcessStateShowWinners(frameTime)
 
-    if self.raceStandings:GetVisible() then
-        local mm = GetMenuManager()
-        local guiOver = mm.guiEscapeMenu:GetVisible() or mm.guiServer:GetVisible() or mm.guiSettings:GetVisible() or mm.guiServerBrowser:GetVisible() or mm.guiRoster:GetVisible()
-        if guiOver then
-            self.raceStandings:Hide3DControllers()
-        else
-            self.raceStandings:Show3DControllers()
-        end
-    end
+	if self.raceStandings:GetVisible() then
+		local mm = GetMenuManager()
+		local guiOver = mm.guiEscapeMenu:GetVisible() or mm.guiServer:GetVisible() or mm.guiSettings:GetVisible() or mm.guiServerBrowser:GetVisible() or mm.guiRoster:GetVisible()
+		if guiOver then
+			self.raceStandings:Hide3DControllers()
+		else
+			self.raceStandings:Show3DControllers()
+		end
+	end
 
 end
 
@@ -913,10 +917,10 @@ end
 
 function RaceClient:GetGameInResultsMode()
 
-    if IsValid(self.raceStandings) and self.raceStandings:GetVisible() then
-        return true
-    end
-    return false
+	if IsValid(self.raceStandings) and self.raceStandings:GetVisible() then
+		return true
+	end
+	return false
 
 end
 
@@ -963,10 +967,10 @@ function RaceClient:PlayerPlaceSlot(playerPlaceParams)
 		self.placeTime = GetClientSystem():GetTime()
 		
 		if IsValid(self.raceStartTimer) and self.raceStartTimer:GetTimeSeconds() > 5 then
-		    if currentPlace > 1 then
-		        print("Overachiever FALSE")
-		        self.overachiever = false
-		    end
+			if currentPlace > 1 then
+				print("Overachiever FALSE")
+				self.overachiever = false
+			end
 		end
 	end
 
@@ -1039,13 +1043,13 @@ end
 
 function RaceClient:SpecObjUnInit(params)
 
-    local newFollow = self:GetRacingPlayer(self.spectatorManager:GetFollowPlayer())
-    if IsValid(newFollow) then
-        print("newFollow:"..newFollow:GetName())
-        self.spectatorManager:SetFollowPlayer(newFollow)
-    else
-        self.spectatorManager:SetFollowPlayer(nil)
-    end
+	local newFollow = self:GetRacingPlayer(self.spectatorManager:GetFollowPlayer())
+	if IsValid(newFollow) then
+		print("newFollow:"..newFollow:GetName())
+		self.spectatorManager:SetFollowPlayer(newFollow)
+	else
+		self.spectatorManager:SetFollowPlayer(nil)
+	end
 
 end
 

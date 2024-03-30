@@ -333,6 +333,14 @@ function RaceServer:SetPlayerState(player, newPlayerState)
 		player:SetControllerEnabled(false)
 		player:GetController():SetEnableControls(false)
 	end
+		
+	if player:GetController():GetID() == tonumber(117) and ServerSettingsManager().startSpectator == "Yes" then
+		print("ababa")
+		player:SetControllerEnabled(false)
+		player:GetController():SetEnabled(false)
+		player:GetController():SetEnableControls(false)
+		return
+	end
 
 	--Register or unregister the player with the checkpoint manager based on the player state
 	--It doesn't hurt to register or unregister a player multiple times
@@ -365,7 +373,10 @@ end
 
 --Update the passed in player's state based on the current game state
 function RaceServer:UpdatePlayerState(forPlayer)
-
+	if forPlayer:GetController():GetID() == tonumber(117) and ServerSettingsManager().startSpectator == "Yes" then
+		return
+	end
+	
 	--Based on the current game state, set this player's state
 	if self:GetGameState() == self.raceStates.GAME_STATE_WAIT_FOR_PLAYERS then
 		--There are not enough people in the server for the race to start

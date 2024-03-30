@@ -44,6 +44,7 @@ local KART_AIRSTEER_AMOUNT = 19*2.1
 local KART_HOP_TURN_FORCE = 4.75*0.6
 
 local KART_DRIFTSTEER_AMOUNT = (19*2.1)*1.5
+local KART_DRIFTSTEER_PERCENTAGE = 0.5
 
 --SYNCEDKART CLASS START
 
@@ -1335,7 +1336,7 @@ function SyncedKart:ProcessController(frameTime)
 					self.currDrifting = false
 				else
 					local rotImpulse = upNormal * (KART_DRIFTSTEER_AMOUNT * frameTime * self.driftingDirection) * speedClamp
-					self.physicalKart:SetAngularVelocity((self.physicalKart:GetAngularVelocity()*0.5)+rotImpulse)
+					self.physicalKart:SetAngularVelocity((self.physicalKart:GetAngularVelocity()*KART_DRIFTSTEER_PERCENTAGE)+rotImpulse)
 					self.driftingLerp = Lerp(frameTime*(speedClamp), self.driftingLerp, self.driftingDirection)
 
 					if self.driftTimer then

@@ -1,9 +1,0 @@
-<Item type="Hats" name="Space Bowl">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="No atomsphere? No problem!" />
-		<Colors amount="2" Color1="0.55 0.65 0.75" Color2="0.1 0.5 1" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

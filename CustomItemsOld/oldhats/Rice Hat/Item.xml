@@ -1,9 +1,0 @@
-<Item type="Hats" name="Rice Hat">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="360 degree UV protection." />
-		<Colors amount="2" Color1="0.764 0.663 0.322" Color2="0.529 0.125 0.043" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

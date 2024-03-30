@@ -1,9 +1,0 @@
-<Item type="Characters" name="Squiddles">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Squiddles can be found in all colors and sizes." />
-		<Colors amount="2" Color1=".231 .624 .084" Color2=".1 .1 .1" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

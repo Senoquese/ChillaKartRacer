@@ -1,9 +1,0 @@
-<Item type="Hats" name="Devil Horns">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Now, if you'll just sign this fiddle contest waiver..." />
-		<Colors amount="2" Color1=".5 0 0" Color2="0.741 0 0" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

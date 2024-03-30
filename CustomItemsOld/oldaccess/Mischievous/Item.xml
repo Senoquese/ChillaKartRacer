@@ -1,9 +1,0 @@
-<Item type="Accessories" name="Mischievous">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="MUAHAHAHAHA!" />
-		<Colors amount="3" Color1="1 0.95 0.57" Color2="0.55 0.65 0.75" Color3="0.2 0.2 0.2" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

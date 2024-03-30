@@ -1,9 +1,0 @@
-<Item type="Hats" name="Roman Helm">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="The legionnaire's first choice." />
-		<Colors amount="2" Color1="1 0 0" Color2=".84 0.7 0.48" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

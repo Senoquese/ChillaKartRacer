@@ -10,8 +10,8 @@ function main(assetDir)
 
     --BRIAN TODO: Test code forcing a lower process priority and disabling process priority adjusting
     --RaiseProcessPriority()
-    LowerProcessPriority()
-    SetEnableProcessPriorityAdjusting(false)
+    -- LowerProcessPriority()
+    -- SetEnableProcessPriorityAdjusting(false)
 
 	ASSET_DIR = assetDir
 
@@ -171,7 +171,7 @@ function InitServerWorld()
 
 	serverWorld:SetCoreObjectFactory(CreateSyncedObjectFactory())
 
-	--serverWorld:SetSyncRates(1 / 5, 1 / 20)
+	serverWorld:SetSyncRates(1 / 20, 1 / 120)
 
 	AssignInputMapping(serverWorld)
 

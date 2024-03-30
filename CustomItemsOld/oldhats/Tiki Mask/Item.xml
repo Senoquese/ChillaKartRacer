@@ -1,9 +1,0 @@
-<Item type="Hats" name="Tiki Mask">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Do it island style." />
-		<Colors amount="1" Color1="0 1 0.2" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

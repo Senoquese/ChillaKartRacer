@@ -1,9 +1,0 @@
-<Item type="Hats" name="Viking Helm">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Caution: beware of sharp horns!" />
-		<Colors amount="2" Color1="1 1 1" Color2="1 0.6 0.3" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

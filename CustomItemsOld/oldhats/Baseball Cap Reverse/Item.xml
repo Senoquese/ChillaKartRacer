@@ -1,9 +1,0 @@
-<Item type="Hats" name="Baseball Cap Reverse">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Still cool." />
-		<Colors amount="2" Color1=".357 .572 1" Color2=".2 .2 .2" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

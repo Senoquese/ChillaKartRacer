@@ -1,9 +1,0 @@
-<Item type="Characters" name="Turtle">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="This unit comes equipped with extra rear protection." />
-		<Colors amount="2" Color1=".78 1 0.133" Color2=".694 .455 .239" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

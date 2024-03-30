@@ -1,9 +1,0 @@
-<Item type="Characters" name="Skeleton">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Shake, Rattle and Roll!" />
-		<Colors amount="2" Color1="0.910 0.875 0.659" Color2="0 1 0" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

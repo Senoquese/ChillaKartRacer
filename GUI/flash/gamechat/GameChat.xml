@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<gamechat>
-	<input left="inputLeft.png" middle="inputMiddle.png" right="inputRight.png" textY="10" />
-	<font face="Arial Bold" size="16" color="FFFFFF" />
-	<mask img="mask.png" />
-</gamechat>

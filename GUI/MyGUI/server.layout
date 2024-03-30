@@ -123,19 +123,24 @@
 				<Widget type="ComboBox" skin="ComboBox" position="12 278 116 32" name="announce">
 					<Property key="ComboBox_ModeDrop" value="true"/>
 					<Property key="ComboBox_AddItem" value="Public"/>
-				<Property key="ComboBox_AddItem" value="Friends Only"/>
+					<Property key="ComboBox_AddItem" value="Friends Only"/>
 					<Property key="ComboBox_AddItem" value="Private"/>
 				</Widget>
 				
-				<Widget type="Button" skin="CheckBox" position="64 278 116 32" name="startspectating">
-					<Property key="Widget_Caption" value="Start as Spectator"/>
-					<Property key="Button_Pressed" value="false"/>
+				<Widget type="StaticText" skin="StaticText" position="128 251 268 24">
+				<Property key="Widget_Caption" value="Start as Spectator"/>
 				</Widget>
 
-				<Widget type="StaticText" skin="StaticText" position="12 331 356 24">
+				<Widget type="ComboBox" skin="ComboBox" position="128 278 300 32" name="startspectator">
+					<Property key="ComboBox_ModeDrop" value="true"/>
+					<Property key="ComboBox_AddItem" value="No"/>
+					<Property key="ComboBox_AddItem" value="Yes"/>
+				</Widget>
+
+				<Widget type="StaticText" skin="StaticText" position="12 321 356 24">
 					<Property key="Widget_Caption" value="CPUs"/>
 				</Widget>
-				<Widget type="ComboBox" skin="ComboBox" position="12 358 68 32" name="minplayers">
+				<Widget type="ComboBox" skin="ComboBox" position="12 348 68 32" name="minplayers">
 					<Property key="ComboBox_AddItem" value="0"/>
 					<Property key="ComboBox_AddItem" value="1"/>
 					<Property key="ComboBox_AddItem" value="2"/>
@@ -148,6 +153,16 @@
 					<Property key="ComboBox_AddItem" value="9"/>
 					<Property key="ComboBox_AddItem" value="10"/>
 					<Property key="ComboBox_AddItem" value="11"/>
+					<Property key="ComboBox_ModeDrop" value="true"/>
+				</Widget>
+
+				<Widget type="StaticText" skin="StaticText" position="12 381 356 24">
+					<Property key="Widget_Caption" value="CC"/>
+				</Widget>
+				<Widget type="ComboBox" skin="ComboBox" position="12 408 68 32" name="kartCC">
+					<Property key="ComboBox_AddItem" value="50"/>
+					<Property key="ComboBox_AddItem" value="100"/>
+					<Property key="ComboBox_AddItem" value="150"/>
 					<Property key="ComboBox_ModeDrop" value="true"/>
 				</Widget>
 			</Widget>

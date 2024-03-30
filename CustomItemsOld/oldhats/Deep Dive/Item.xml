@@ -1,9 +1,0 @@
-<Item type="Hats" name="Deep Dive">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Garunteed leak-proof up to 20,000 leagues." />
-		<Colors amount="2" Color1=".89 .69 .51" Color2=".96 .93 .54" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

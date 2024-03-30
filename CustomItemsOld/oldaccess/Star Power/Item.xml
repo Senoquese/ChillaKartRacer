@@ -1,9 +1,0 @@
-<Item type="Accessories" name="Star Power">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="Instant celebrity status." />
-		<Colors amount="2" Color1="1 0.95 0.57" Color2=".438 .109 1" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

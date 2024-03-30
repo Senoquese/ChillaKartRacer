@@ -1,9 +1,0 @@
-<Item type="Accessories" name="Eye Poppers">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="WOWZA!" />
-		<Colors amount="3" Color1=".15 .15 .15" Color2="1 .15 .15" Color3=".25 1 .75" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

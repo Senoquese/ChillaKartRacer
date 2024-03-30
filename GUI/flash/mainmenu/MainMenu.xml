@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<mainmenu>
-	<button name="joinButton" 		id="join" 		sound="GUI\\flash\\garage\\sounds\\Karts.wav" />
-	<button name="garageButton" 	id="garage" 	sound="GUI\\flash\\garage\\sounds\\Wheels.wav" />
-	<button name="settingsButton" 	id="settings" 	sound="GUI\\flash\\garage\\sounds\\Characters.wav" />
-	<button name="helpButton" 	id="help" 	sound="GUI\\flash\\garage\\sounds\\Accessories.wav" />
-	<button name="exitButton"		id="exit"		sound="GUI\\flash\\garage\\sounds\\Accessories.wav" />
-</mainmenu>

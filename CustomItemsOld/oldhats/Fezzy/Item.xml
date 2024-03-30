@@ -1,9 +1,0 @@
-<Item type="Hats" name="Fezzy">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="please believe a new dimension." />
-		<Colors amount="2" Color1="1 0 0" Color2="1 1 0" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>

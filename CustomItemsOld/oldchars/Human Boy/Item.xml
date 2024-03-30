@@ -1,9 +1,0 @@
-<Item type="Characters" name="Human Boy">
-	<Description>
-		<Author data="NimbleBit" />
-		<Note data="A basic human male unit." />
-		<Colors amount="4" Color1="1 0.85 0.69" Color2="0.74 0.53 0.29" Color3="0.22 0.54 1" Color4="1 1 1" />
-	</Description>
-	<Settings>
-	</Settings>
-</Item>
